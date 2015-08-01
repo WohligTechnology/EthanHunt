@@ -1,34 +1,74 @@
-@import "../bower_components/lesshat/build/lesshat.less";
-@font-face {
-    font-family: 'Wohlig';
-    src: url('../fonts/wohlig.eot');
-    src: local('☺'), url('../fonts/wohlig.woff') format('woff'), url('../fonts/wohlig.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Merge';
-    src: local('☺'), url('../fonts/merge.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-body {
-    margin: 0;
-    .background-image(linear-gradient(to bottom, #001c37 0%,#003f62 100%));
-    overflow: hidden;
-    a {
-        text-decoration: none;
+    @import "../bower_components/lesshat/build/lesshat.less";
+    @font-face {
+        font-family: 'Wohlig';
+        src: url('../fonts/wohlig.eot');
+        src: local('☺'), url('../fonts/wohlig.woff') format('woff'), url('../fonts/wohlig.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
     }
-    a:hover {
-        text-decoration: none;
+    
+    @font-face {
+        font-family: 'Merge';
+        src: local('☺'), url('../fonts/merge.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
     }
-}
-.section {
-}
-//sohan
-.head {
-    float: right;
-    color: #fff;
-    padding-right: 25px;
-    padding-top: 20px;
-}
+    
+    body {
+        margin: 0;
+        .background-image(linear-gradient(to bottom, #001c37 0%, #003f62 100%));
+        overflow: hidden;
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .section {
+        .logo {
+            img {
+                width: 200px;
+            }
+        }
+        .sun {
+            img {
+                width: 180px;
+            }
+        }
+        .moon {
+            img {
+                width: 90px;
+            }
+        }
+        .rocket {
+            img {
+                height: 130px;
+            }
+        }
+        .satelite{
+            img{
+                width: 135px;
+            }
+        }
+        .saucer{
+            img{
+                width: 150px;
+            }
+        }
+         .saturn{
+            img{
+                width: 150px;
+            }
+        }
+    }
+    
+    //sohan
+    .head {
+        float: right;
+        color: #fff;
+        padding-right: 25px;
+        padding-top: 20px;
+        font-family: 'merge';
+    }
