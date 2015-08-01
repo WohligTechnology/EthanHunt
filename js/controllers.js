@@ -1,15 +1,13 @@
 angular.module('wohligController', ['templateservicemod', 'navigationservice', 'valdr'])
 
 .controller('WohligCtrl', function($scope, TemplateService, NavigationService) {
-    //Used to name the .html file
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    console.log("Wohlig Technology");
 })
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService) {
-    //Used to name the .html file
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    console.log("Home Wohlig");
 })
 .controller('HeaderCtrl', function($scope, TemplateService) {
     $scope.template = TemplateService;
 });
+
+console.log("change");

@@ -10,9 +10,16 @@ wohligapp.config(function($stateProvider, $urlRouterProvider) {
     //Turn the spinner on or off
     $stateProvider
     .state('wohlig', {
-        url: "/home",
+        url: "/wohlig",
+        abstract: true,
         templateUrl: "views/template.html",
         controller: 'WohligCtrl'
     })
-    $urlRouterProvider.otherwise("/home");
+    .state('wohlig.home', {
+        url: "/home",
+        templateUrl: "views/template.html",
+        controller: 'HomeCtrl'
+    })
+    
+    $urlRouterProvider.otherwise("/wohlig/home");
 });
