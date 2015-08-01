@@ -17,13 +17,12 @@ wohligapp.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('wohlig.home', {
             url: "/home",
-            templateUrl: "views/content/home.html",
             controller: 'HomeCtrl'
         })
         .state('wohlig.enquiry', {
             url: "/enquiry",
             templateUrl: "views/content/enquiry.html",
-            controller: 'HomeCtrl'
+            controller: 'EnquiryCtrl'
         })
 
     $urlRouterProvider.otherwise("/wohlig/home");
