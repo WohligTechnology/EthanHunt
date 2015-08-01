@@ -38,10 +38,10 @@ body a:hover {
 .section .sun {
   position: absolute;
   right: 17%;
-  top: 10%;
+  top: 14%;
 }
 .section .sun .menuimage img {
-  width: 200px;
+  width: 190px;
 }
 .section .moon {
   position: absolute;
