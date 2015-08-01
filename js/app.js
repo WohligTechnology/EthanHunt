@@ -1,26 +1,22 @@
 // JavaScript Document
 var wohligapp = angular.module('wohligapp', [
+    'ui.router',
     'wohligController',
     'templateservicemod',
     'navigationservice'
 ]);
 
-wohligapp.config(function($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
+wohligapp.config(function($stateProvider, $urlRouterProvider) {
     //Turn the spinner on or off
-    cfpLoadingBarProvider.includeSpinner = false;
 
     $stateProvider
 
     .state('wohlig', {
-        url: "/",
+        url: "/home",
         templateUrl: "views/template.html",
         controller: 'WohligCtrl'
     })
-    .state('wohlig.home', {
-        url: "/home",
-        controller: 'HomeCtrl'
-    });
     
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/home");
 
 });
