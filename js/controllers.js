@@ -2,14 +2,13 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
 
 .controller('WohligCtrl', function($scope, TemplateService, NavigationService) {
     $scope.template=TemplateService;
-    console.log("Wohlig Technology");
 })
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService) {
     $scope.template=TemplateService;
-    console.log("Home Wohlig");
+})
+.controller('EnquiryCtrl', function($scope, TemplateService, NavigationService) {
+    $scope.template=TemplateService;
 })
 .controller('HeaderCtrl', function($scope, TemplateService) {
     $scope.template = TemplateService;
 });
-
-console.log("change");
