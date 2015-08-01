@@ -27,11 +27,85 @@ body a {
 body a:hover {
   text-decoration: none;
 }
+.section .logo {
+  position: absolute;
+  top: 4%;
+  left: 10%;
+}
+.section .logo img {
+  width: 260px;
+}
+.section .sun {
+  position: absolute;
+  right: 17%;
+  top: 10%;
+}
+.section .sun .menuimage img {
+  width: 200px;
+}
+.section .moon {
+  position: absolute;
+  left: 25%;
+  top: 30%;
+}
+.section .moon .menuimage img {
+  width: 100px;
+}
+.section .rocket {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section .rocket .menuimage img {
+  height: 130px;
+}
+.section .satelite {
+  position: absolute;
+  left: 18%;
+  bottom: 16%;
+}
+.section .satelite .menuimage img {
+  width: 125px;
+}
+.section .saucer {
+  position: absolute;
+  left: 48%;
+  bottom: 10%;
+}
+.section .saucer .menuimage img {
+  width: 150px;
+}
+.section .saturn {
+  position: absolute;
+  right: 15%;
+  bottom: 21%;
+}
+.section .saturn .menuimage img {
+  width: 150px;
+}
+.section .menuTop {
+  position: relative;
+}
+.section .menuTop .menuimage {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.section .menuTop .menuimage:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
 .head {
   float: right;
   color: #fff;
   padding-right: 25px;
   padding-top: 20px;
+  font-family: 'merge';
 }
 .footer {
   position: absolute;
@@ -48,4 +122,58 @@ body a:hover {
   font-size: 18px;
   vertical-align: middle;
   color: #FF7676;
+}
+.comet {
+  position: absolute;
+  margin-left: -2000px;
+  left: 50%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.comet img {
+  width: 120px;
+}
+.comet .cometInner {
+  position: relative;
+  margin-top: 20px;
+}
+.comet span.label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #003F62;
+  font-family: "Wohlig";
+  font-size: 13px;
+}
+.comet.active {
+  margin-left: 0px;
+}
+.comet.active.leave {
+  margin-left: 2000px;
+}
+.comet.notransition {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes rotate{ 0% {  -webkit-transform: rotateZ(0deg); } 100%{  -webkit-transform: rotateZ(360deg); }}
+@-moz-keyframes rotate{ 0% {  -moz-transform: rotateZ(0deg); } 100%{  -moz-transform: rotateZ(360deg); }}
+@-o-keyframes rotate{ 0% {  -o-transform: rotateZ(0deg); } 100%{  -o-transform: rotateZ(360deg); }}
+@keyframes rotate{ 0% {-webkit-transform: rotateZ(0deg);-moz-transform: rotateZ(0deg);-ms-transform: rotateZ(0deg);transform: rotateZ(0deg); } 100%{-webkit-transform: rotateZ(360deg);-moz-transform: rotateZ(360deg);-ms-transform: rotateZ(360deg);transform: rotateZ(360deg); };
+}
+.rotate {
+  -webkit-animation: rotate 60 linear 0 infinite;
+  -moz-animation: rotate 60 linear 0 infinite;
+  -o-animation: rotate 60 linear 0 infinite;
+  animation: rotate 60 linear 0 infinite;
 }

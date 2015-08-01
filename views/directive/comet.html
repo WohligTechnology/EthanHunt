@@ -1,7 +1,12 @@
-<div class="menuimage">
-    <img ng-src="{{menuimage}}" alt="">
-</div>
-<div class="comet">
-    <img src="img/component/comet.png" alt="">
-    <span>{{label}}</span>
+<div class="menuTop ">
+    <div class="menuimage">
+        <img ng-src="{{menuimage}}" ng-class="shouldRotate" alt="">
+    </div>
+
+    <div class="comet">
+        <div class="cometInner">
+            <img src="img/component/comet.png" alt="">
+            <span class="label">{{label}}</span>
+        </div>
+    </div>
 </div>

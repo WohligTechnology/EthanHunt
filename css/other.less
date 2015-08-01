@@ -1,5 +1,4 @@
 @import "style.less";
-
  .footer {
     position: absolute;
     bottom: 5px;
@@ -15,4 +14,57 @@
         vertical-align: middle;
         color: #FF7676;
     }
+}
+.comet {
+    position: absolute;
+    margin-left: -2000px;
+    left: 50%;
+    .transition(all 0.4 ease);
+    .translateX(-50%);
+    img {
+        width: 120px;
+    }
+    .cometInner {
+        position: relative;
+        margin-top: 20px;
+    }
+    span.label {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #003F62;
+        font-family: "Wohlig";
+        font-size: 13px;
+    }
+}
+.comet.active {
+    margin-left: 0px;
+}
+.comet.active.leave {
+    margin-left: 2000px;
+}
+.comet.notransition {
+    .transition(none);
+}
+.keyframes(~'rotate, 0% {  transform: rotateZ(0deg); } 100%{  transform: rotateZ(360deg); }');
+ .rotate(@time) {
+    .animation(rotate @time linear 0s infinite normal);
+}
+.rotate10 {
+    .rotate(10s);
+}
+.rotate20 {
+    .rotate(20s);
+}
+.rotate30 {
+    .rotate(30s);
+}
+.rotate60 {
+    .rotate(60s);
+}
+.rotate120 {
+    .rotate(120s);
+}
+.rotate180 {
+    .rotate(180s);
 }

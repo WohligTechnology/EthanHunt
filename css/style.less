@@ -6,16 +6,15 @@
         font-weight: normal;
         font-style: normal;
     }
-    
     @font-face {
         font-family: 'Merge';
         src: local('☺'), url('../fonts/merge.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
     body {
         margin: 0;
+        .blur(10px);
         .background-image(linear-gradient(to bottom, #001c37 0%, #003f62 100%));
         overflow: hidden;
         a {
@@ -25,7 +24,6 @@
             text-decoration: none;
         }
     }
-    
     .section {
         .logo {
             position: absolute;
@@ -39,16 +37,20 @@
             position: absolute;
             right: 17%;
             top: 10%;
-            img {
-                width: 200px;
+            .menuimage {
+                img {
+                    width: 200px;
+                }
             }
         }
         .moon {
             position: absolute;
             left: 25%;
             top: 30%;
-            img {
-                width: 100px;
+            .menuimage {
+                img {
+                    width: 100px;
+                }
             }
         }
         .rocket {
@@ -56,36 +58,52 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            img {
-                height: 130px;
+            .menuimage {
+                img {
+                    height: 130px;
+                }
             }
         }
         .satelite {
             position: absolute;
             left: 18%;
             bottom: 16%;
-            img {
-                width: 125px;
+            .menuimage {
+                img {
+                    width: 125px;
+                }
             }
         }
         .saucer {
             position: absolute;
             left: 48%;
             bottom: 10%;
-            img {
-                width: 150px;
+            .menuimage {
+                img {
+                    width: 150px;
+                }
             }
         }
         .saturn {
             position: absolute;
             right: 15%;
             bottom: 21%;
-            img {
-                width: 150px;
+            .menuimage {
+                img {
+                    width: 150px;
+                }
+            }
+        }
+        .menuTop {
+            position: relative;
+            .menuimage {
+                .transition(all 0.4s ease);
+            }
+            .menuimage:hover {
+                .transform(scale(1.2));
             }
         }
     }
-    
     //sohan
     .head {
         float: right;
