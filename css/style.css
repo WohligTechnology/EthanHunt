@@ -27,23 +27,59 @@ body a {
 body a:hover {
   text-decoration: none;
 }
+.section .logo {
+  position: absolute;
+  top: 4%;
+  left: 10%;
+}
 .section .logo img {
-  width: 200px;
+  width: 260px;
+}
+.section .sun {
+  position: absolute;
+  right: 17%;
+  top: 10%;
 }
 .section .sun img {
-  width: 180px;
+  width: 200px;
+}
+.section .moon {
+  position: absolute;
+  left: 25%;
+  top: 30%;
 }
 .section .moon img {
-  width: 90px;
+  width: 100px;
+}
+.section .rocket {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .section .rocket img {
   height: 130px;
 }
+.section .satelite {
+  position: absolute;
+  left: 18%;
+  bottom: 16%;
+}
 .section .satelite img {
-  width: 135px;
+  width: 125px;
+}
+.section .saucer {
+  position: absolute;
+  left: 48%;
+  bottom: 10%;
 }
 .section .saucer img {
   width: 150px;
+}
+.section .saturn {
+  position: absolute;
+  right: 15%;
+  bottom: 21%;
 }
 .section .saturn img {
   width: 150px;
