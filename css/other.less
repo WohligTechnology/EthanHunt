@@ -47,8 +47,10 @@
     .transition(none);
 }
 .keyframes(~'rotate, 0% {  transform: rotateZ(0deg); } 100%{  transform: rotateZ(360deg); }');
+ .keyframes(~'sauser, 0% {  transform: rotateZ(-5deg); } 100%{  transform: rotateZ(5deg); }');
+ .keyframes(~'rocket, 0% {  margin-top: 15px; } 100%{  margin-top:-15px; }');
  .rotate(@time) {
-    .animation(rotate @time linear 0s infinite normal);
+    .animation(rotate@time linear 0s infinite normal);
 }
 .rotate10 {
     .rotate(10s);
@@ -67,4 +69,15 @@
 }
 .rotate180 {
     .rotate(180s);
+}
+.animatedSauser {
+    .animation(sauser 3s ease-out 0s infinite alternate);
+}
+.animatedRocket {
+    .animation(rocket 4s ease-in-out 0s infinite alternate);
+}
+
+.stars.ng-scope {
+    background: url(../img/background/stars.png);
+    background-size: 160px;
 }

@@ -33,13 +33,11 @@ wohligapp.directive('labelHover', function($document) {
     return {
         restrict: 'EA',
         replace: false,
-        scope: {
-        },
+        scope: {},
         templateUrl: "views/directive/comet.html",
         link: function($scope, element, attr) {
             $scope.menuimage = attr.menuImage;
             $scope.label = attr.labelHover;
-            console.log(attr);
             $scope.shouldRotate = attr.addClass;
 
             var $element = $(element).children(".menuTop");
@@ -48,6 +46,10 @@ wohligapp.directive('labelHover', function($document) {
 
 
             $menuImage.hover(function() {
+                $comet.addClass("notransition");
+                $comet.removeClass("active");
+                $comet.removeClass("leave");
+                $comet.removeClass("notransition");
                 $comet.addClass("active");
             }, function() {
                 $comet.addClass("leave");
