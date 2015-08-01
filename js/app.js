@@ -11,12 +11,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider, cfpLoadingBarProvid
 
     $stateProvider
 
-    .state('home', {
-        url: "/home",
+    .state('wohlig', {
+        url: "/",
         templateUrl: "views/template.html",
+        controller: 'WohligCtrl'
+    })
+    .state('wohlig.home', {
+        url: "/home",
         controller: 'HomeCtrl'
     })
 
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/");
 
 });
