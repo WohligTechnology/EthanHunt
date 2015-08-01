@@ -10,3 +10,7 @@ function getSection() {
     var height = $(window).height()
     $("head .sectioncss").html(".section {min-height: " + height+"px;}");
 }
+
+function addComet() {
+    
+};

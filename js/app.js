@@ -32,14 +32,14 @@ wohligapp.config(function($stateProvider, $urlRouterProvider) {
 wohligapp.directive('labelHover', function($document) {
     return {
         restrict: 'EA',
-        replace: true,
-        scope: {
-            game: '='
-        },
-        link: function(scope, element, attr) {
-
-
-            console.log("Changes");
+        replace: false,
+        scope: {},
+        templateUrl: "views/directive/comet.html",
+        link: function($scope, element, attr) {
+            var $element=$(element);
+            $scope.menuimage=attr.menuImage;
+            $scope.label=attr.labelHover;
+            console.log($element);
 
         }
 
