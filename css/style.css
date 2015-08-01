@@ -12,6 +12,10 @@
   font-weight: normal;
   font-style: normal;
 }
+body {
+  margin: 0;
+  overflow: hidden;
+}
 body a {
   text-decoration: none;
 }
