@@ -1,11 +1,11 @@
 // JavaScript Document
-var firstapp = angular.module('firstapp', [
-    'phonecatControllers',
+var wohligapp = angular.module('wohligapp', [
+    'wohligController',
     'templateservicemod',
     'navigationservice'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
+wohligapp.config(function($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
     //Turn the spinner on or off
     cfpLoadingBarProvider.includeSpinner = false;
 
@@ -19,8 +19,8 @@ firstapp.config(function($stateProvider, $urlRouterProvider, cfpLoadingBarProvid
     .state('wohlig.home', {
         url: "/home",
         controller: 'HomeCtrl'
-    })
-
+    });
+    
     $urlRouterProvider.otherwise("/");
 
 });
