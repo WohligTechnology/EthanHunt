@@ -1,18 +1,29 @@
 @import "../bower_components/lesshat/build/lesshat.less";
-
-
-
 @font-face {
-	font-family: 'Wohlig';
-	src: url('fonts/wohlig.eot');
-	src: local('☺'), url('fonts/wohlig.woff') format('woff'), url('fonts/wohlig.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Wohlig';
+    src: url('fonts/wohlig.eot');
+    src: local('☺'), url('fonts/wohlig.woff') format('woff'), url('fonts/wohlig.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'Merge';
-	src: local('☺'), url('fonts/merge.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Merge';
+    src: local('☺'), url('fonts/merge.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.section {
+    background: url("../img/background/home_background.png") no-repeat center;
+    background-size: cover;
 }
