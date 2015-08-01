@@ -17,7 +17,7 @@ wohligapp.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('wohlig.home', {
         url: "/home",
-        templateUrl: "views/template.html",
+        templateUrl: "views/content/home.html",
         controller: 'HomeCtrl'
     })
     
