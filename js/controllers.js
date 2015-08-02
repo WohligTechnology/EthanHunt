@@ -13,7 +13,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
     .controller('EnquiryCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
-        $scope.template.menuheader = "enquiry";
+        $scope.template.menuheader = "Enquiry";
     })
     .controller('ReachusCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
@@ -21,7 +21,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         $scope.template.init();
         $scope.template.contentClass = true;
         $scope.template.hideContent = true;
-        $scope.template.menuheader = "reachus";
+        $scope.template.menuheader = "Reach Us";
     })
     .controller('HeaderCtrl', function($scope, TemplateService) {
         $scope.template = TemplateService;

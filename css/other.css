@@ -477,6 +477,7 @@ textarea:focus {
   font-family: "Wohlig";
   font-size: 13px;
   z-index: 11;
+  text-transform: lowercase;
 }
 .comet.active {
   margin-left: 0px;
