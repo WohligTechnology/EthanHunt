@@ -211,12 +211,6 @@
                 width: 140px;
             }
         }
-//        .enquiry {
-//            position: absolute;
-//            top: 20px;
-//            left: 50%;
-//            .translateX(-50%);
-//        }
     }
     //sohan
     .head {
@@ -230,114 +224,134 @@
             margin: 40px;
         }
     }
-    .backback {
-        background-image: url('img/background/form_bak.png');
-        background-repeat: no-repeat;
-        height: 275px;
-        width: 300px;
+    section.enquiry {
         position: absolute;
-        bottom: 36%;
-        left: 51%;
-        .transform(translateX(-50%));
-        background-size: contain;
-        z-index: 0;
-    }
-    .backfront {
-        background-image: url('img/background/form_front.png');
-        background-repeat: no-repeat;
-        height: 320px;
-        width: 300px;
-        position: absolute;
-        bottom: 52%;
-        left: 52%;
-        .transform(translateX(-50%));
-        background-size: contain;
-        z-index: 1;
-    }
-    .rock img {
-        width: 600px;
-    }
-    .rock {
-        text-align: center;
-    }
-    .aliens {
-        position: absolute;
-        bottom: 165px;
-        left: 52%;
-        .transform(translateX(-50%));
-        z-index: 1;
-    }
-    .rock {
-        position: absolute;
-        bottom: 50px;
-        z-index: 0;
-        left: 0;
-        right: 0;
-    }
-    img.alien1 {
-        height: 150px;
-    }
-    img.alien2 {
-        height: 100px;
-        padding: 0px 25px;
-    }
-    img.alien3 {
-        height: 190px;
-        padding-left: 60px;
-    }
-    .form {
-        padding: 0px 70px 20px 25px;
-    }
-    .form input {
+        top: 0px;
         width: 100%;
-        margin: 0 0 5px 0;
-        height: 23px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 0px;
-        border: 1px solid #ddd;
-        padding-left: 5px;
-        font-family: "Merge";
-    }
-    .full-form {
-        padding: 25px 20px 0px 20px;
-    }
-    .form textarea {
-        width: 98%;
-        border: 1px solid #ddd;
-        padding: 5px;
-        height: 50px;
-        border-radius: 5px;
-        font-family: "Merge";
-        resize: none;
-    }
-    p.text-color {
-        font-size: 11px;
-        color: #AFAFAF;
-        padding: 0px;
-        font-family: "Merge";
-        line-height: 15px;
-        margin: 5px;
-    }
-    input.button {
-        background: #E61C24;
-        color: #fff;
-        padding: 0px 0;
-        height: 33px;
-        width: 90px;
-        float: right;
-        margin-top: 10px;
-        font-family: "Merge";
-        cursor: pointer;
-    }
-    .text-feedback {
-        width: 88%;
-        padding: 0px 10px 8px;
-    }
-    input:focus {
-        outline: none;
-    }
-    textarea:focus {
-        outline: none;
+        .enquiry {
+            .alienrocks {
+                height: 770px;
+                position: relative;
+                .aliens {
+                    position: absolute;
+                    bottom: 0px;
+                    .translateX(-50%);
+                    width: 750px;
+				 z-index: 1;
+                    left: 50%;
+                }
+                .formholder {
+                    //                    position: relative;
+                    .forms-query {
+                        position: absolute;
+                        left: -273px;
+                        top: -218px;
+                        .backback {
+                            background-image: url('../img/background/form_bak.png');
+                            background-repeat: no-repeat;
+                            height: 320px;
+                            width: 300px;
+                            background-size: 100%;
+                            z-index: -1;
+                            margin-top: -144px;
+                            position: relative;
+                        }
+                        .backfront {
+                            background-image: url('../img/background/form_front.png');
+                            background-repeat: no-repeat;
+                            height: 343px;
+                            width: 300px;
+                            background-size: 100%;
+                            margin-left: 14px;
+                            margin-top: -143px;
+                        }
+                        .form {
+                            padding-right: 30px;
+                        }
+                        .form input {
+                            width: 100%;
+                            margin: 0 0 5px 0;
+                            height: 23px;
+                            border-radius: 5px;
+                            box-shadow: 0px 0px 0px;
+                            border: 1px solid #ddd;
+                            padding-left: 5px;
+                            font-family: "Merge";
+                        }
+                        .full-form {
+                            padding: 35px;
+                        }
+                        .form textarea {
+                            width: 98%;
+                            border: 1px solid #ddd;
+                            padding: 5px;
+                            height: 50px;
+                            border-radius: 5px;
+                            font-family: "Merge";
+                            resize: none;
+                        }
+                        p.text-color {
+                            font-size: 11px;
+                            color: #AFAFAF;
+                            padding: 0px;
+                            font-family: "Merge";
+                            line-height: 15px;
+                            margin: 5px;
+                        }
+                        input.button {
+                            background: #E61C24;
+                            color: #fff;
+                            padding: 0px 0;
+                            height: 33px;
+                            width: 100%;
+                            float: right;
+                            margin-top: 10px;
+                            font-family: "Merge";
+                            cursor: pointer;
+                        }
+                        input:focus {
+                            outline: none;
+                        }
+                        textarea:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                .rock {
+                    position: absolute;
+                    bottom: 50px;
+                    left: 50%;
+                    .translateX(-50%);
+                    width: 600px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .alienall {
+                width: 100px;
+                position: absolute;
+                bottom: 170px;
+                z-index: 9;
+            }
+            .alien1 {
+                left: 200px;
+            }
+            .alien2 {
+                left: 350px;
+            }
+            .alien3 {
+                left: 515px;
+                img {
+                    position: relative;
+                    width: 100px;
+                    height: auto;
+                    left: 0px;
+                    bottom: 0;
+                    z-index: 9;
+                }
+            }
+        }
     }
     .blurHome {
         .blur(10px);
