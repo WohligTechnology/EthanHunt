@@ -216,10 +216,13 @@
     .head {
         float: right;
         color: #fff;
-        padding-right: 25px;
-        padding-top: 20px;
         font-family: 'Wohlig';
         text-transform: lowercase;
+        position: relative;
+        z-index: 99;
+        h1 {
+            margin:40px;
+        }
     }
     .backback {
         background: url('http://localhost/EthanHunt/img/background/form_bak.png') no-repeat;
@@ -335,9 +338,10 @@
     }
     .back-nav {
         position: absolute;
-        top: 20px;
-        left: 20px;
+        top: 0px;
+        left: 0px;
         z-index: 9;
+        margin: 40px;
         img {
             width: 40px;
             cursor: pointer;
