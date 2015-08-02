@@ -54,13 +54,13 @@
  .keyframes(~'sauser, 0% {  transform: rotateZ(-5deg); } 100%{  transform: rotateZ(5deg); }');
  .keyframes(~'rocket, 0% {  margin-top: 15px; } 100%{  margin-top:-15px; }');
  .rotate(@time) {
-    .animation(rotate@time linear 0s infinite normal);
+    .animation(rotate @time linear 0s infinite normal);
 }
 .rotate10 {
     .rotate(10s);
 }
 .rotate20 {
-    .rotate(20s);
+    .animation(rotate 20s linear 0s infinite reverse);
 }
 .rotate30 {
     .rotate(30s);

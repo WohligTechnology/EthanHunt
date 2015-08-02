@@ -27,6 +27,13 @@ lesshat-selector {
 @-o-keyframes translatecomets3{ 0% {  -o-transform: translate(6000px,3000px); } 100%{  -o-transform: translate(-4000px,-2000px); }}
 @keyframes translatecomets3{ 0% {-webkit-transform: translate(6000px,3000px);-moz-transform: translate(6000px,3000px);-ms-transform: translate(6000px,3000px);transform: translate(6000px,3000px); } 100%{-webkit-transform: translate(-4000px,-2000px);-moz-transform: translate(-4000px,-2000px);-ms-transform: translate(-4000px,-2000px);transform: translate(-4000px,-2000px); };
 }
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes translateastro{ 0% {  -webkit-transform: translate(0px,5px); } 100%{  -webkit-transform: translate(0px,-5px); }}
+@-moz-keyframes translateastro{ 0% {  -moz-transform: translate(0px,5px); } 100%{  -moz-transform: translate(0px,-5px); }}
+@-o-keyframes translateastro{ 0% {  -o-transform: translate(0px,5px); } 100%{  -o-transform: translate(0px,-5px); }}
+@keyframes translateastro{ 0% {-webkit-transform: translate(0px,5px);-moz-transform: translate(0px,5px);-ms-transform: translate(0px,5px);transform: translate(0px,5px); } 100%{-webkit-transform: translate(0px,-5px);-moz-transform: translate(0px,-5px);-ms-transform: translate(0px,-5px);transform: translate(0px,-5px); };
+}
 @font-face {
   font-family: 'Wohlig';
   src: url('../fonts/wohlig.eot');
@@ -59,10 +66,14 @@ body a:hover {
   position: absolute;
   top: 4%;
   left: 10%;
+  cursor: pointer;
 }
 .section .logo img {
   width: 260px;
-  z-index: 999;
+  z-index: 9;
+}
+.section .logo:hover .astro {
+  left: -156px;
 }
 .section .sun {
   position: absolute;
@@ -71,7 +82,7 @@ body a:hover {
 }
 .section .sun .menuimage img {
   width: 190px;
-  z-index: 99999;
+  z-index: 9;
   position: relative;
 }
 .section .moon {
@@ -81,7 +92,7 @@ body a:hover {
 }
 .section .moon .menuimage img {
   width: 100px;
-  z-index: 99999;
+  z-index: 99;
   position: relative;
 }
 .section .rocket {
@@ -92,7 +103,7 @@ body a:hover {
 }
 .section .rocket .menuimage img {
   height: 130px;
-  z-index: 999;
+  z-index: 9;
 }
 .section .satelite {
   position: absolute;
@@ -101,7 +112,7 @@ body a:hover {
 }
 .section .satelite .menuimage img {
   width: 125px;
-  z-index: 999;
+  z-index: 9;
 }
 .section .saucer {
   position: absolute;
@@ -110,7 +121,7 @@ body a:hover {
 }
 .section .saucer .menuimage img {
   width: 150px;
-  z-index: 9999;
+  z-index: 9;
   position: relative;
 }
 .section .saturn {
@@ -120,7 +131,7 @@ body a:hover {
 }
 .section .saturn .menuimage img {
   width: 150px;
-  z-index: 999;
+  z-index: 9;
 }
 .section .menuTop {
   cursor: pointer;
@@ -147,31 +158,38 @@ body a:hover {
   -moz-animation: translatesocial 120s ease 0s infinite alternate;
   -o-animation: translatesocial 120s ease 0s infinite alternate;
   animation: translatesocial 120s ease 0s infinite alternate;
+  z-index: 9;
 }
 .section .social .icon {
   position: relative;
   right: 0;
   width: 120px;
   height: 80px;
+  z-index: 9;
 }
 .section .social .icon img {
   width: 35px;
+  position: relative;
+  z-index: 9;
 }
 .section .social .icon .facebook {
   position: relative;
   top: 0;
   cursor: pointer;
+  z-index: 9;
 }
 .section .social .icon .twitter {
   position: relative;
   left: 30px;
   cursor: pointer;
+  z-index: 9;
 }
 .section .social .icon .tumblr {
   position: relative;
   top: 42px;
   right: 44px;
   cursor: pointer;
+  z-index: 9;
 }
 .section .comets1 {
   -webkit-animation: translatecomets1 40s linear 0s infinite normal;
@@ -224,6 +242,22 @@ body a:hover {
   zoom: 0.3;
   z-index: -99;
   position: relative;
+}
+.section .astro {
+  position: absolute;
+  top: 100px;
+  left: -288px;
+  -webkit-transition: all 8s ease;
+  -moz-transition: all 8s ease;
+  -o-transition: all 8s ease;
+  transition: all 8s ease;
+  -webkit-animation: translateastro 2s ease-in-out 0s infinite alternate;
+  -moz-animation: translateastro 2s ease-in-out 0s infinite alternate;
+  -o-animation: translateastro 2s ease-in-out 0s infinite alternate;
+  animation: translateastro 2s ease-in-out 0s infinite alternate;
+}
+.section .astro img {
+  width: 140px;
 }
 .head {
   float: right;
@@ -345,6 +379,16 @@ textarea:focus {
   -ms-filter: blur(10px);
   filter: blur(10px);
 }
+.back-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9;
+}
+.back-nav img {
+  width: 40px;
+  cursor: pointer;
+}
 .footer {
   position: absolute;
   bottom: 5px;
@@ -366,18 +410,20 @@ textarea:focus {
   position: absolute;
   margin-left: -2000px;
   left: 50%;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+  z-index: 9;
 }
 .comet img {
   width: 120px;
+  position: relative;
 }
 .comet .cometInner {
   position: relative;
@@ -436,15 +482,10 @@ lesshat-selector {
   animation: rotate 10s linear 0s infinite normal;
 }
 .rotate20 {
-  -webkit-transform: rotate(20s);
-  -moz-transform: rotate(20s);
-  -ms-transform: rotate(20s);
-  -o-transform: rotate(20s);
-  transform: rotate(20s);
-  -webkit-animation: rotate 20s linear 0s infinite normal;
-  -moz-animation: rotate 20s linear 0s infinite normal;
-  -o-animation: rotate 20s linear 0s infinite normal;
-  animation: rotate 20s linear 0s infinite normal;
+  -webkit-animation: rotate 20s linear 0s infinite reverse;
+  -moz-animation: rotate 20s linear 0s infinite reverse;
+  -o-animation: rotate 20s linear 0s infinite reverse;
+  animation: rotate 20s linear 0s infinite reverse;
 }
 .rotate30 {
   -webkit-transform: rotate(30s);

@@ -11,7 +11,8 @@ templateservicemod.service('TemplateService', function() {
         this.header = "views/header.html";
         this.content = "views/content/home.html";
         this.footer = "views/footer.html";
-        this.contentClass="blurHome";
+        this.hideContent = false;
+        this.contentClass = "blurHome";
     };
 
     this.changecontent = function(page) {
@@ -20,7 +21,7 @@ templateservicemod.service('TemplateService', function() {
         data.content = "views/content/" + page + ".html";
         return data;
     };
-    
+
     this.init();
 
 });

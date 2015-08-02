@@ -72,6 +72,12 @@ body a:hover {
   width: 260px;
   z-index: 9;
 }
+.section .logo img.earth {
+  position: absolute;
+  width: 50px;
+  left: 67px;
+  top: 19px;
+}
 .section .logo:hover .astro {
   left: -156px;
 }
@@ -384,4 +390,20 @@ textarea:focus {
 .back-nav img {
   width: 40px;
   cursor: pointer;
+}
+.rockets {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+.rockets .menuimage img {
+  height: 130px;
+  z-index: 9;
+}
+.googlemap {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
