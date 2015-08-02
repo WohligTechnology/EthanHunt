@@ -8,10 +8,24 @@ lesshat-selector {
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes translatecomets{ 0% {  -webkit-transform: translate(0px,0px); } 100%{  -webkit-transform: translate(1000px,1000px); }}
-@-moz-keyframes translatecomets{ 0% {  -moz-transform: translate(0px,0px); } 100%{  -moz-transform: translate(1000px,1000px); }}
-@-o-keyframes translatecomets{ 0% {  -o-transform: translate(0px,0px); } 100%{  -o-transform: translate(1000px,1000px); }}
-@keyframes translatecomets{ 0% {-webkit-transform: translate(0px,0px);-moz-transform: translate(0px,0px);-ms-transform: translate(0px,0px);transform: translate(0px,0px); } 100%{-webkit-transform: translate(1000px,1000px);-moz-transform: translate(1000px,1000px);-ms-transform: translate(1000px,1000px);transform: translate(1000px,1000px); };
+@-webkit-keyframes translatecomets1{ 0% {  -webkit-transform: translate(-4000px,5000px); } 100%{  -webkit-transform: translate(3000px,-2000px); }}
+@-moz-keyframes translatecomets1{ 0% {  -moz-transform: translate(-4000px,5000px); } 100%{  -moz-transform: translate(3000px,-2000px); }}
+@-o-keyframes translatecomets1{ 0% {  -o-transform: translate(-4000px,5000px); } 100%{  -o-transform: translate(3000px,-2000px); }}
+@keyframes translatecomets1{ 0% {-webkit-transform: translate(-4000px,5000px);-moz-transform: translate(-4000px,5000px);-ms-transform: translate(-4000px,5000px);transform: translate(-4000px,5000px); } 100%{-webkit-transform: translate(3000px,-2000px);-moz-transform: translate(3000px,-2000px);-ms-transform: translate(3000px,-2000px);transform: translate(3000px,-2000px); };
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes translatecomets2{ 0% {  -webkit-transform: translate(-2500px,3000px); } 100%{  -webkit-transform: translate(2500px,-2000px); }}
+@-moz-keyframes translatecomets2{ 0% {  -moz-transform: translate(-2500px,3000px); } 100%{  -moz-transform: translate(2500px,-2000px); }}
+@-o-keyframes translatecomets2{ 0% {  -o-transform: translate(-2500px,3000px); } 100%{  -o-transform: translate(2500px,-2000px); }}
+@keyframes translatecomets2{ 0% {-webkit-transform: translate(-2500px,3000px);-moz-transform: translate(-2500px,3000px);-ms-transform: translate(-2500px,3000px);transform: translate(-2500px,3000px); } 100%{-webkit-transform: translate(2500px,-2000px);-moz-transform: translate(2500px,-2000px);-ms-transform: translate(2500px,-2000px);transform: translate(2500px,-2000px); };
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes translatecomets3{ 0% {  -webkit-transform: translate(6000px,3000px); } 100%{  -webkit-transform: translate(-4000px,-2000px); }}
+@-moz-keyframes translatecomets3{ 0% {  -moz-transform: translate(6000px,3000px); } 100%{  -moz-transform: translate(-4000px,-2000px); }}
+@-o-keyframes translatecomets3{ 0% {  -o-transform: translate(6000px,3000px); } 100%{  -o-transform: translate(-4000px,-2000px); }}
+@keyframes translatecomets3{ 0% {-webkit-transform: translate(6000px,3000px);-moz-transform: translate(6000px,3000px);-ms-transform: translate(6000px,3000px);transform: translate(6000px,3000px); } 100%{-webkit-transform: translate(-4000px,-2000px);-moz-transform: translate(-4000px,-2000px);-ms-transform: translate(-4000px,-2000px);transform: translate(-4000px,-2000px); };
 }
 @font-face {
   font-family: 'Wohlig';
@@ -48,6 +62,7 @@ body a:hover {
 }
 .section .logo img {
   width: 260px;
+  z-index: 999;
 }
 .section .sun {
   position: absolute;
@@ -56,6 +71,8 @@ body a:hover {
 }
 .section .sun .menuimage img {
   width: 190px;
+  z-index: 99999;
+  position: relative;
 }
 .section .moon {
   position: absolute;
@@ -64,6 +81,8 @@ body a:hover {
 }
 .section .moon .menuimage img {
   width: 100px;
+  z-index: 99999;
+  position: relative;
 }
 .section .rocket {
   position: absolute;
@@ -73,6 +92,7 @@ body a:hover {
 }
 .section .rocket .menuimage img {
   height: 130px;
+  z-index: 999;
 }
 .section .satelite {
   position: absolute;
@@ -81,6 +101,7 @@ body a:hover {
 }
 .section .satelite .menuimage img {
   width: 125px;
+  z-index: 999;
 }
 .section .saucer {
   position: absolute;
@@ -89,6 +110,8 @@ body a:hover {
 }
 .section .saucer .menuimage img {
   width: 150px;
+  z-index: 9999;
+  position: relative;
 }
 .section .saturn {
   position: absolute;
@@ -97,6 +120,7 @@ body a:hover {
 }
 .section .saturn .menuimage img {
   width: 150px;
+  z-index: 999;
 }
 .section .menuTop {
   cursor: pointer;
@@ -127,7 +151,7 @@ body a:hover {
 .section .social .icon {
   position: relative;
   right: 0;
-  width: 114px;
+  width: 120px;
   height: 80px;
 }
 .section .social .icon img {
@@ -149,18 +173,177 @@ body a:hover {
   right: 44px;
   cursor: pointer;
 }
-.section .comets {
-  -webkit-animation: translatesocial 120s ease 0s infinite alternate;
-  -moz-animation: translatesocial 120s ease 0s infinite alternate;
-  -o-animation: translatesocial 120s ease 0s infinite alternate;
-  animation: translatesocial 120s ease 0s infinite alternate;
+.section .comets1 {
+  -webkit-animation: translatecomets1 40s linear 0s infinite normal;
+  -moz-animation: translatecomets1 40s linear 0s infinite normal;
+  -o-animation: translatecomets1 40s linear 0s infinite normal;
+  animation: translatecomets1 40s linear 0s infinite normal;
+}
+.section .comets1 img {
+  zoom: 0.5;
+  z-index: -99;
+  position: relative;
+}
+.section .comets2 {
+  -webkit-animation: translatecomets2 60s linear 7s infinite normal;
+  -moz-animation: translatecomets2 60s linear 7s infinite normal;
+  -o-animation: translatecomets2 60s linear 7s infinite normal;
+  animation: translatecomets2 60s linear 7s infinite normal;
+  -webkit-transform: translateX(-1000px);
+  -moz-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
+  -o-transform: translateX(-1000px);
+  transform: translateX(-1000px);
+}
+.section .comets2 img {
+  zoom: 0.4;
+  z-index: -99;
+  position: relative;
+}
+.section .comets3 {
+  -webkit-animation: translatecomets3 50s linear 20s infinite normal;
+  -moz-animation: translatecomets3 50s linear 20s infinite normal;
+  -o-animation: translatecomets3 50s linear 20s infinite normal;
+  animation: translatecomets3 50s linear 20s infinite normal;
+  -webkit-transform: translateX(-1000px);
+  -moz-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
+  -o-transform: translateX(-1000px);
+  transform: translateX(-1000px);
+}
+.section .comets3 img {
+  -webkit-transform: rotate(255deg);
+  -moz-transform: rotate(255deg);
+  -ms-transform: rotate(255deg);
+  -o-transform: rotate(255deg);
+  transform: rotate(255deg);
+  -webkit-animation: rotate 255deg linear 0s infinite normal;
+  -moz-animation: rotate 255deg linear 0s infinite normal;
+  -o-animation: rotate 255deg linear 0s infinite normal;
+  animation: rotate 255deg linear 0s infinite normal;
+  zoom: 0.3;
+  z-index: -99;
+  position: relative;
 }
 .head {
   float: right;
   color: #fff;
   padding-right: 25px;
   padding-top: 20px;
-  font-family: 'merge';
+  font-family: 'Wohlig';
+}
+.backback {
+  background: url('http://localhost/EthanHunt/img/background/form_bak.png') no-repeat;
+  height: 275px;
+  width: 300px;
+  position: absolute;
+  bottom: 36%;
+  left: 51%;
+  transform: translateX(-50%);
+  background-size: contain;
+  z-index: 0;
+}
+.backfront {
+  background: url('http://localhost/EthanHunt/img/background/form_front.png') no-repeat;
+  height: 320px;
+  width: 300px;
+  position: absolute;
+  bottom: 52%;
+  left: 52%;
+  transform: translateX(-50%);
+  background-size: contain;
+  z-index: 1;
+}
+.rock img {
+  width: 600px;
+}
+.rock {
+  text-align: center;
+}
+.aliens {
+  position: absolute;
+  bottom: 165px;
+  left: 52%;
+  transform: translatex(-50%);
+  z-index: 1;
+}
+.rock {
+  position: absolute;
+  bottom: 50px;
+  z-index: 0;
+  left: 0;
+  right: 0;
+}
+img.alien1 {
+  height: 150px;
+}
+img.alien2 {
+  height: 100px;
+  padding: 0px 25px;
+}
+img.alien3 {
+  height: 190px;
+  padding-left: 60px;
+}
+.form {
+  padding: 0px 70px 20px 25px;
+}
+.form input {
+  width: 100%;
+  margin: 0 0 5px 0;
+  height: 23px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px;
+  border: 1px solid #ddd;
+  padding-left: 5px;
+  font-family: "Merge";
+}
+.full-form {
+  padding: 25px 20px 0px 20px;
+}
+.form textarea {
+  width: 98%;
+  border: 1px solid #ddd;
+  padding: 5px;
+  height: 50px;
+  border-radius: 5px;
+  font-family: "Merge";
+  resize: none;
+}
+p.text-color {
+  font-size: 11px;
+  color: #AFAFAF;
+  padding: 0px;
+  font-family: "Merge";
+  line-height: 15px;
+  margin: 5px;
+}
+input.button {
+  background: #E61C24;
+  color: #fff;
+  padding: 0px 0;
+  height: 33px;
+  width: 90px;
+  float: right;
+  margin-top: 10px;
+  font-family: "Merge";
+  cursor: pointer;
+}
+.text-feedback {
+  width: 88%;
+  padding: 0px 10px 8px;
+}
+input:focus {
+  outline: none;
+}
+textarea:focus {
+  outline: none;
+}
+.blurHome {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
 }
 .footer {
   position: absolute;
