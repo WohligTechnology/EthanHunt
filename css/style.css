@@ -136,8 +136,14 @@ body a:hover {
   bottom: 22%;
 }
 .section .saturn .menuimage img {
-  width: 150px;
+  width: 120px;
   z-index: 9;
+}
+.section .saturn .menuimage img.image2 {
+  width: 313px;
+  position: absolute;
+  top: 23px;
+  left: -97px;
 }
 .section .menuTop {
   cursor: pointer;

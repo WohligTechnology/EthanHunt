@@ -139,6 +139,12 @@ body a:hover {
   width: 150px;
   z-index: 9;
 }
+.section .saturn .menuimage img.image2 {
+  width: 313px;
+  position: absolute;
+  top: 23px;
+  left: -97px;
+}
 .section .menuTop {
   cursor: pointer;
   position: relative;
@@ -408,8 +414,24 @@ textarea:focus {
 .googlemap {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 17%;
   transform: translateY(-50%);
+}
+.reachss .astro {
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  -webkit-transition: all 8s ease;
+  -moz-transition: all 8s ease;
+  -o-transition: all 8s ease;
+  transition: all 8s ease;
+  -webkit-animation: translateastro 2s ease-in-out 0s infinite alternate;
+  -moz-animation: translateastro 2s ease-in-out 0s infinite alternate;
+  -o-animation: translateastro 2s ease-in-out 0s infinite alternate;
+  animation: translateastro 2s ease-in-out 0s infinite alternate;
+}
+.reachss .astro img {
+  width: 140px;
 }
 .footer {
   position: absolute;
