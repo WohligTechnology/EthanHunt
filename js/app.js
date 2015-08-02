@@ -51,7 +51,8 @@ wohligapp.directive('labelHover', function($document) {
             $comet.css("left", $(window).width() * -1 + "px");
 
             $menuImage.hover(function() {
-                $comet.css("left", $(window).width() * -1 + "px");
+                $comet.stop();
+                $comet.stop().css("left", $(window).width() * -1 + "px");
                 $comet.stop().animate({
                     left: "50%"
                 }, 600, function() {
