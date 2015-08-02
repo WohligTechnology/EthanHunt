@@ -27,6 +27,13 @@ lesshat-selector {
 @-o-keyframes translatecomets3{ 0% {  -o-transform: translate(6000px,3000px); } 100%{  -o-transform: translate(-4000px,-2000px); }}
 @keyframes translatecomets3{ 0% {-webkit-transform: translate(6000px,3000px);-moz-transform: translate(6000px,3000px);-ms-transform: translate(6000px,3000px);transform: translate(6000px,3000px); } 100%{-webkit-transform: translate(-4000px,-2000px);-moz-transform: translate(-4000px,-2000px);-ms-transform: translate(-4000px,-2000px);transform: translate(-4000px,-2000px); };
 }
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes translateastro{ 0% {  -webkit-transform: translate(0px,5px); } 100%{  -webkit-transform: translate(0px,-5px); }}
+@-moz-keyframes translateastro{ 0% {  -moz-transform: translate(0px,5px); } 100%{  -moz-transform: translate(0px,-5px); }}
+@-o-keyframes translateastro{ 0% {  -o-transform: translate(0px,5px); } 100%{  -o-transform: translate(0px,-5px); }}
+@keyframes translateastro{ 0% {-webkit-transform: translate(0px,5px);-moz-transform: translate(0px,5px);-ms-transform: translate(0px,5px);transform: translate(0px,5px); } 100%{-webkit-transform: translate(0px,-5px);-moz-transform: translate(0px,-5px);-ms-transform: translate(0px,-5px);transform: translate(0px,-5px); };
+}
 @font-face {
   font-family: 'Wohlig';
   src: url('../fonts/wohlig.eot');
@@ -59,10 +66,14 @@ body a:hover {
   position: absolute;
   top: 4%;
   left: 10%;
+  cursor: pointer;
 }
 .section .logo img {
   width: 260px;
   z-index: 9;
+}
+.section .logo:hover .astro {
+  left: -156px;
 }
 .section .sun {
   position: absolute;
@@ -230,6 +241,16 @@ body a:hover {
 }
 .section .astro {
   position: absolute;
+  top: 100px;
+  left: -288px;
+  -webkit-transition: all 8s ease;
+  -moz-transition: all 8s ease;
+  -o-transition: all 8s ease;
+  transition: all 8s ease;
+  -webkit-animation: translateastro 2s ease-in-out 0s infinite alternate;
+  -moz-animation: translateastro 2s ease-in-out 0s infinite alternate;
+  -o-animation: translateastro 2s ease-in-out 0s infinite alternate;
+  animation: translateastro 2s ease-in-out 0s infinite alternate;
 }
 .section .astro img {
   width: 140px;
