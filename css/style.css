@@ -228,6 +228,12 @@ body a:hover {
   z-index: -99;
   position: relative;
 }
+.section .astro {
+  position: absolute;
+}
+.section .astro img {
+  width: 140px;
+}
 .head {
   float: right;
   color: #fff;
