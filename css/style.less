@@ -77,7 +77,7 @@
             position: absolute;
             left: 50%;
             top: 40%;
-            transform: translate(-50%, -50%);
+            .transform(translate(-50%, -50%));
             .menuimage {
                 img {
                     height: 130px;
@@ -211,6 +211,12 @@
                 width: 140px;
             }
         }
+        .enquiry {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            .translateX(-50%);
+        }
     }
     //sohan
     .head {
@@ -225,7 +231,7 @@
         }
     }
     .backback {
-        background-image: url('http://localhost/EthanHunt/img/background/form_bak.png');
+        background-image: url('img/background/form_bak.png');
         background-repeat: no-repeat;
         height: 275px;
         width: 300px;
@@ -237,7 +243,7 @@
         z-index: 0;
     }
     .backfront {
-        background-image: url('http://localhost/EthanHunt/img/background/form_front.png');
+        background-image: url('img/background/form_front.png');
         background-repeat: no-repeat;
         height: 320px;
         width: 300px;
@@ -353,7 +359,7 @@
         position: absolute;
         left: 50%;
         top: 20%;
-        transform: translate(-50%, -50%);
+        .transform(translate(-50%, -50%));
         .menuimage {
             img {
                 height: 130px;
@@ -365,7 +371,7 @@
         position: absolute;
         top: 50%;
         right: 17%;
-        transform: translateY(-50%);
+        .transform(translateY(-50%));
     }
     .reachss {
         .astro {
