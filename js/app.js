@@ -43,24 +43,26 @@ wohligapp.directive('labelHover', function($document) {
             var $menuImage = $element.children(".menuimage");
             var $comet = $element.children(".comet");
 
+            $comet.css("left", $(window).width() * -1 + "px");
 
             $menuImage.hover(function() {
-                $comet.addClass("notransition");
-                $comet.removeClass("active");
-                $comet.removeClass("leave");
-                $comet.removeClass("notransition");
-                $comet.addClass("active");
-            }, function() {
-                $comet.addClass("leave");
-                setTimeout(function() {
-                    $comet.addClass("notransition");
-                    $comet.removeClass("active");
-                    $comet.removeClass("leave");
-                    setTimeout(function() {
-                        $comet.removeClass("notransition");
-                    }, 100);
-                }, 400);
+                $comet.css("left", $(window).width() * -1 + "px");
+                $comet.stop();
+                $comet.animate({
+                    opacity: 1,
+                    left: "50%"
+                }, 500, function() {
 
+                });
+
+            }, function() {
+
+                $comet.animate({
+                    opacity: 1,
+                    left: $(window).width()
+                }, 500, function() {
+
+                });
             });
 
 
