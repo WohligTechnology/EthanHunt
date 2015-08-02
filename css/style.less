@@ -1,7 +1,8 @@
     @import "../bower_components/lesshat/build/lesshat.less";
-
-.keyframes(~'translatesocial, 0% {  transform: translate(90%); } 100%{  transform: translate(30%); }');
-
+    .keyframes(~'translatesocial, 0% {  transform: translate(90%); } 100%{  transform: translate(30%); }');
+    .keyframes(~'translatecomets1, 0% {  transform: translate(-4000px,5000px); } 100%{  transform: translate(3000px,-2000px); }');
+    .keyframes(~'translatecomets2, 0% {  transform: translate(-2500px,3000px); } 100%{  transform: translate(2500px,-2000px); }');
+    .keyframes(~'translatecomets3, 0% {  transform: translate(6000px,3000px); } 100%{  transform: translate(-4000px,-2000px); }');
     @font-face {
         font-family: 'Wohlig';
         src: url('../fonts/wohlig.eot');
@@ -18,7 +19,6 @@
     }
     
     body {
-        font-family: 'Merge';
         margin: 0;
         //        .blur(10px);
         .background-image(linear-gradient(to bottom, #000305 0%, #011B2A 100%));
@@ -144,6 +144,26 @@
                 }
             }
         }
+        .comets1 {
+            .animation(translatecomets1 40s linear 0s infinite normal);
+            z-index: -1;
+            .scale(0.4);
+        }
+        .comets2 {
+            .animation(translatecomets2 60s linear 7s infinite normal);
+            z-index: -1;
+            
+            .transform(translateX(-1000px) scale(0.5));
+        }
+        .comets3 {
+            .animation(translatecomets3 50s linear 20s infinite normal);
+            z-index: -1;
+            .transform(translateX(-1000px) scale(0.3));
+           
+            img {
+                .rotate(255deg);
+            }
+        }
     }
     
     //sohan
@@ -152,6 +172,7 @@
         color: #fff;
         padding-right: 25px;
         padding-top: 20px;
+<<<<<<< HEAD
         font-family: 'Wohlig';
     }
     .backback {
@@ -264,3 +285,7 @@
 .blurHome {
     .blur(10px);
 }
+=======
+        font-family: 'merge';
+    }
+>>>>>>> origin/master
