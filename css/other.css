@@ -104,7 +104,7 @@ body a:hover {
 .section .rocket {
   position: absolute;
   left: 50%;
-  top: 48%;
+  top: 40%;
   transform: translate(-50%, -50%);
 }
 .section .rocket .menuimage img {
@@ -274,10 +274,13 @@ body a:hover {
 .head {
   float: right;
   color: #fff;
-  padding-right: 25px;
-  padding-top: 20px;
   font-family: 'Wohlig';
   text-transform: lowercase;
+  position: relative;
+  z-index: 99;
+}
+.head h1 {
+  margin: 40px;
 }
 .backback {
   background: url('http://localhost/EthanHunt/img/background/form_bak.png') no-repeat;
@@ -311,7 +314,11 @@ body a:hover {
   position: absolute;
   bottom: 165px;
   left: 52%;
-  transform: translatex(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 1;
 }
 .rock {
@@ -394,9 +401,10 @@ textarea:focus {
 }
 .back-nav {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 0px;
+  left: 0px;
   z-index: 9;
+  margin: 40px;
 }
 .back-nav img {
   width: 40px;
@@ -463,7 +471,15 @@ textarea:focus {
 .comet img {
   width: 111px;
   position: relative;
+  -webkit-transform: rotate(29deg);
+  -moz-transform: rotate(29deg);
+  -o-transform: rotate(29deg);
+  -ms-transform: rotate(29deg);
   transform: rotate(29deg);
+  -webkit-animation: rotate 29deg linear 0s infinite normal;
+  -moz-animation: rotate 29deg linear 0s infinite normal;
+  -o-animation: rotate 29deg linear 0s infinite normal;
+  animation: rotate 29deg linear 0s infinite normal;
   z-index: 9;
 }
 .comet .cometInner {

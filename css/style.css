@@ -49,6 +49,7 @@ lesshat-selector {
 }
 body {
   margin: 0;
+  min-width: 1000px;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDAzMDUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAxMWIyYSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
   background-image: -webkit-linear-gradient(top, #000305 0%, #011b2a 100%);
   background-image: -moz-linear-gradient(top, #000305 0%, #011b2a 100%);
@@ -104,7 +105,7 @@ body a:hover {
 .section .rocket {
   position: absolute;
   left: 50%;
-  top: 48%;
+  top: 40%;
   transform: translate(-50%, -50%);
 }
 .section .rocket .menuimage img {
@@ -285,6 +286,10 @@ body a:hover {
   position: absolute;
   bottom: 36%;
   left: 51%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   background-size: contain;
   z-index: 0;
@@ -296,6 +301,10 @@ body a:hover {
   position: absolute;
   bottom: 52%;
   left: 52%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   background-size: contain;
   z-index: 1;
@@ -310,7 +319,11 @@ body a:hover {
   position: absolute;
   bottom: 165px;
   left: 52%;
-  transform: translatex(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 1;
 }
 .rock {
