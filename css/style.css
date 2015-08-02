@@ -62,7 +62,7 @@ body a:hover {
 }
 .section .logo img {
   width: 260px;
-  z-index: 999;
+  z-index: 9;
 }
 .section .sun {
   position: absolute;
@@ -71,7 +71,7 @@ body a:hover {
 }
 .section .sun .menuimage img {
   width: 190px;
-  z-index: 99999;
+  z-index: 9;
   position: relative;
 }
 .section .moon {
@@ -81,7 +81,7 @@ body a:hover {
 }
 .section .moon .menuimage img {
   width: 100px;
-  z-index: 99999;
+  z-index: 99;
   position: relative;
 }
 .section .rocket {
@@ -92,7 +92,7 @@ body a:hover {
 }
 .section .rocket .menuimage img {
   height: 130px;
-  z-index: 999;
+  z-index: 9;
 }
 .section .satelite {
   position: absolute;
@@ -101,7 +101,7 @@ body a:hover {
 }
 .section .satelite .menuimage img {
   width: 125px;
-  z-index: 999;
+  z-index: 9;
 }
 .section .saucer {
   position: absolute;
@@ -110,7 +110,7 @@ body a:hover {
 }
 .section .saucer .menuimage img {
   width: 150px;
-  z-index: 9999;
+  z-index: 9;
   position: relative;
 }
 .section .saturn {
@@ -120,7 +120,7 @@ body a:hover {
 }
 .section .saturn .menuimage img {
   width: 150px;
-  z-index: 999;
+  z-index: 9;
 }
 .section .menuTop {
   cursor: pointer;
@@ -147,31 +147,38 @@ body a:hover {
   -moz-animation: translatesocial 120s ease 0s infinite alternate;
   -o-animation: translatesocial 120s ease 0s infinite alternate;
   animation: translatesocial 120s ease 0s infinite alternate;
+  z-index: 9;
 }
 .section .social .icon {
   position: relative;
   right: 0;
   width: 120px;
   height: 80px;
+  z-index: 9;
 }
 .section .social .icon img {
   width: 35px;
+  position: relative;
+  z-index: 9;
 }
 .section .social .icon .facebook {
   position: relative;
   top: 0;
   cursor: pointer;
+  z-index: 9;
 }
 .section .social .icon .twitter {
   position: relative;
   left: 30px;
   cursor: pointer;
+  z-index: 9;
 }
 .section .social .icon .tumblr {
   position: relative;
   top: 42px;
   right: 44px;
   cursor: pointer;
+  z-index: 9;
 }
 .section .comets1 {
   -webkit-animation: translatecomets1 40s linear 0s infinite normal;
@@ -340,4 +347,14 @@ textarea:focus {
   -moz-filter: blur(10px);
   -ms-filter: blur(10px);
   filter: blur(10px);
+}
+.back-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9;
+}
+.back-nav img {
+  width: 40px;
+  cursor: pointer;
 }
