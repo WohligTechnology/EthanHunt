@@ -38,6 +38,7 @@
             left: 10%;
             img {
                 width: 260px;
+                z-index: 999;
             }
         }
         .sun {
@@ -47,6 +48,8 @@
             .menuimage {
                 img {
                     width: 190px;
+                    z-index: 99999;
+                     position: relative;
                 }
             }
         }
@@ -57,6 +60,8 @@
             .menuimage {
                 img {
                     width: 100px;
+                    z-index: 99999;
+                     position: relative;
                 }
             }
         }
@@ -68,6 +73,7 @@
             .menuimage {
                 img {
                     height: 130px;
+                    z-index: 999;
                 }
             }
         }
@@ -78,6 +84,7 @@
             .menuimage {
                 img {
                     width: 125px;
+                    z-index: 999;
                 }
             }
         }
@@ -88,6 +95,8 @@
             .menuimage {
                 img {
                     width: 150px;
+                    z-index: 9999;
+                     position: relative;
                 }
             }
         }
@@ -99,6 +108,7 @@
             .menuimage {
                 img {
                     width: 150px;
+                    z-index: 999;
                 }
             }
         }
@@ -146,22 +156,30 @@
         }
         .comets1 {
             .animation(translatecomets1 40s linear 0s infinite normal);
-            z-index: -1;
-            .scale(0.4);
+            //            .scale(0.2);
+            img {
+                zoom: 0.5;
+                z-index: -99;
+                position: relative;
+            }
         }
         .comets2 {
             .animation(translatecomets2 60s linear 7s infinite normal);
-            z-index: -1;
-            
-            .transform(translateX(-1000px) scale(0.5));
+            .transform(translateX(-1000px));
+            img {
+                zoom: 0.4;
+                z-index: -99;
+                position: relative;
+            }
         }
         .comets3 {
             .animation(translatecomets3 50s linear 20s infinite normal);
-            z-index: -1;
-            .transform(translateX(-1000px) scale(0.3));
-           
+            .transform(translateX(-1000px));
             img {
                 .rotate(255deg);
+                zoom: 0.3;
+                z-index: -99;
+                position: relative;
             }
         }
     }
@@ -172,9 +190,9 @@
         color: #fff;
         padding-right: 25px;
         padding-top: 20px;
-<<<<<<< HEAD
         font-family: 'Wohlig';
     }
+    
     .backback {
         background: url('http://localhost/EthanHunt/img/background/form_bak.png') no-repeat;
         height: 275px;
@@ -186,6 +204,7 @@
         background-size: contain;
         z-index: 0;
     }
+    
     .backfront {
         background: url('http://localhost/EthanHunt/img/background/form_front.png') no-repeat;
         height: 320px;
@@ -197,12 +216,15 @@
         background-size: contain;
         z-index: 1;
     }
+    
     .rock img {
         width: 600px;
     }
+    
     .rock {
         text-align: center;
     }
+    
     .aliens {
         position: absolute;
         bottom: 165px;
@@ -210,6 +232,7 @@
         transform: translatex(-50%);
         z-index: 1;
     }
+    
     .rock {
         position: absolute;
         bottom: 50px;
@@ -217,20 +240,25 @@
         left: 0;
         right: 0;
     }
+    
     img.alien1 {
         height: 150px;
     }
+    
     img.alien2 {
         height: 100px;
         padding: 0px 25px;
     }
+    
     img.alien3 {
         height: 190px;
         padding-left: 60px;
     }
+    
     .form {
         padding: 0px 70px 20px 25px;
     }
+    
     .form input {
         width: 100%;
         margin: 0 0 5px 0;
@@ -241,9 +269,11 @@
         padding-left: 5px;
         font-family: "Merge";
     }
+    
     .full-form {
         padding: 25px 20px 0px 20px;
     }
+    
     .form textarea {
         width: 98%;
         border: 1px solid #ddd;
@@ -253,6 +283,7 @@
         font-family: "Merge";
         resize: none;
     }
+    
     p.text-color {
         font-size: 11px;
         color: #AFAFAF;
@@ -261,6 +292,7 @@
         line-height: 15px;
         margin: 5px;
     }
+    
     input.button {
         background: #E61C24;
         color: #fff;
@@ -272,20 +304,21 @@
         font-family: "Merge";
         cursor: pointer;
     }
+    
     .text-feedback {
         width: 88%;
         padding: 0px 10px 8px;
     }
+    
     input:focus {
         outline: none;
     }
+    
     textarea:focus {
         outline: none;
     }
-.blurHome {
-    .blur(10px);
-}
-=======
-        font-family: 'merge';
+    
+    .blurHome {
+        .blur(10px);
+        //        .font-family: 'merge';
     }
->>>>>>> origin/master
