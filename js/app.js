@@ -24,6 +24,11 @@ wohligapp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: "views/content/enquiry.html",
             controller: 'EnquiryCtrl'
         })
+        .state('wohlig.reachus', {
+            url: "/reachus",
+            templateUrl: "views/content/reachus.html",
+            controller: 'ReachusCtrl'
+        })
 
     $urlRouterProvider.otherwise("/wohlig/home");
 });
