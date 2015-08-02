@@ -8,6 +8,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
     $scope.template=TemplateService;
     $scope.template.init();
     $scope.template.contentClass=false;
+    $scope.template.menuheader="";
 })
 .controller('EnquiryCtrl', function($scope, TemplateService, NavigationService) {
     $scope.template=TemplateService;
