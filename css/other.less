@@ -1,5 +1,5 @@
 @import "style.less";
- .footer {
+.footer {
     position: absolute;
     bottom: 5px;
     right: 20px;
@@ -15,6 +15,7 @@
         color: #FF7676;
     }
 }
+
 .comet {
     position: absolute;
     left: 50%;
@@ -41,56 +42,173 @@
         text-transform: lowercase;
     }
 }
+
 .comet.active {
     margin-left: 0px;
 }
+
 .comet.active.leave {
     margin-left: 2000px;
 }
+
 .comet.notransition {
     .transition(none);
 }
+
 .keyframes(~'rotate, 0% {  transform: rotateZ(0deg); } 100%{  transform: rotateZ(360deg); }');
- .keyframes(~'sauser, 0% {  transform: rotateZ(-5deg); } 100%{  transform: rotateZ(5deg); }');
- .keyframes(~'rocket, 0% {  margin-top: 15px; } 100%{  margin-top:-15px; }');
- .rotate(@time) {
+.keyframes(~'sauser, 0% {  transform: rotateZ(-5deg); } 100%{  transform: rotateZ(5deg); }');
+.keyframes(~'rocket, 0% {  margin-top: 15px; } 100%{  margin-top:-15px; }');
+.rotate(@time) {
     .animation(rotate@time linear 0s infinite normal);
 }
+
 .rotate10 {
     .rotate(10s);
 }
+
 .rotate20 {
     .animation(rotate 20s linear 0s infinite reverse);
 }
+
 .rotate30 {
     .rotate(30s);
 }
+
 .rotate60 {
     .rotate(60s);
 }
+
 .rotate120 {
     .rotate(120s);
 }
+
 .rotate180 {
     .rotate(180s);
 }
+
 .animatedSauser {
     .animation(sauser 3s ease-in-out 0s infinite alternate);
 }
+
 .animatedRing {
     .animation(sauser 7s ease-in-out 0s infinite alternate-reverse);
 }
+
 .animatedRocket {
     .animation(rocket 4s ease-in-out 0s infinite alternate);
 }
+
 .stars.ng-scope {
     background: url(../img/background/stars.png);
     background-size: 160px;
 }
+
 .disableBackground {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     background: rgba(109, 190, 255, 0.17);
+}
+
+.disableBackgroundabt {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgb(252, 196, 0);
+    opacity: 0.9;
+}
+
+.abt {
+    .abtlogo {
+        position: absolute;
+        top: 4%;
+        right: 14%;
+        cursor: pointer;
+        img {
+            width: 260px;
+            z-index: 9;
+            align: right;
+        }
+        //        img.sun {
+        //            position: absolute;
+        //            width: 70px;
+        //            left: 57px;
+        //            top: 8px;
+        //        }
+    }
+    .abtcontent {
+        position: absolute;
+        top: 8%;
+        width: 50%;
+        left: 10%;
+        font-family: "Merge";
+        text-align: justify;
+        font-size: 14px;
+        line-height: 175%;
+        color: #3A3A3A;
+    }
+}
+
+.teamrock {
+    position: absolute;
+    top: 0px;
+    width: 38%;
+    .teamland {
+        position: relative;
+        left: 10%;
+        top:360px;
+        img {
+            width: 100%;
+        }
+    }
+    .teamarrival {
+        position: relative;
+        left: 45%;
+        top:200px;
+        img {
+            width: 27%;
+        }
+    }
+    .teamaliens {
+        .alienalls {
+            width: 50px;
+            position: relative;
+            bottom: 113px;
+            z-index: 9;
+        }
+        .alien11 {
+            left: 250px;
+            top:150px;
+        }
+        .alien22 {
+            left: 255px;
+            top:150px;
+        }
+        .alien33 {
+            left: 255px;
+            top:150px;
+            img {
+                position: relative;
+                width: 100px;
+                height: auto;
+                left: 0px;
+                bottom: 0;
+                z-index: 9;
+            }
+        }
+    }
+}
+
+.teamdata {
+    position: absolute;
+    top: 10%;
+    width: 50%;
+    left: 47%;
+    font-family: "Merge";
+    text-align: justify;
+    font-size: 14px;
+    line-height: 175%;
+    color: #EEEAEA;
 }

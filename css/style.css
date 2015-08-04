@@ -108,8 +108,8 @@ body a:hover {
   top: 40%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .section .rocket .menuimage img {
@@ -163,8 +163,8 @@ body a:hover {
 .section .menuTop .menuimage:hover {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 .section .social {
@@ -226,8 +226,8 @@ body a:hover {
   animation: translatecomets2 60s linear 7s infinite normal;
   -webkit-transform: translateX(-1000px);
   -moz-transform: translateX(-1000px);
-  -ms-transform: translateX(-1000px);
   -o-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
   transform: translateX(-1000px);
 }
 .section .comets2 img {
@@ -242,15 +242,15 @@ body a:hover {
   animation: translatecomets3 50s linear 20s infinite normal;
   -webkit-transform: translateX(-1000px);
   -moz-transform: translateX(-1000px);
-  -ms-transform: translateX(-1000px);
   -o-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
   transform: translateX(-1000px);
 }
 .section .comets3 img {
   -webkit-transform: rotate(255deg);
   -moz-transform: rotate(255deg);
-  -ms-transform: rotate(255deg);
   -o-transform: rotate(255deg);
+  -ms-transform: rotate(255deg);
   transform: rotate(255deg);
   zoom: 0.3;
   z-index: -99;
@@ -297,8 +297,8 @@ section.enquiry .enquiry .alienrocks .aliens {
   bottom: 0px;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 750px;
   z-index: 1;
@@ -384,8 +384,8 @@ section.enquiry .enquiry .alienrocks .rock {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 600px;
 }
@@ -438,8 +438,8 @@ section.enquiry .enquiry .alien3 img {
   top: 20%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .rockets .menuimage img {
@@ -452,8 +452,8 @@ section.enquiry .enquiry .alien3 img {
   right: 17%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .reachss .astro {

@@ -6,7 +6,7 @@ var wohligapp = angular.module('wohligapp', [
     'navigationservice'
 ]);
 
-wohligapp.config(function($stateProvider, $urlRouterProvider) {
+wohligapp.config(function ($stateProvider, $urlRouterProvider) {
     //Turn the spinner on or off
     $stateProvider
         .state('wohlig', {
@@ -29,17 +29,37 @@ wohligapp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: "views/content/reachus.html",
             controller: 'ReachusCtrl'
         })
+        .state('wohlig.about', {
+            url: "/about",
+            templateUrl: "views/content/about.html",
+            controller: 'AboutCtrl'
+        })
+        .state('wohlig.clients', {
+            url: "/clients",
+            templateUrl: "views/content/clients.html",
+            controller: 'ClientsCtrl'
+        })
+        .state('wohlig.portfolio', {
+            url: "/portfolio",
+            templateUrl: "views/content/portfolio.html",
+            controller: 'PortfolioCtrl'
+        })
+        .state('wohlig.team', {
+            url: "/team",
+            templateUrl: "views/content/team.html",
+            controller: 'TeamCtrl'
+        })
 
     $urlRouterProvider.otherwise("/wohlig/home");
 });
 
-wohligapp.directive('labelHover', function($document) {
+wohligapp.directive('labelHover', function ($document) {
     return {
         restrict: 'EA',
         replace: false,
         scope: {},
         templateUrl: "views/directive/comet.html",
-        link: function($scope, element, attr) {
+        link: function ($scope, element, attr) {
             $scope.menuimage = attr.menuImage;
             var realwidth = $(window).width();
             if (realwidth < 1000) {
@@ -58,18 +78,18 @@ wohligapp.directive('labelHover', function($document) {
 
             $comet.css("left", realwidth * -1 + "px");
 
-            $menuImage.hover(function() {
+            $menuImage.hover(function () {
                 $comet.stop();
                 $comet.stop().css("left", realwidth * -1 + "px");
                 $comet.stop().animate({
                     left: "50%"
-                }, 600, function() {
+                }, 600, function () {
 
                 });
-            }, function() {
+            }, function () {
                 $comet.animate({
                     left: realwidth
-                }, 600, function() {
+                }, 600, function () {
 
                 });
             });
