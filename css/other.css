@@ -742,3 +742,14 @@ lesshat-selector {
   line-height: 175%;
   color: #EEEAEA;
 }
+.enquiry .section .addresses {
+  position: absolute;
+  top: 30%;
+  width: 30%;
+  left: 20%;
+  font-family: "Merge";
+  text-align: justify;
+  font-size: 14px;
+  line-height: 175%;
+  color: #EEEAEA;
+}
