@@ -698,28 +698,32 @@ lesshat-selector {
 }
 .teamrock .teamarrival {
   position: relative;
-  left: 50%;
+  left: 45%;
   top: 200px;
 }
 .teamrock .teamarrival img {
-  width: 20%;
+  width: 27%;
 }
-.teamrock .teamalien .alienall {
-  width: 50px;
+.teamrock .teamaliens {
   position: absolute;
+  left: 226px;
+  top: 163%;
+}
+.teamrock .teamaliens .alienalls {
+  width: 50px;
   bottom: 113px;
   z-index: 9;
 }
-.teamrock .teamalien .alien1 {
-  left: 250px;
+.teamrock .teamaliens .alien11 {
+  top: 150px;
 }
-.teamrock .teamalien .alien2 {
-  left: 300px;
+.teamrock .teamaliens .alien22 {
+  top: 150px;
 }
-.teamrock .teamalien .alien3 {
-  left: 350px;
+.teamrock .teamaliens .alien33 {
+  top: 150px;
 }
-.teamrock .teamalien .alien3 img {
+.teamrock .teamaliens .alien33 img {
   position: relative;
   width: 100px;
   height: auto;
