@@ -4,6 +4,7 @@
     .keyframes(~'translatecomets2, 0% {  transform: translate(-2500px,3000px); } 100%{  transform: translate(2500px,-2000px); }');
     .keyframes(~'translatecomets3, 0% {  transform: translate(6000px,3000px); } 100%{  transform: translate(-4000px,-2000px); }');
     .keyframes(~'translateastro, 0% {  transform: translate(0px,5px); } 100%{  transform: translate(0px,-5px); }');
+    .keyframes(~'translateateam, 0% {  transform: translate(-150%); } 100%{  transform: translate(0%); }');
     @font-face {
         font-family: 'Wohlig';
         src: url('../fonts/wohlig.eot');
@@ -409,3 +410,61 @@
             }
         }
     }
+    
+    .teamrock {
+        position: absolute;
+        top: 0px;
+        width: 38%;
+        .teamland {
+            position: relative;
+            left: 10%;
+            top: 360px;
+            img {
+                width: 100%;
+            }
+        }
+        .teamarrival {
+            position: relative;
+            left: 38%;
+            top: 115px;
+            img {
+                width: 40%;
+                .animation(translateateam 20s ease 0s alternate);
+            }
+        }
+        .teamaliens {
+            position: absolute;
+            left: 226px;
+            top: 156%;
+            .alienalls {
+                width: 50px;
+                bottom: 113px;
+                z-index: 9;
+            }
+            .alien11 {
+                top: 150px;
+            }
+            .alien22 {
+                top: 150px;
+            }
+            .alien33 {
+                top: 150px;
+                img {
+                    position: relative;
+                    width: 100px;
+                    height: auto;
+                    left: 0px;
+                    bottom: 0;
+                    z-index: 9;
+                }
+            }
+        }
+    }
+.client-alien {
+       position: absolute;
+    bottom: 15%;
+    right: 15%;
+    img{
+       width: 60%; 
+    }
+}

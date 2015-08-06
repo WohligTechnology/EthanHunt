@@ -58,6 +58,7 @@
 .keyframes(~'rotate, 0% {  transform: rotateZ(0deg); } 100%{  transform: rotateZ(360deg); }');
 .keyframes(~'sauser, 0% {  transform: rotateZ(-5deg); } 100%{  transform: rotateZ(5deg); }');
 .keyframes(~'rocket, 0% {  margin-top: 15px; } 100%{  margin-top:-15px; }');
+
 .rotate(@time) {
     .animation(rotate@time linear 0s infinite normal);
 }
@@ -151,54 +152,7 @@
     }
 }
 
-.teamrock {
-    position: absolute;
-    top: 0px;
-    width: 38%;
-    .teamland {
-        position: relative;
-        left: 10%;
-        top: 360px;
-        img {
-            width: 100%;
-        }
-    }
-    .teamarrival {
-        position: relative;
-        left: 45%;
-        top: 200px;
-        img {
-            width: 27%;
-        }
-    }
-    .teamaliens {
-        position: absolute;
-        left: 226px;
-        top: 163%;
-        .alienalls {
-            width: 50px;
-            bottom: 113px;
-            z-index: 9;
-        }
-        .alien11 {
-            top: 150px;
-        }
-        .alien22 {
-            top: 150px;
-        }
-        .alien33 {
-            top: 150px;
-            img {
-                position: relative;
-                width: 100px;
-                height: auto;
-                left: 0px;
-                bottom: 0;
-                z-index: 9;
-            }
-        }
-    }
-}
+
 
 .teamdata {
     position: absolute;
