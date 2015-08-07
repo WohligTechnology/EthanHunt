@@ -35,6 +35,13 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         $scope.template = TemplateService;
         $scope.template.init();
         $scope.template.menuheader = "Clients";
+    
+    $scope.slides = [
+				'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+				'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+				'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+				'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+			];
 
     })
     .controller('PortfolioCtrl', function ($scope, TemplateService, NavigationService) {

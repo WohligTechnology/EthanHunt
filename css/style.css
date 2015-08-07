@@ -539,3 +539,64 @@ section.enquiry .enquiry .alien3 img {
 .client-alien img {
   width: 60%;
 }
+.screen {
+  position: relative;
+  right: 178px;
+  width: 100%;
+  bottom: 166px;
+}
+.screen img {
+  top: 0;
+  position: relative;
+}
+.flexslider-container {
+  width: 50%;
+  margin: 10px auto;
+}
+.slider {
+  position: absolute;
+  top: -32%;
+  width: 50%;
+  right: 34%;
+  height: 338px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.slider ul {
+  display: block;
+  list-style: none;
+}
+.slider ul li {
+  display: inline-block;
+  height: 103px;
+}
+.slider::-webkit-scrollbar-track {
+  background-color: grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+.slider::-webkit-scrollbar {
+  width: 6px;
+  -webkit-border-radius: 26px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 26px;
+  -moz-background-clip: padding;
+  border-radius: 26px;
+  background-clip: padding-box;
+}
+.slider::-webkit-scrollbar-thumb {
+  background-color: #C6C6C6;
+  height: 8px;
+  -webkit-border-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 20px;
+  -moz-background-clip: padding;
+  border-radius: 20px;
+  background-clip: padding-box;
+}
