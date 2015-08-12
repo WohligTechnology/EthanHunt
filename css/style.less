@@ -23,7 +23,8 @@
     body {
         margin: 0;
         min-width: 1000px;
-        .background-image(linear-gradient(to bottom, #000305 0%, #011B2A 100%));
+        .background-image(linear-gradient(to bottom,#ACDEFF 20%,#003C5F 100%));
+        
         overflow: hidden;
         a {
             text-decoration: none;
@@ -181,8 +182,9 @@
             .animation(translatecomets1 40s linear 0s infinite normal);
             //            .scale(0.2);
             img {
-                zoom: 0.5;
-                z-index: -99;
+                .rotate(-5deg);
+                zoom: 0.25;
+                z-index: 1;
                 position: relative;
             }
         }
@@ -190,8 +192,9 @@
             .animation(translatecomets2 60s linear 7s infinite normal);
             .transform(translateX(-1000px));
             img {
-                zoom: 0.4;
-                z-index: -99;
+                .rotate(-5deg);
+                zoom: 0.28;
+                z-index: 1;
                 position: relative;
             }
         }
@@ -199,9 +202,9 @@
             .animation(translatecomets3 50s linear 20s infinite normal);
             .transform(translateX(-1000px));
             img {
-                .rotate(255deg);
+                .rotate(245deg);
                 zoom: 0.3;
-                z-index: -99;
+                z-index: 1;
                 position: relative;
             }
         }
