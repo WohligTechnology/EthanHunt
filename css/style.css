@@ -682,6 +682,18 @@ section.enquiry .enquiry .alien3 img {
 .clients2 {
   position: absolute;
   text-align: center;
-  top: 25%;
+  top: 38%;
   left: 15%;
+}
+.clients3 {
+  position: absolute;
+  text-align: center;
+  top: 27%;
+  left: 36%;
+}
+.clients4 {
+  position: absolute;
+  text-align: center;
+  top: 63%;
+  left: 10%;
 }
