@@ -46,7 +46,7 @@ module.exports = function (grunt) {
             },
             frontend: {
                 files: {
-                    './w/w.js': './w/w.min.js',
+                    './w/w.min.js': ['./w/w.js']
                 }
             }
         },
