@@ -12,7 +12,7 @@ module.exports = function (grunt) {
                     compress: true,
                 },
                 files: {
-                    './css/other.css': './less/other.less'
+                    './w/w.css': './less/other.less'
                 }
             }
         },
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                     './js/templateservice.js',
                     './js/navigation.js'
                 ],
-                dest: './js/site.js',
+                dest: './w/w.js',
             }
         },
         uglify: {
@@ -46,7 +46,7 @@ module.exports = function (grunt) {
             },
             frontend: {
                 files: {
-                    './js/site.js': './js/site.min.js',
+                    './w/w.js': './w/w.min.js',
                 }
             }
         },
@@ -57,6 +57,13 @@ module.exports = function (grunt) {
                 options: {
                     nospawn: true
                 }
+            },
+            js: {
+                files: ['js/*.js'], // which files to watch
+                tasks: ['concat'],
+                options: {
+                    nospawn: true
+                }
             }
         }
     });
@@ -64,5 +71,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.registerTask('default', ['less']);
+    grunt.registerTask('default', ['watch']);
 };

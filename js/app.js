@@ -5,7 +5,6 @@ var wohligapp = angular.module('wohligapp', [
     'templateservicemod',
     'navigationservice'
 ]);
-
 wohligapp.config(function ($stateProvider, $urlRouterProvider) {
     //Turn the spinner on or off
     $stateProvider
@@ -93,9 +92,6 @@ wohligapp.directive('labelHover', function ($document) {
 
                 });
             });
-
-
         }
-
     }
 });

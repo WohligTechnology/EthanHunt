@@ -471,7 +471,6 @@ var wohligapp = angular.module('wohligapp', [
     'templateservicemod',
     'navigationservice'
 ]);
-
 wohligapp.config(function ($stateProvider, $urlRouterProvider) {
     //Turn the spinner on or off
     $stateProvider
@@ -559,10 +558,7 @@ wohligapp.directive('labelHover', function ($document) {
 
                 });
             });
-
-
         }
-
     }
 });;
 angular.module('wohligController', ['templateservicemod', 'navigationservice', 'valdr'])
@@ -604,7 +600,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         $scope.template = TemplateService;
         $scope.template.init();
         $scope.template.menuheader = "Clients";
-        $scope.template.backurl = "img/social/back.png";
+        $scope.template.backurl = "img/social/back3.png";
 
         $scope.slides = [
             'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
@@ -623,7 +619,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
     .controller('TeamCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
-//        $scope.template.menuheader = "Team";
+        $scope.template.menuheader = "Team";
         $scope.template.backurl = "img/social/back.png";
     })
     .controller('HeaderCtrl', function($scope, TemplateService) {
