@@ -1,5 +1,5 @@
 //Gruntfile
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     //Initializing the configuration object
     grunt.initConfig({
@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                 options: {
                     sourceMap: true,
                     sourceMapRootpath: '../',
-                    sourceMapURL:'other.css.map',
+                    sourceMapURL: 'other.css.map',
                     compress: true,
                 },
                 files: {
@@ -18,24 +18,27 @@ module.exports = function(grunt) {
         },
         concat: {
             options: {
-                separator: ';',
+                separator: ';\n',
             },
-            js_frontend: {
+            dist: {
                 src: [
-                    './bower_components/jquery/jquery.js',
-                    './bower_components/bootstrap/dist/js/bootstrap.js',
-                    './app/assets/javascript/frontend.js'
+                    './bower_components/jquery/dist/jquery.min.js',
+                     './js/main.js',
+                    './bower_components/less/dist/less.min.js',
+                    './bower_components/moment/min/moment.min.js',
+                    './bower_components/angular/angular.min.js',
+                    './bower_components/ui-router/release/angular-ui-router.min.js',
+                    './bower_components/angular-loading-bar/build/loading-bar.min.js',
+                    './bower_components/valdr/valdr.min.js',
+                    './bower_components/valdr/valdr-message.min.js',
+                    './bower_components/lodash/lodash.min.js',
+                    './js/app.js',
+                    './js/controllers.js',
+                    './js/templateservice.js',
+                    './js/navigation.js'
                 ],
-                dest: './public/assets/javascript/frontend.js',
-            },
-            js_backend: {
-                src: [
-                    './bower_components/jquery/jquery.js',
-                    './bower_components/bootstrap/dist/js/bootstrap.js',
-                    './app/assets/javascript/backend.js'
-                ],
-                dest: './public/assets/javascript/backend.js',
-            },
+                dest: './js/site.js',
+            }
         },
         uglify: {
             options: {
@@ -62,6 +65,7 @@ module.exports = function(grunt) {
             }
         }
     });
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
