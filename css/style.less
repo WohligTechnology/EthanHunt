@@ -5,6 +5,8 @@
     .keyframes(~'translatecomets3, 0% {  transform: translate(6000px,3000px); } 100%{  transform: translate(-4000px,-2000px); }');
     .keyframes(~'translateastro, 0% {  transform: translate(0px,5px); } 100%{  transform: translate(0px,-5px); }');
     .keyframes(~'translateateam, 0% {  transform: translate(-150%); } 100%{  transform: translate(0%); }');
+    .keyframes(~'translatealien, 0% {  transform: translate(0px,7px); } 100%{  transform: translate(0%); }');
+    .keyframes(~'translatehand, 0% {  transform: translate(0px,4px); } 100%{  transform: translate(2px,0px); }');
     @font-face {
         font-family: 'Wohlig';
         src: url('../fonts/wohlig.eot');
@@ -23,8 +25,7 @@
     body {
         margin: 0;
         min-width: 1000px;
-        .background-image(linear-gradient(to bottom,#ACDEFF 20%,#003C5F 100%));
-        
+        .background-image(linear-gradient(to bottom, #ACDEFF 20%, #003C5F 100%));
         overflow: hidden;
         a {
             text-decoration: none;
@@ -423,7 +424,7 @@
             left: 10%;
             top: 360px;
             img {
-                width: 100%;
+                width: 90%;
             }
         }
         .teamarrival {
@@ -431,14 +432,14 @@
             left: 38%;
             top: 115px;
             img {
-                width: 40%;
+                width: 35%;
                 .animation(translateateam 20s ease 0s alternate);
             }
         }
         .teamaliens {
             position: absolute;
-            left: 226px;
-            top: 156%;
+            left: 100px;
+            top: 130%;
             .alienalls {
                 width: 50px;
                 bottom: 113px;
@@ -447,11 +448,29 @@
             .alien11 {
                 top: 150px;
             }
+            .alien44 {
+                top: 150px;
+                width: 65px;
+            }
+            .alien55 {
+                width: 100px;
+                bottom: 26px !important;
+                position: relative;
+                .animation(translatealien 2s ease 0s infinite alternate);
+            }
             .alien22 {
                 top: 150px;
             }
+            .alien34 {
+                width: 20px;
+                position: relative;
+                right: 65px;
+                bottom: 70px;
+                .animation(translatehand 2s ease 0s infinite alternate);
+            }
             .alien33 {
                 top: 150px;
+                width: 65px;
                 img {
                     position: relative;
                     width: 100px;
@@ -493,7 +512,7 @@
         position: absolute;
         top: -32%;
         width: 50%;
-            right: 34%;
+        right: 34%;
         height: 338px;
         overflow: hidden;
         overflow-y: scroll;
@@ -502,7 +521,7 @@
             list-style: none;
             li {
                 display: inline-block;
-                    height: 103px;
+                height: 103px;
             }
         }
         //        .scrollbar-dynamic {
@@ -525,8 +544,24 @@
     }
     
     .slider::-webkit-scrollbar-thumb {
-        background-color: #C6C6C6;;
-//        outline: 1px solid rgb(204, 204, 204);
+        background-color: #C6C6C6;
+        ;
+        //        outline: 1px solid rgb(204, 204, 204);
         height: 8px;
         .border-radius(20px);
+    }
+    
+    .qoute {
+        padding-top: 50px;
+        h4 {
+            font-size: 18px;
+            text-align: right;
+            font-family: 'Merge';
+        }
+        p {
+            text-align: right;
+            padding: 0;
+            margin: 0;
+            line-height: 0;
+        }
     }

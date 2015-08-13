@@ -57,7 +57,6 @@
 .keyframes(~'rotate, 0% {  transform: rotateZ(0deg); } 100%{  transform: rotateZ(360deg); }');
 .keyframes(~'sauser, 0% {  transform: rotateZ(-5deg); } 100%{  transform: rotateZ(5deg); }');
 .keyframes(~'rocket, 0% {  margin-top: 15px; } 100%{  margin-top:-15px; }');
-
 .rotate(@time) {
     .animation(rotate@time linear 0s infinite normal);
 }
@@ -108,7 +107,8 @@
     height: 100%;
     position: absolute;
     top: 0;
-    background: rgba(109, 190, 255, 0.17);
+       background: #9968ff;
+    opacity: 0.5;
 }
 
 .disableBackgroundabt {
@@ -116,18 +116,18 @@
     height: 100%;
     position: absolute;
     top: 0;
-    background: #FFFCA9;
-    opacity: 0.9;
+    background: #ae6121;
+    opacity: 0.8;
 }
 
 .abt {
     .abtlogo {
         position: absolute;
-        top: 4%;
+        top: 7%;
         right: 14%;
         cursor: pointer;
         img {
-            width: 260px;
+            width: 190px;
             z-index: 9;
             align: right;
         }
@@ -143,19 +143,40 @@
         top: 8%;
         width: 50%;
         left: 10%;
-        font-family: "Merge";
+        font-family: "Wohlig";
         text-align: justify;
         font-size: 14px;
-        line-height: 175%;
-        color: #3A3A3A;
+        //        line-height: 175%;
+        color: #fff;
+        h2 {
+            font-size: 45px;
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+        }
+        p {
+            font-family: 'merge';
+            padding: 0;
+            margin: 0;
+        }
+        h4 {
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+        }
+        .margin {
+            margin: 10px 0px 25px 0px !important;
+        }
+        .margin-bot {
+            margin-bottom: 25px;
+        }
     }
 }
 
-
-
 .teamdata {
     position: absolute;
-    top: 10%;
+        top: 4%;
     width: 50%;
     left: 47%;
     font-family: "Merge";
@@ -163,6 +184,14 @@
     font-size: 14px;
     line-height: 175%;
     color: #EEEAEA;
+     h2 {
+         font-family: "wohlig";
+            font-size: 45px;
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+         text-align: right;
+        }
 }
 
 .enquiry {
