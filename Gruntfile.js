@@ -23,16 +23,17 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     './bower_components/jquery/dist/jquery.min.js',
+                    './bower_components/isotope/dist/isotope.pkgd.min.js"',
                     './js/main.js',
                     './bower_components/less/dist/less.min.js',
                     './bower_components/moment/min/moment.min.js',
-                    './/cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js',
                     './bower_components/angular/angular.min.js',
                     './bower_components/ui-router/release/angular-ui-router.min.js',
                     './bower_components/angular-loading-bar/build/loading-bar.min.js',
                     './bower_components/valdr/valdr.min.js',
                     './bower_components/valdr/valdr-message.min.js',
                     './bower_components/lodash/lodash.min.js',
+                    './bower_components/angular-isotope/dist/angular-isotope.min.js',
                     './js/app.js',
                     './js/controllers.js',
                     './js/templateservice.js',

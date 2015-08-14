@@ -8,11 +8,9 @@
 </div>
 <div class="portimag">
     <div class="img-holdr">
-        <ul class="grid" masonry="true">
-            <li ng-repeat="item in items | filter: { name: nameFilter } | orderBy: order">
+        <ul isotope-container="isotope-container">
+            <li ng-repeat="item in items" isotope-item="isotope-item">
                 <img ng-src="{{item.picture}}">
-
-<!--                <br /> <span>Company: {{item.company}}</span>-->
             </li>
         </ul>
     </div>
@@ -22,29 +20,13 @@
                 <img src="img/portfolio/all.png">
             </li>
             <li ng-click="order = 'type'">
-                 <img src="img/portfolio/website.png">
+                <img src="img/portfolio/website.png">
             </li>
             <li ng-click="order = 'age'">
-                 <img src="img/portfolio/mobile.png">
+                <img src="img/portfolio/mobile.png">
             </li>
         </ul>
     </div>
-    <!--
-        <div>
-            <input type="text" ng-model="nameFilter" />
-            <a href="#" ng-click="order = 'id'">Order by id</a>
-            <a href="#" ng-click="order = 'name'">Order by name</a>
-            <a href="#" ng-click="order = 'age'">Order by age</a>
-
-            <ul class="grid" masonry="true">
-                <li ng-repeat="item in items | filter: { name: nameFilter } | orderBy: order">
-                    <img ng-src="{{item.picture}}">
-
-                    <br /> <span>Company: {{item.company}}</span>
-                </li>
-            </ul>
-        </div>
--->
 </div>
 <div class="portdetail">
     <div class="portback"></div>

@@ -7,6 +7,7 @@
 .keyframes(~'translateateam, 0% {  transform: translate(-150%); } 100%{  transform: translate(0%); }');
 .keyframes(~'translatealien, 0% {  transform: translate(0px,7px); } 100%{  transform: translate(0%); }');
 .keyframes(~'translatehand, 0% {  transform: translate(0px,4px); } 100%{  transform: translate(2px,0px); }');
+
 @font-face {
     font-family: 'Wohlig';
     src: url('../fonts/wohlig.eot');
@@ -27,12 +28,10 @@ body {
     min-width: 1000px;
     .background-image(linear-gradient(to bottom, #ACDEFF 20%, #003C5F 100%));
     overflow: hidden;
-    a {
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: none;
-    }
+
+    a { text-decoration: none; }
+
+    a:hover { text-decoration: none; }
 }
 
 .section {
@@ -41,10 +40,12 @@ body {
         top: 4%;
         left: 10%;
         cursor: pointer;
+
         img {
             width: 260px;
             z-index: 9;
         }
+
         img.earth {
             position: absolute;
             width: 50px;
@@ -52,67 +53,79 @@ body {
             top: 19px;
         }
     }
-    .logo:hover .astro {
-        left: -156px;
-    }
+
+    .logo:hover .astro { left: -156px; }
+
     .sun {
         position: absolute;
         right: 17%;
         top: 14%;
+
         .menuimage img {
             width: 190px;
             z-index: 9;
             position: relative;
         }
     }
+
     .moon {
         position: absolute;
         left: 25%;
         top: 26%;
+
         .menuimage img {
             width: 100px;
             z-index: 99;
             position: relative;
         }
     }
+
     .rocket {
         position: absolute;
         left: 50%;
         top: 40%;
         .transform(translate(-50%, -50%));
+
         .menuimage img {
             height: 130px;
             z-index: 9;
         }
     }
+
     .satelite {
         position: absolute;
         left: 18%;
         bottom: 20%;
+
         .menuimage img {
             width: 125px;
             z-index: 9;
         }
     }
+
     .saucer {
         position: absolute;
         left: 48%;
         bottom: 13%;
+
         .menuimage img {
             width: 150px;
             z-index: 9;
             position: relative;
         }
     }
+
     .saturn {
         position: absolute;
         right: 15%;
         bottom: 22%;
+
         .menuimage {
             img {
                 width: 120px;
                 z-index: 9;
             }
+
             img.image2 {
                 width: 313px;
                 position: absolute;
@@ -121,45 +134,50 @@ body {
             }
         }
     }
+
     .menuTop {
         cursor: pointer;
         position: relative;
-        .menuimage {
-            .transition(all 0.4s ease);
-        }
-        .menuimage:hover {
-            .transform(scale(1.2));
-        }
+
+        .menuimage { .transition(all 0.4s ease); }
+
+        .menuimage:hover { .transform(scale(1.2)); }
     }
+
     .social {
         width: 100%;
         position: relative;
         top: 20px;
         .animation(translatesocial 120s ease 0s infinite alternate);
         z-index: 9;
+
         .icon {
             position: relative;
             right: 0;
             width: 120px;
             height: 80px;
             z-index: 9;
+
             img {
                 width: 35px;
                 position: relative;
                 z-index: 9;
             }
+
             .facebook {
                 position: relative;
                 top: 0;
                 cursor: pointer;
                 z-index: 9;
             }
+
             .twitter {
                 position: relative;
                 left: 30px;
                 cursor: pointer;
                 z-index: 9;
             }
+
             .tumblr {
                 position: relative;
                 top: 42px;
@@ -169,8 +187,10 @@ body {
             }
         }
     }
+
     .comets1 {
         .animation(translatecomets1 40s linear 0s infinite normal);
+
         //            .scale(0.2);
         img {
             .rotate(-5deg);
@@ -179,9 +199,11 @@ body {
             position: relative;
         }
     }
+
     .comets2 {
         .animation(translatecomets2 60s linear 7s infinite normal);
         .transform(translateX(-1000px));
+
         img {
             .rotate(-5deg);
             zoom: 0.28;
@@ -189,9 +211,11 @@ body {
             position: relative;
         }
     }
+
     .comets3 {
         .animation(translatecomets3 50s linear 20s infinite normal);
         .transform(translateX(-1000px));
+
         img {
             .rotate(245deg);
             zoom: 0.3;
@@ -199,15 +223,15 @@ body {
             position: relative;
         }
     }
+
     .astro {
         position: absolute;
         top: 100px;
         left: -288px;
         .transition(all 8s ease);
         .animation(translateastro 2s ease-in-out 0s infinite alternate);
-        img {
-            width: 140px;
-        }
+
+        img { width: 140px; }
     }
     //
 }
@@ -220,9 +244,8 @@ body {
     text-transform: lowercase;
     position: relative;
     z-index: 99;
-    h1 {
-        margin: 40px;
-    }
+
+    h1 { margin: 40px; }
 }
 
 section.enquiry {
@@ -230,10 +253,12 @@ section.enquiry {
     top: 0px;
     width: 100%;
     background-color: rgba(9, 0, 39, 0.37);
+
     .enquiry {
         .alienrocks {
             height: 770px;
             position: relative;
+
             .aliens {
                 position: absolute;
                 bottom: 0px;
@@ -242,12 +267,14 @@ section.enquiry {
                 z-index: 1;
                 left: 50%;
             }
+
             .formholder {
                 //                    position: relative;
                 .forms-query {
                     position: absolute;
                     left: -273px;
                     top: -218px;
+
                     .backback {
                         background-image: url('../img/background/form_bak.png');
                         background-repeat: no-repeat;
@@ -258,6 +285,7 @@ section.enquiry {
                         margin-top: -144px;
                         position: relative;
                     }
+
                     .backfront {
                         background-image: url('../img/background/form_front.png');
                         background-repeat: no-repeat;
@@ -267,9 +295,9 @@ section.enquiry {
                         margin-left: 14px;
                         margin-top: -143px;
                     }
-                    .form {
-                        padding-right: 30px;
-                    }
+
+                    .form { padding-right: 30px; }
+
                     .form input {
                         width: 100%;
                         margin: 0 0 5px 0;
@@ -280,9 +308,9 @@ section.enquiry {
                         padding-left: 5px;
                         font-family: "Merge";
                     }
-                    .full-form {
-                        padding: 35px;
-                    }
+
+                    .full-form { padding: 35px; }
+
                     .form textarea {
                         width: 98%;
                         border: 1px solid #ddd;
@@ -292,6 +320,7 @@ section.enquiry {
                         font-family: "Merge";
                         resize: none;
                     }
+
                     p.text-color {
                         font-size: 11px;
                         color: #AFAFAF;
@@ -300,6 +329,7 @@ section.enquiry {
                         line-height: 15px;
                         margin: 5px;
                     }
+
                     input.button {
                         background: #E61C24;
                         color: #fff;
@@ -311,39 +341,38 @@ section.enquiry {
                         font-family: "Merge";
                         cursor: pointer;
                     }
-                    input:focus {
-                        outline: none;
-                    }
-                    textarea:focus {
-                        outline: none;
-                    }
+
+                    input:focus { outline: none; }
+
+                    textarea:focus { outline: none; }
                 }
             }
+
             .rock {
                 position: absolute;
                 bottom: 50px;
                 left: 50%;
                 .translateX(-50%);
                 width: 600px;
-                img {
-                    width: 100%;
-                }
+
+                img { width: 100%; }
             }
         }
+
         .alienall {
             width: 100px;
             position: absolute;
             bottom: 170px;
             z-index: 9;
         }
-        .alien1 {
-            left: 200px;
-        }
-        .alien2 {
-            left: 350px;
-        }
+
+        .alien1 { left: 200px; }
+
+        .alien2 { left: 350px; }
+
         .alien3 {
             left: 515px;
+
             img {
                 position: relative;
                 width: 100px;
@@ -367,6 +396,7 @@ section.enquiry {
     left: 0px;
     z-index: 9;
     margin: 40px;
+
     img {
         width: 40px;
         cursor: pointer;
@@ -378,6 +408,7 @@ section.enquiry {
     left: 50%;
     top: 20%;
     .transform(translate(-50%, -50%));
+
     .menuimage img {
         height: 130px;
         z-index: 9;
@@ -397,58 +428,64 @@ section.enquiry {
     left: -2px;
     .transition(all 8s ease);
     .animation(translateastro 2s ease-in-out 0s infinite alternate);
-    img {
-        width: 140px;
-    }
+
+    img { width: 140px; }
 }
 
 .teamrock {
     position: absolute;
     top: 0px;
     width: 38%;
+
     .teamland {
         position: relative;
         left: 10%;
         top: 360px;
-        img {
-            width: 90%;
-        }
+
+        img { width: 90%; }
     }
+
     .teamarrival {
         position: relative;
         left: 38%;
         top: 115px;
+
         img {
             width: 35%;
             .animation(translateateam 20s ease 0s alternate);
         }
     }
+
     .teamaliens {
         position: absolute;
         left: 100px;
         top: 130%;
+
         .alienalls {
             width: 50px;
             bottom: 113px;
             z-index: 9;
         }
-        .alien11 {
-            top: 150px;
-        }
+
+        .alien11 { top: 150px; }
+
         .alien44 {
             top: 150px;
             width: 65px;
         }
+
         .alien55 {
             width: 100px;
             bottom: 26px !important;
             position: relative;
             .animation(translatealien 2s ease 0s infinite alternate);
         }
+
         .alien22 {
             top: 150px;
             width: 65px;
         }
+
         .alien34 {
             width: 20px;
             position: relative;
@@ -456,9 +493,11 @@ section.enquiry {
             bottom: 70px;
             .animation(translatehand 2s ease 0s infinite alternate);
         }
+
         .alien33 {
             top: 150px;
             width: 65px;
+
             img {
                 position: relative;
                 width: 100px;
@@ -475,9 +514,8 @@ section.enquiry {
     position: absolute;
     bottom: 15%;
     right: 15%;
-    img {
-        width: 60%;
-    }
+
+    img { width: 60%; }
 }
 
 .screen {
@@ -485,6 +523,7 @@ section.enquiry {
     right: 178px;
     width: 100%;
     bottom: 166px;
+
     img {
         top: 0;
         position: relative;
@@ -504,9 +543,11 @@ section.enquiry {
     height: 338px;
     overflow: hidden;
     overflow-y: scroll;
+
     ul {
         display: block;
         list-style: none;
+
         li {
             display: inline-block;
             height: 103px;
@@ -516,11 +557,13 @@ section.enquiry {
 
 .qoute {
     padding-top: 50px;
+
     h4 {
         font-size: 18px;
         text-align: right;
         font-family: 'Merge';
     }
+
     p {
         text-align: right;
         padding: 0;
@@ -640,14 +683,7 @@ section.enquiry {
     right: 4%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 300;
-}
+h1, h2, h3, h4, h5, h6 { font-weight: 300; }
 
 .port {
     position: absolute;
@@ -672,6 +708,7 @@ h6 {
     background-color: rgba(255, 255, 255, 0.8);
     opacity: 1;
     z-index: 9;
+
     .img-holdr {
         position: absolute;
         height: 100%;
@@ -680,33 +717,34 @@ h6 {
         right: 300px;
         overflow-y: scroll;
     }
+
     .filter-section {
         width: 300px;
         position: absolute;
         right: 0;
         top: 0;
         height: 100%;
+
         ul {
             list-style: none;
             text-align: center;
             padding: 0;
+
             li {
                 padding: 9px 0px;
                 cursor: pointer;
             }
         }
     }
-    input {
-        position: absolute;
-    }
+
+    input { position: absolute; }
 }
 
-.portdetail {
-    position: absolute;
-}
+.portdetail { position: absolute; }
 
 .grid {
-    border: solid 1px #ccc padding: 10px 10px 0 0;
+    border: solid 1px #ccc;
+    padding: 10px 10px 0 0;
 }
 
 .grid li {
@@ -719,40 +757,32 @@ h6 {
     padding: 0px 7px;
     height: 200px;
     width: 200px;
+
     img {
         width: 100%;
         height: auto;
     }
 }
 
-
 /**** Transitions ****/
-
-.masonry {
-    .masonry {
-        li {
-            /* apply before masonry add class */
-            position: relative;
-            /* important to add it before enter animation start */
-                .transiton(all .7s ease);
-//            -webkit-transition-duration: .7s;
-//            transition-duration: .7s;
-//            -webkit-transition-property: all;
-//            transition-property: all;
-        }
-    }
+.masonry .masonry li {
+    /* apply before masonry add class */
+    position: relative;
+    /* important to add it before enter animation start */
+//    .transiton(all .7s ease);
+                -webkit-transition-duration: .7s;
+                transition-duration: .7s;
+                -webkit-transition-property: all;
+                transition-property: all;
 }
 
-.masonry {
-    .masonry-enter {
-        /* limit animated properties for entering elements */
-        -webkit-transition-property: -webkit-transform, opacity;
-        transition-property: transform, opacity;
-    }
+.masonry .masonry-enter {
+    /* limit animated properties for entering elements */
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
 }
 
-.masonry-enter,
-.masonry-leave {
+.masonry-enter, .masonry-leave {
     .masonry-leave-active {
         opacity: 0;
         -webkit-transform: scale(0.1);
@@ -760,8 +790,7 @@ h6 {
     }
 }
 
-.masonry-leave,
-.masonry-enter {
+.masonry-leave, .masonry-enter {
     .masonry-enter-active {
         opacity: 1;
         -webkit-transform: scale(1);
