@@ -26,6 +26,7 @@ module.exports = function(grunt) {
                     './js/main.js',
                     './bower_components/less/dist/less.min.js',
                     './bower_components/moment/min/moment.min.js',
+                    './/cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js',
                     './bower_components/angular/angular.min.js',
                     './bower_components/ui-router/release/angular-ui-router.min.js',
                     './bower_components/angular-loading-bar/build/loading-bar.min.js',
@@ -36,6 +37,8 @@ module.exports = function(grunt) {
                     './js/controllers.js',
                     './js/templateservice.js',
                     './js/navigation.js'
+                    
+                    
                 ],
                 dest: './w/w.js',
             }

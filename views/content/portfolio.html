@@ -1,5 +1,51 @@
 <div class="disableBackground"></div>
 
-<div>
-    <h1>Portfolio</h1>
+<div class="port">
+    <h1>portfolio</h1>
+</div>
+<div class="portimg">
+    <img src="img/planet/port.png">
+</div>
+<div class="portimag">
+    <div class="img-holdr">
+        <ul class="grid" masonry="true">
+            <li ng-repeat="item in items | filter: { name: nameFilter } | orderBy: order">
+                <img ng-src="{{item.picture}}">
+
+<!--                <br /> <span>Company: {{item.company}}</span>-->
+            </li>
+        </ul>
+    </div>
+    <div class="filter-section">
+        <ul>
+            <li ng-click="order = 'id'">
+                <img src="img/portfolio/all.png">
+            </li>
+            <li ng-click="order = 'type'">
+                 <img src="img/portfolio/website.png">
+            </li>
+            <li ng-click="order = 'age'">
+                 <img src="img/portfolio/mobile.png">
+            </li>
+        </ul>
+    </div>
+    <!--
+        <div>
+            <input type="text" ng-model="nameFilter" />
+            <a href="#" ng-click="order = 'id'">Order by id</a>
+            <a href="#" ng-click="order = 'name'">Order by name</a>
+            <a href="#" ng-click="order = 'age'">Order by age</a>
+
+            <ul class="grid" masonry="true">
+                <li ng-repeat="item in items | filter: { name: nameFilter } | orderBy: order">
+                    <img ng-src="{{item.picture}}">
+
+                    <br /> <span>Company: {{item.company}}</span>
+                </li>
+            </ul>
+        </div>
+-->
+</div>
+<div class="portdetail">
+    <div class="portback"></div>
 </div>
