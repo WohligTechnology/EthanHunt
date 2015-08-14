@@ -8,6 +8,8 @@ function getSection() {
     var height = $(window).height()
     $("head .sectioncss").html(".section {min-height: " + height + "px;}");
 }
+
+
 var lastmousemove = {};
 var changeRatio = 0.1;
 $(window).mousemove(function(event) {
