@@ -1,607 +1,609 @@
-    @import "../bower_components/lesshat/build/lesshat.less";
-    .keyframes(~'translatesocial, 0% {  transform: translate(90%); } 100%{  transform: translate(30%); }');
-    .keyframes(~'translatecomets1, 0% {  transform: translate(-4000px,5000px); } 100%{  transform: translate(3000px,-2000px); }');
-    .keyframes(~'translatecomets2, 0% {  transform: translate(-2500px,3000px); } 100%{  transform: translate(2500px,-2000px); }');
-    .keyframes(~'translatecomets3, 0% {  transform: translate(6000px,3000px); } 100%{  transform: translate(-4000px,-2000px); }');
-    .keyframes(~'translateastro, 0% {  transform: translate(0px,5px); } 100%{  transform: translate(0px,-5px); }');
-    .keyframes(~'translateateam, 0% {  transform: translate(-150%); } 100%{  transform: translate(0%); }');
-    .keyframes(~'translatealien, 0% {  transform: translate(0px,7px); } 100%{  transform: translate(0%); }');
-    .keyframes(~'translatehand, 0% {  transform: translate(0px,4px); } 100%{  transform: translate(2px,0px); }');
-    @font-face {
-        font-family: 'Wohlig';
-        src: url('../fonts/wohlig.eot');
-        src: local('☺'), url('../fonts/wohlig.woff') format('woff'), url('../fonts/wohlig.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Merge';
-        src: local('☺'), url('../fonts/merge.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    body {
-        margin: 0;
-        min-width: 1000px;
-        .background-image(linear-gradient(to bottom, #ACDEFF 20%, #003C5F 100%));
-        overflow: hidden;
-        a {
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-    }
-    
-    .section {
-        .logo {
-            position: absolute;
-            top: 4%;
-            left: 10%;
-            cursor: pointer;
-            img {
-                width: 260px;
-                z-index: 9;
-            }
-            img.earth {
-                position: absolute;
-                width: 50px;
-                left: 67px;
-                top: 19px;
-            }
-        }
-        .logo:hover .astro {
-            left: -156px;
-        }
-        .sun {
-            position: absolute;
-            right: 17%;
-            top: 14%;
-            .menuimage {
-                img {
-                    width: 190px;
-                    z-index: 9;
-                    position: relative;
-                }
-            }
-        }
-        .moon {
-            position: absolute;
-            left: 25%;
-            top: 26%;
-            .menuimage {
-                img {
-                    width: 100px;
-                    z-index: 99;
-                    position: relative;
-                }
-            }
-        }
-        .rocket {
-            position: absolute;
-            left: 50%;
-            top: 40%;
-            .transform(translate(-50%, -50%));
-            .menuimage {
-                img {
-                    height: 130px;
-                    z-index: 9;
-                }
-            }
-        }
-        .satelite {
-            position: absolute;
-            left: 18%;
-            bottom: 20%;
-            .menuimage {
-                img {
-                    width: 125px;
-                    z-index: 9;
-                }
-            }
-        }
-        .saucer {
-            position: absolute;
-            left: 48%;
-            bottom: 13%;
-            .menuimage {
-                img {
-                    width: 150px;
-                    z-index: 9;
-                    position: relative;
-                }
-            }
-        }
-        .saturn {
-            position: absolute;
-            right: 15%;
-            bottom: 22%;
-            .menuimage {
-                img {
-                    width: 120px;
-                    z-index: 9;
-                }
-                img.image2 {
-                    width: 313px;
-                    position: absolute;
-                    top: 23px;
-                    left: -97px;
-                }
-            }
-        }
-        .menuTop {
-            cursor: pointer;
-            position: relative;
-            .menuimage {
-                .transition(all 0.4s ease);
-            }
-            .menuimage:hover {
-                .transform(scale(1.2));
-            }
-        }
-        .social {
-            width: 100%;
-            position: relative;
-            top: 20px;
-            .animation(translatesocial 120s ease 0s infinite alternate);
-            z-index: 9;
-            .icon {
-                position: relative;
-                right: 0;
-                width: 120px;
-                height: 80px;
-                z-index: 9;
-                img {
-                    width: 35px;
-                    position: relative;
-                    z-index: 9;
-                }
-                .facebook {
-                    position: relative;
-                    top: 0;
-                    cursor: pointer;
-                    z-index: 9;
-                }
-                .twitter {
-                    position: relative;
-                    left: 30px;
-                    cursor: pointer;
-                    z-index: 9;
-                }
-                .tumblr {
-                    position: relative;
-                    top: 42px;
-                    right: 44px;
-                    cursor: pointer;
-                    z-index: 9;
-                }
-            }
-        }
-        .comets1 {
-            .animation(translatecomets1 40s linear 0s infinite normal);
-            //            .scale(0.2);
-            img {
-                .rotate(-5deg);
-                zoom: 0.25;
-                z-index: 1;
-                position: relative;
-            }
-        }
-        .comets2 {
-            .animation(translatecomets2 60s linear 7s infinite normal);
-            .transform(translateX(-1000px));
-            img {
-                .rotate(-5deg);
-                zoom: 0.28;
-                z-index: 1;
-                position: relative;
-            }
-        }
-        .comets3 {
-            .animation(translatecomets3 50s linear 20s infinite normal);
-            .transform(translateX(-1000px));
-            img {
-                .rotate(245deg);
-                zoom: 0.3;
-                z-index: 1;
-                position: relative;
-            }
-        }
-        .astro {
-            position: absolute;
-            top: 100px;
-            left: -288px;
-            .transition(all 8s ease);
-            .animation(translateastro 2s ease-in-out 0s infinite alternate);
-            img {
-                width: 140px;
-            }
-        }
-        //        
-    }
-    
-    //sohan
-    .head {
-        float: right;
-        color: #fff;
-        font-family: 'Wohlig';
-        text-transform: lowercase;
-        position: relative;
-        z-index: 99;
-        h1 {
-            margin: 40px;
-        }
-    }
-    section.enquiry {
+@import "../bower_components/lesshat/build/lesshat.less";
+.keyframes(~'translatesocial, 0% {  transform: translate(90%); } 100%{  transform: translate(30%); }');
+.keyframes(~'translatecomets1, 0% {  transform: translate(-4000px,5000px); } 100%{  transform: translate(3000px,-2000px); }');
+.keyframes(~'translatecomets2, 0% {  transform: translate(-2500px,3000px); } 100%{  transform: translate(2500px,-2000px); }');
+.keyframes(~'translatecomets3, 0% {  transform: translate(6000px,3000px); } 100%{  transform: translate(-4000px,-2000px); }');
+.keyframes(~'translateastro, 0% {  transform: translate(0px,5px); } 100%{  transform: translate(0px,-5px); }');
+.keyframes(~'translateateam, 0% {  transform: translate(-150%); } 100%{  transform: translate(0%); }');
+.keyframes(~'translatealien, 0% {  transform: translate(0px,7px); } 100%{  transform: translate(0%); }');
+.keyframes(~'translatehand, 0% {  transform: translate(0px,4px); } 100%{  transform: translate(2px,0px); }');
+
+@font-face {
+    font-family: 'Wohlig';
+    src: url('../fonts/wohlig.eot');
+    src: local('☺'), url('../fonts/wohlig.woff') format('woff'), url('../fonts/wohlig.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merge';
+    src: local('☺'), url('../fonts/merge.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    min-width: 1000px;
+    .background-image(linear-gradient(to bottom, #ACDEFF 20%, #003C5F 100%));
+    overflow: hidden;
+
+    a { text-decoration: none; }
+
+    a:hover { text-decoration: none; }
+}
+
+.section {
+    .logo {
         position: absolute;
-        top: 0px;
-        width: 100%;
-        background-color: rgba(9, 0, 39, 0.37);
-        .enquiry {
-            .alienrocks {
-                height: 770px;
-                position: relative;
-                .aliens {
-                    position: absolute;
-                    bottom: 0px;
-                    .translateX(-50%);
-                    width: 750px;
-                    z-index: 1;
-                    left: 50%;
-                }
-                .formholder {
-                    //                    position: relative;
-                    .forms-query {
-                        position: absolute;
-                        left: -273px;
-                        top: -218px;
-                        .backback {
-                            background-image: url('../img/background/form_bak.png');
-                            background-repeat: no-repeat;
-                            height: 320px;
-                            width: 300px;
-                            background-size: 100%;
-                            z-index: -1;
-                            margin-top: -144px;
-                            position: relative;
-                        }
-                        .backfront {
-                            background-image: url('../img/background/form_front.png');
-                            background-repeat: no-repeat;
-                            height: 343px;
-                            width: 300px;
-                            background-size: 100%;
-                            margin-left: 14px;
-                            margin-top: -143px;
-                        }
-                        .form {
-                            padding-right: 30px;
-                        }
-                        .form input {
-                            width: 100%;
-                            margin: 0 0 5px 0;
-                            height: 23px;
-                            border-radius: 5px;
-                            box-shadow: 0px 0px 0px;
-                            border: 1px solid #ddd;
-                            padding-left: 5px;
-                            font-family: "Merge";
-                        }
-                        .full-form {
-                            padding: 35px;
-                        }
-                        .form textarea {
-                            width: 98%;
-                            border: 1px solid #ddd;
-                            padding: 5px;
-                            height: 50px;
-                            border-radius: 5px;
-                            font-family: "Merge";
-                            resize: none;
-                        }
-                        p.text-color {
-                            font-size: 11px;
-                            color: #AFAFAF;
-                            padding: 0px;
-                            font-family: "Merge";
-                            line-height: 15px;
-                            margin: 5px;
-                        }
-                        input.button {
-                            background: #E61C24;
-                            color: #fff;
-                            padding: 0px 0;
-                            height: 33px;
-                            width: 100%;
-                            float: right;
-                            margin-top: 10px;
-                            font-family: "Merge";
-                            cursor: pointer;
-                        }
-                        input:focus {
-                            outline: none;
-                        }
-                        textarea:focus {
-                            outline: none;
-                        }
-                    }
-                }
-                .rock {
-                    position: absolute;
-                    bottom: 50px;
-                    left: 50%;
-                    .translateX(-50%);
-                    width: 600px;
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-            .alienall {
-                width: 100px;
-                position: absolute;
-                bottom: 170px;
-                z-index: 9;
-            }
-            .alien1 {
-                left: 200px;
-            }
-            .alien2 {
-                left: 350px;
-            }
-            .alien3 {
-                left: 515px;
-                img {
-                    position: relative;
-                    width: 100px;
-                    height: auto;
-                    left: 0px;
-                    bottom: 0;
-                    z-index: 9;
-                }
-            }
-        }
-    }
-    
-    .blurHome {
-        .blur(10px);
-        //        .font-family: 'merge';
-    }
-    
-    .back-nav {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 9;
-        margin: 40px;
+        top: 4%;
+        left: 10%;
+        cursor: pointer;
+
         img {
-            width: 40px;
-            cursor: pointer;
+            width: 260px;
+            z-index: 9;
+        }
+
+        img.earth {
+            position: absolute;
+            width: 50px;
+            left: 67px;
+            top: 19px;
         }
     }
-    
-    .rockets {
+
+    .logo:hover .astro { left: -156px; }
+
+    .sun {
+        position: absolute;
+        right: 17%;
+        top: 14%;
+
+        .menuimage img {
+            width: 190px;
+            z-index: 9;
+            position: relative;
+        }
+    }
+
+    .moon {
+        position: absolute;
+        left: 25%;
+        top: 26%;
+
+        .menuimage img {
+            width: 100px;
+            z-index: 99;
+            position: relative;
+        }
+    }
+
+    .rocket {
         position: absolute;
         left: 50%;
-        top: 20%;
+        top: 40%;
         .transform(translate(-50%, -50%));
+
+        .menuimage img {
+            height: 130px;
+            z-index: 9;
+        }
+    }
+
+    .satelite {
+        position: absolute;
+        left: 18%;
+        bottom: 20%;
+
+        .menuimage img {
+            width: 125px;
+            z-index: 9;
+        }
+    }
+
+    .saucer {
+        position: absolute;
+        left: 48%;
+        bottom: 13%;
+
+        .menuimage img {
+            width: 150px;
+            z-index: 9;
+            position: relative;
+        }
+    }
+
+    .saturn {
+        position: absolute;
+        right: 15%;
+        bottom: 22%;
+
         .menuimage {
             img {
-                height: 130px;
+                width: 120px;
+                z-index: 9;
+            }
+
+            img.image2 {
+                width: 313px;
+                position: absolute;
+                top: 23px;
+                left: -97px;
+            }
+        }
+    }
+
+    .menuTop {
+        cursor: pointer;
+        position: relative;
+
+        .menuimage { .transition(all 0.4s ease); }
+
+        .menuimage:hover { .transform(scale(1.2)); }
+    }
+
+    .social {
+        width: 100%;
+        position: relative;
+        top: 20px;
+        .animation(translatesocial 120s ease 0s infinite alternate);
+        z-index: 9;
+
+        .icon {
+            position: relative;
+            right: 0;
+            width: 120px;
+            height: 80px;
+            z-index: 9;
+
+            img {
+                width: 35px;
+                position: relative;
+                z-index: 9;
+            }
+
+            .facebook {
+                position: relative;
+                top: 0;
+                cursor: pointer;
+                z-index: 9;
+            }
+
+            .twitter {
+                position: relative;
+                left: 30px;
+                cursor: pointer;
+                z-index: 9;
+            }
+
+            .tumblr {
+                position: relative;
+                top: 42px;
+                right: 44px;
+                cursor: pointer;
                 z-index: 9;
             }
         }
     }
-    
-    .googlemap {
-        position: absolute;
-        top: 50%;
-        right: 17%;
-        .transform(translateY(-50%));
-    }
-    
-    .reachss {
-        .astro {
-            position: absolute;
-            top: 50%;
-            left: -2px;
-            .transition(all 8s ease);
-            .animation(translateastro 2s ease-in-out 0s infinite alternate);
-            img {
-                width: 140px;
-            }
+
+    .comets1 {
+        .animation(translatecomets1 40s linear 0s infinite normal);
+
+        //            .scale(0.2);
+        img {
+            .rotate(-5deg);
+            zoom: 0.25;
+            z-index: 1;
+            position: relative;
         }
     }
-    
-    .teamrock {
+
+    .comets2 {
+        .animation(translatecomets2 60s linear 7s infinite normal);
+        .transform(translateX(-1000px));
+
+        img {
+            .rotate(-5deg);
+            zoom: 0.28;
+            z-index: 1;
+            position: relative;
+        }
+    }
+
+    .comets3 {
+        .animation(translatecomets3 50s linear 20s infinite normal);
+        .transform(translateX(-1000px));
+
+        img {
+            .rotate(245deg);
+            zoom: 0.3;
+            z-index: 1;
+            position: relative;
+        }
+    }
+
+    .astro {
         position: absolute;
-        top: 0px;
-        width: 38%;
-        .teamland {
+        top: 100px;
+        left: -288px;
+        .transition(all 8s ease);
+        .animation(translateastro 2s ease-in-out 0s infinite alternate);
+
+        img { width: 140px; }
+    }
+    //
+}
+
+//sohan
+.head {
+    float: right;
+    color: #fff;
+    font-family: 'Wohlig';
+    text-transform: lowercase;
+    position: relative;
+    z-index: 99;
+
+    h1 { margin: 40px; }
+}
+
+section.enquiry {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: rgba(9, 0, 39, 0.37);
+
+    .enquiry {
+        .alienrocks {
+            height: 770px;
             position: relative;
-            left: 10%;
-            top: 360px;
-            img {
-                width: 90%;
+
+            .aliens {
+                position: absolute;
+                bottom: 0px;
+                .translateX(-50%);
+                width: 750px;
+                z-index: 1;
+                left: 50%;
             }
-        }
-        .teamarrival {
-            position: relative;
-            left: 38%;
-            top: 115px;
-            img {
-                width: 35%;
-                .animation(translateateam 20s ease 0s alternate);
-            }
-        }
-        .teamaliens {
-            position: absolute;
-            left: 100px;
-            top: 130%;
-            .alienalls {
-                width: 50px;
-                bottom: 113px;
-                z-index: 9;
-            }
-            .alien11 {
-                top: 150px;
-            }
-            .alien44 {
-                top: 150px;
-                width: 65px;
-            }
-            .alien55 {
-                width: 100px;
-                bottom: 26px !important;
-                position: relative;
-                .animation(translatealien 2s ease 0s infinite alternate);
-            }
-            .alien22 {
-                top: 150px;
-            }
-            .alien34 {
-                width: 20px;
-                position: relative;
-                right: 65px;
-                bottom: 70px;
-                .animation(translatehand 2s ease 0s infinite alternate);
-            }
-            .alien33 {
-                top: 150px;
-                width: 65px;
-                img {
-                    position: relative;
-                    width: 100px;
-                    height: auto;
-                    left: 0px;
-                    bottom: 0;
-                    z-index: 9;
+
+            .formholder {
+                //                    position: relative;
+                .forms-query {
+                    position: absolute;
+                    left: -273px;
+                    top: -218px;
+
+                    .backback {
+                        background-image: url('../img/background/form_bak.png');
+                        background-repeat: no-repeat;
+                        height: 320px;
+                        width: 300px;
+                        background-size: 100%;
+                        z-index: -1;
+                        margin-top: -144px;
+                        position: relative;
+                    }
+
+                    .backfront {
+                        background-image: url('../img/background/form_front.png');
+                        background-repeat: no-repeat;
+                        height: 343px;
+                        width: 300px;
+                        background-size: 100%;
+                        margin-left: 14px;
+                        margin-top: -143px;
+                    }
+
+                    .form { padding-right: 30px; }
+
+                    .form input {
+                        width: 100%;
+                        margin: 0 0 5px 0;
+                        height: 23px;
+                        border-radius: 5px;
+                        box-shadow: 0px 0px 0px;
+                        border: 1px solid #ddd;
+                        padding-left: 5px;
+                        font-family: "Merge";
+                    }
+
+                    .full-form { padding: 35px; }
+
+                    .form textarea {
+                        width: 98%;
+                        border: 1px solid #ddd;
+                        padding: 5px;
+                        height: 50px;
+                        border-radius: 5px;
+                        font-family: "Merge";
+                        resize: none;
+                    }
+
+                    p.text-color {
+                        font-size: 11px;
+                        color: #AFAFAF;
+                        padding: 0px;
+                        font-family: "Merge";
+                        line-height: 15px;
+                        margin: 5px;
+                    }
+
+                    input.button {
+                        background: #E61C24;
+                        color: #fff;
+                        padding: 0px 0;
+                        height: 33px;
+                        width: 100%;
+                        float: right;
+                        margin-top: 10px;
+                        font-family: "Merge";
+                        cursor: pointer;
+                    }
+
+                    input:focus { outline: none; }
+
+                    textarea:focus { outline: none; }
                 }
             }
-        }
-    }
-    
-    .client-alien {
-        position: absolute;
-        bottom: 15%;
-        right: 15%;
-        img {
-            width: 60%;
-        }
-    }
-    
-    .screen {
-        position: relative;
-        right: 178px;
-        width: 100%;
-        bottom: 166px;
-        img {
-            top: 0;
-            position: relative;
-        }
-    }
-    
-    .flexslider-container {
-        width: 50%;
-        margin: 10px auto;
-    }
-    
-    .slider {
-        position: absolute;
-        top: -32%;
-        width: 50%;
-        right: 34%;
-        height: 338px;
-        overflow: hidden;
-        overflow-y: scroll;
-        ul {
-            display: block;
-            list-style: none;
-            li {
-                display: inline-block;
-                height: 103px;
+
+            .rock {
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                .translateX(-50%);
+                width: 600px;
+
+                img { width: 100%; }
             }
         }
-        //        .scrollbar-dynamic {
-        //    height: 338px;
-        //        overflow: hidden;
-        //        overflow-y: scroll;
-        //}
-    }
-    
-    .slider::-webkit-scrollbar-track {
-        background-color: grey;
-        border-left: 1px solid grey;
-        border-right: 1px solid grey;
-        .border-radius(10px);
-    }
-    
-    .slider::-webkit-scrollbar {
-        width: 6px;
-        .border-radius(26px);
-    }
-    
-    .slider::-webkit-scrollbar-thumb {
-        background-color: #C6C6C6;
-        ;
-        //        outline: 1px solid rgb(204, 204, 204);
-        height: 8px;
-        .border-radius(20px);
-    }
-    
-    .qoute {
-        padding-top: 50px;
-        h4 {
-            font-size: 18px;
-            text-align: right;
-            font-family: 'Merge';
+
+        .alienall {
+            width: 100px;
+            position: absolute;
+            bottom: 170px;
+            z-index: 9;
         }
-        p {
-            text-align: right;
-            padding: 0;
-            margin: 0;
-            line-height: 0;
+
+        .alien1 { left: 200px; }
+
+        .alien2 { left: 350px; }
+
+        .alien3 {
+            left: 515px;
+
+            img {
+                position: relative;
+                width: 100px;
+                height: auto;
+                left: 0px;
+                bottom: 0;
+                z-index: 9;
+            }
         }
     }
-    
-    .backstar {
-        background: url(../img/star-client.png);
-        background-size: 160px;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
-    
-    .clients {
-        position: absolute;
-        text-align: center;
-    }
-    
-    .clients1 {
-        .clients;
-        top: 22%;
-        left: 12%;
-    }
-    
-    .clients2 {
-        .clients;
-        top: 38%;
-        left: 15%;
-    }
-    
-    .clients3 {
-        .clients;
-        top: 27%;
-        left: 36%;
-    }
-    
-    .clients4 {
-        .clients;
-        top: 63%;
-        left: 10%;
-    }
-h1,h2,h3,h4,h5,h6 {
-    font-weight: 300;
 }
+
+.blurHome {
+    .blur(10px);
+    //        .font-family: 'merge';
+}
+
+.back-nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    margin: 40px;
+
+    img {
+        width: 40px;
+        cursor: pointer;
+    }
+}
+
+.rockets {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    .transform(translate(-50%, -50%));
+
+    .menuimage img {
+        height: 130px;
+        z-index: 9;
+    }
+}
+
+.googlemap {
+    position: absolute;
+    top: 50%;
+    right: 17%;
+    .transform(translateY(-50%));
+}
+
+.reachss .astro {
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    .transition(all 8s ease);
+    .animation(translateastro 2s ease-in-out 0s infinite alternate);
+
+    img { width: 140px; }
+}
+
+.teamrock {
+    position: absolute;
+    top: 0px;
+    width: 38%;
+
+    .teamland {
+        position: relative;
+        left: 10%;
+        top: 360px;
+
+        img { width: 90%; }
+    }
+
+    .teamarrival {
+        position: relative;
+        left: 38%;
+        top: 115px;
+
+        img {
+            width: 35%;
+            .animation(translateateam 20s ease 0s alternate);
+        }
+    }
+
+    .teamaliens {
+        position: absolute;
+        left: 100px;
+        top: 130%;
+
+        .alienalls {
+            width: 50px;
+            bottom: 113px;
+            z-index: 9;
+        }
+
+        .alien11 { top: 150px; }
+
+        .alien44 {
+            top: 150px;
+            width: 65px;
+        }
+
+        .alien55 {
+            width: 100px;
+            bottom: 26px !important;
+            position: relative;
+            .animation(translatealien 2s ease 0s infinite alternate);
+        }
+
+        .alien22 { top: 150px; }
+
+        .alien34 {
+            width: 20px;
+            position: relative;
+            right: 65px;
+            bottom: 70px;
+            .animation(translatehand 2s ease 0s infinite alternate);
+        }
+
+        .alien33 {
+            top: 150px;
+            width: 65px;
+
+            img {
+                position: relative;
+                width: 100px;
+                height: auto;
+                left: 0px;
+                bottom: 0;
+                z-index: 9;
+            }
+        }
+    }
+}
+
+.client-alien {
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+
+    img { width: 60%; }
+}
+
+.screen {
+    position: relative;
+    right: 178px;
+    width: 100%;
+    bottom: 166px;
+
+    img {
+        top: 0;
+        position: relative;
+    }
+}
+
+.flexslider-container {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.slider {
+    position: absolute;
+    top: -32%;
+    width: 50%;
+    right: 34%;
+    height: 338px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    ul {
+        display: block;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            height: 103px;
+        }
+    }
+}
+
+.qoute {
+    padding-top: 50px;
+
+    h4 {
+        font-size: 18px;
+        text-align: right;
+        font-family: 'Merge';
+    }
+
+    p {
+        text-align: right;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+    }
+}
+
+.backstar {
+    background: url(../img/star-client.png);
+    background-size: 160px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.clients {
+    position: absolute;
+    text-align: center;
+}
+
+.clients1 {
+    .clients();
+    top: 22%;
+    left: 12%;
+}
+
+.clients2 {
+    .clients();
+    top: 38%;
+    left: 15%;
+}
+
+.clients3 {
+    .clients();
+    top: 27%;
+    left: 36%;
+}
+
+.clients4 {
+    .clients();
+    top: 63%;
+    left: 10%;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 300; }
