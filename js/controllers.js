@@ -1,4 +1,4 @@
-angular.module('wohligController', ['templateservicemod', 'navigationservice', 'valdr'])
+angular.module('wohligController', ['templateservicemod', 'navigationservice', 'valdr', 'wu.masonry'])
 
 .controller('WohligCtrl', function($scope, TemplateService, NavigationService) {
     $scope.template = TemplateService;

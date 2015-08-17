@@ -3,7 +3,8 @@ var wohligapp = angular.module('wohligapp', [
     'ui.router',
     'wohligController',
     'templateservicemod',
-    'navigationservice'
+    'navigationservice',
+    'wu.masonry'
 ]);
 wohligapp.config(function ($stateProvider, $urlRouterProvider) {
     //Turn the spinner on or off

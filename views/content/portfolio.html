@@ -8,11 +8,13 @@
 </div>
 <div class="portimag">
     <div class="img-holdr">
-        <ul isotope-container="isotope-container">
-            <li ng-repeat="item in items" isotope-item="isotope-item">
+
+        <div masonry>
+            <div class="masonry-brick" ng-repeat="item in items">
                 <img ng-src="{{item.picture}}">
-            </li>
-        </ul>
+            </div>
+        </div>
+
     </div>
     <div class="filter-section">
         <ul>
@@ -31,3 +33,4 @@
 <div class="portdetail">
     <div class="portback"></div>
 </div>
+
