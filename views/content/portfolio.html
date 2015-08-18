@@ -9,11 +9,11 @@
 <div class="portimag">
     <div class="img-holdr">
 
-        <ul class="grid" masonry="false">
-            <li ng-repeat="item in items | filter: { type: nameFilter } ">
+        <div class="grid" masonry="true">
+            <div ui-view ng-repeat="item in items | filter: { type: nameFilter } " class="animate-fil">
                 <img ng-src="{{item.picture}}">
-            </li>
-        </ul>
+            </div>
+        </div>
 
     </div>
     <div class="filter-section" ng-init="nameFilter = ''">

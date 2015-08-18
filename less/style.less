@@ -755,13 +755,14 @@ h1, h2, h3, h4, h5, h6 { font-weight: 300; }
 .grid {
     padding: 5px 10px;
 
-    li {
+    div {
         display: inline-block;
         overflow: hidden;
         padding: 5px;
         padding-left: 0px;
-        height: 200px;
-        width: 200px;
+        padding-bottom: 0px;
+//        height: 200px;
+//        width: 200px;
 
         img {
             width: 100%;
@@ -771,12 +772,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: 300; }
 }
 
 /**** Transitions ****/
-.masonry, .masonry li {
+.masonry, .masonry div {
     position: absolute;
     .transition(all .7s);
 }
 
-.masonry-enter, .masonry-leave { .transition-property(all); }
+.masonry-enter, .masonry-leave { .transition-property(transform, opacity); }
 
 .masonry-enter, .masonry-leave.masonry-leave-active {
     opacity: 0;
@@ -786,4 +787,20 @@ h1, h2, h3, h4, h5, h6 { font-weight: 300; }
 .masonry-leave, .masonry-enter.masonry-enter-active {
     opacity: 1;
     .scale(1);
+}
+
+.animate-fil.ng-enter, 
+.animate-fil.ng-leave, 
+.animate-fil.ng-move {
+  position: absolute;
+    .transition(all .7s);
+}
+
+.animate-fil.ng-leave,.animate-fil.ng-move.ng-move-active,.animate-fil.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
+.animate-fil.ng-leave.ng-leave-active,.animate-fil.ng-move,.animate-fil.ng-enter {
+  opacity: 0;
+    .scale(0.1);
 }
