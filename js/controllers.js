@@ -1,4 +1,4 @@
-angular.module('wohligController', ['templateservicemod', 'navigationservice', 'valdr', 'wu.masonry'])
+angular.module('wohligController', ['templateservicemod', 'navigationservice', 'valdr'])
 
 .controller('WohligCtrl', function($scope, TemplateService, NavigationService) {
     $scope.template = TemplateService;
@@ -93,7 +93,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         }, {
             "id": 9,
             "picture": "img/portfolio/download9.jpg",
-
+            "type": "Website",
             "name": "Reynolds Bishop"
         }, {
             "id": 10,

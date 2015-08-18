@@ -26,8 +26,6 @@
     "less": "~2.5.1",
     "lesshat": "~3.0.2",
     "animate.css": "~3.3.0",
-    "angular-masonry": "~0.11.1",
-    "masonry": "~3.3.1",
-    "outlayer": "~1.4.1"
+    "masonry": "~2.1.08"
   }
 }

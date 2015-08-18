@@ -731,8 +731,18 @@ h1, h2, h3, h4, h5, h6 { font-weight: 300; }
             padding: 0;
 
             li {
-                padding: 9px 0px;
+                position: relative;
+                padding: 10px 0px;
                 cursor: pointer;
+            }
+
+            img { width: 150px; }
+
+            img.ring {
+                width: 292px;
+                position: absolute;
+                left: 7px;
+                top: 45px;
             }
         }
     }
@@ -743,57 +753,37 @@ h1, h2, h3, h4, h5, h6 { font-weight: 300; }
 .portdetail { position: absolute; }
 
 .grid {
-    border: solid 1px #ccc;
-    padding: 10px 10px 0 0;
-}
+    padding: 5px 10px;
 
-.grid li {
-    display: inline-block;
-    height: 100%;
-    /* border: solid 1px #ccc; */
-    /* margin: 0 0 10px 10px; */
-    /* background: #eee; */
-    overflow: hidden;
-    padding: 0px 7px;
-    height: 200px;
-    width: 200px;
+    li {
+        display: inline-block;
+        overflow: hidden;
+        padding: 5px;
+        padding-left: 0px;
+        height: 200px;
+        width: 200px;
 
-    img {
-        width: 100%;
-        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
 /**** Transitions ****/
-.masonry .masonry li {
-    /* apply before masonry add class */
-    position: relative;
-    /* important to add it before enter animation start */
-//    .transiton(all .7s ease);
-                -webkit-transition-duration: .7s;
-                transition-duration: .7s;
-                -webkit-transition-property: all;
-                transition-property: all;
+.masonry, .masonry li {
+    position: absolute;
+    .transition(all .7s);
 }
 
-.masonry .masonry-enter {
-    /* limit animated properties for entering elements */
-    -webkit-transition-property: -webkit-transform, opacity;
-    transition-property: transform, opacity;
+.masonry-enter, .masonry-leave { .transition-property(all); }
+
+.masonry-enter, .masonry-leave.masonry-leave-active {
+    opacity: 0;
+    .scale(0.1);
 }
 
-.masonry-enter, .masonry-leave {
-    .masonry-leave-active {
-        opacity: 0;
-        -webkit-transform: scale(0.1);
-        transform: scale(0.1);
-    }
-}
-
-.masonry-leave, .masonry-enter {
-    .masonry-enter-active {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
+.masonry-leave, .masonry-enter.masonry-enter-active {
+    opacity: 1;
+    .scale(1);
 }

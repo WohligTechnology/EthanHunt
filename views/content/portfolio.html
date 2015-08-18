@@ -9,23 +9,26 @@
 <div class="portimag">
     <div class="img-holdr">
 
-        <div masonry>
-            <div class="masonry-brick" ng-repeat="item in items">
+        <ul class="grid" masonry="false">
+            <li ng-repeat="item in items | filter: { type: nameFilter } ">
                 <img ng-src="{{item.picture}}">
-            </div>
-        </div>
+            </li>
+        </ul>
 
     </div>
-    <div class="filter-section">
+    <div class="filter-section" ng-init="nameFilter = ''">
         <ul>
-            <li ng-click="order = 'id'">
+            <li ng-click="nameFilter = ''">
                 <img src="img/portfolio/all.png">
+                <img src="img/portfolio/ring.png" class="ring" ng-show="nameFilter=='';">
             </li>
-            <li ng-click="order = 'type'">
+            <li ng-click="nameFilter = 'Website'">
                 <img src="img/portfolio/website.png">
+                <img src="img/portfolio/ring.png" class="ring" ng-show="nameFilter=='Website';">
             </li>
-            <li ng-click="order = 'age'">
+            <li ng-click="nameFilter = 'mobile'">
                 <img src="img/portfolio/mobile.png">
+                <img src="img/portfolio/ring.png" class="ring" ng-show="nameFilter=='mobile';">
             </li>
         </ul>
     </div>

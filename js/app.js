@@ -3,10 +3,9 @@ var wohligapp = angular.module('wohligapp', [
     'ui.router',
     'wohligController',
     'templateservicemod',
-    'navigationservice',
-    'wu.masonry'
+    'navigationservice'
 ]);
-wohligapp.config(function ($stateProvider, $urlRouterProvider) {
+wohligapp.config(function($stateProvider, $urlRouterProvider) {
     //Turn the spinner on or off
     $stateProvider
         .state('wohlig', {
@@ -53,13 +52,13 @@ wohligapp.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/wohlig/home");
 });
 
-wohligapp.directive('labelHover', function ($document) {
+wohligapp.directive('labelHover', function($document) {
     return {
         restrict: 'EA',
         replace: false,
         scope: {},
         templateUrl: "views/directive/comet.html",
-        link: function ($scope, element, attr) {
+        link: function($scope, element, attr) {
             $scope.menuimage = attr.menuImage;
             var realwidth = $(window).width();
             if (realwidth < 1000) {
@@ -78,25 +77,26 @@ wohligapp.directive('labelHover', function ($document) {
 
             $comet.css("left", realwidth * -1 + "px");
 
-            $menuImage.hover(function () {
+            $menuImage.hover(function() {
                 $comet.stop();
                 $comet.stop().css("left", realwidth * -1 + "px");
                 $comet.stop().animate({
                     left: "50%"
-                }, 600, function () {
+                }, 600, function() {
 
                 });
-            }, function () {
+            }, function() {
                 $comet.animate({
                     left: realwidth
-                }, 600, function () {
+                }, 600, function() {
 
                 });
             });
         }
     }
 })
-.directive("masonry", function () {
+
+.directive("masonry", function() {
     var NGREPEAT_SOURCE_RE = '<!-- ngRepeat: ((.*) in ((.*?)( track by (.*))?)) -->';
     return {
         compile: function(element, attrs) {
@@ -104,42 +104,42 @@ wohligapp.directive('labelHover', function ($document) {
             var animation = attrs.ngAnimate || "'masonry'";
             var $brick = element.children();
             $brick.attr("ng-animate", animation);
-            
+
             // generate item selector (exclude leaving items)
             var type = $brick.prop('tagName');
-            var itemSelector = type+":not([class$='-leave-active'])";
-            
-            return function (scope, element, attrs) {
+            var itemSelector = type + ":not([class$='-leave-active'])";
+
+            return function(scope, element, attrs) {
                 var options = angular.extend({
                     itemSelector: itemSelector
                 }, scope.$eval(attrs.masonry));
-                
+
                 // try to infer model from ngRepeat
-                if (!options.model) { 
+                if (!options.model) {
                     var ngRepeatMatch = element.html().match(NGREPEAT_SOURCE_RE);
                     if (ngRepeatMatch) {
                         options.model = ngRepeatMatch[4];
                     }
                 }
-                
+
                 // initial animation
                 element.addClass('masonry');
-                
+
                 // Wait inside directives to render
-                setTimeout(function () {
+                setTimeout(function() {
                     element.masonry(options);
-                    
-                    element.on("$destroy", function () {
+
+                    element.on("$destroy", function() {
                         element.masonry('destroy')
                     });
-                    
+
                     if (options.model) {
                         scope.$apply(function() {
-                            scope.$watchCollection(options.model, function (_new, _old) {
-                                if(_new == _old) return;
-                                
+                            scope.$watchCollection(options.model, function(_new, _old) {
+                                if (_new == _old) return;
+
                                 // Wait inside directives to render
-                                setTimeout(function () {
+                                setTimeout(function() {
                                     element.masonry("reload");
                                 });
                             });
