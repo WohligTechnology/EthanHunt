@@ -102,16 +102,16 @@ wohligapp.directive('masonry', function($document) {
     return {
         restrict: 'EA',
         replace: false,
-        //        scope: {},
         templateUrl: "views/directive/portfolio.html",
         link: function($scope, element, attr) {
             var $element = $(element);
-            
+            console.log(attr);
             setTimeout(function() {
                 $element.children(".grid").children(".grid-item").children("img").load(function() {
-                    console.log($(this).html());
+                    $scope[attr.getMasonry].masonry("reloadItems");
+                    $scope[attr.getMasonry].masonry("layout");
                 });
-                $scope.portfolio=$('.grid').masonry({
+                $scope[attr.getMasonry] = $('.grid').masonry({
                     itemSelector: '.grid-item',
                     columnWidth: 10,
                     transitionDuration: '0.8s'

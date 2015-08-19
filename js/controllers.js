@@ -113,7 +113,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
             setTimeout(function() {
                 $scope.portfolio.masonry("reloadItems");
                 $scope.portfolio.masonry("layout");
-            }, 100);
+            }, 10);
 
 
         };
