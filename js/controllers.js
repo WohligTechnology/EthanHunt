@@ -1,9 +1,9 @@
 angular.module('wohligController', ['templateservicemod', 'navigationservice', 'valdr'])
 
 .controller('WohligCtrl', function($scope, TemplateService, NavigationService) {
-    $scope.template = TemplateService;
-    $scope.template.init();
-})
+        $scope.template = TemplateService;
+        $scope.template.init();
+    })
     .controller('HomeCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
@@ -42,23 +42,24 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
     .controller('PortfolioCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
+        $scope.nameFilter = "";
         //        $scope.template.menuheader = "Portfolio";
         $scope.template.backurl = "img/social/back.png";
 
         $scope.items = [{
             "id": 0,
             "picture": "img/portfolio/download.jpg",
-            "type": "Website",
+            "type": "website",
             "name": "Mathews Goff"
         }, {
             "id": 1,
             "picture": "img/portfolio/download1.jpg",
-            "type": "Website",
+            "type": "website",
             "name": "Collins Alston"
         }, {
             "id": 2,
             "picture": "img/portfolio/download2.jpg",
-            "type": "Website",
+            "type": "website",
             "name": "Jasmine Rollins"
         }, {
             "id": 3,
@@ -68,7 +69,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         }, {
             "id": 4,
             "picture": "img/portfolio/download4.jpg",
-            "type": "Website",
+            "type": "website",
             "name": "Wilder King"
         }, {
             "id": 5,
@@ -78,7 +79,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         }, {
             "id": 6,
             "picture": "img/portfolio/download6.jpg",
-            "type": "Website",
+            "type": "website",
             "name": "Reynolds Bishop"
         }, {
             "id": 7,
@@ -88,12 +89,12 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         }, {
             "id": 8,
             "picture": "img/portfolio/download8.jpg",
-            "type": "Website",
+            "type": "website",
             "name": "Reynolds Bishop"
         }, {
             "id": 9,
             "picture": "img/portfolio/download9.jpg",
-            "type": "Website",
+            "type": "website",
             "name": "Reynolds Bishop"
         }, {
             "id": 10,
@@ -103,9 +104,19 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         }, {
             "id": 11,
             "picture": "img/portfolio/download11.jpg",
-            "type": "Website",
+            "type": "website",
             "name": "Reynolds Bishop"
         }];
+
+        $scope.changefilter = function(filter) {
+            $scope.nameFilter = filter;
+            setTimeout(function() {
+                $scope.portfolio.masonry("reloadItems");
+                $scope.portfolio.masonry("layout");
+            }, 100);
+
+
+        };
     })
     .controller('TeamCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;

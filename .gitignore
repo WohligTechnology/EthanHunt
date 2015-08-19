@@ -2,3 +2,5 @@ bower_components/
 node_modules/
 w/
 *.db
+less/other.css
+less/style.css

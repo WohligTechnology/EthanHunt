@@ -9,7 +9,16 @@ module.exports = function(grunt) {
                     sourceMap: true,
                     sourceMapRootpath: '../',
                     sourceMapURL: 'w.css.map',
-                    compress: true,
+                    compress: false,
+                },
+                files: {
+                    './w/w.css': './less/other.less'
+                }
+            },
+            production: {
+                options: {
+                    sourceMap: false,
+                    compress: true
                 },
                 files: {
                     './w/w.css': './less/other.less'
@@ -23,6 +32,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     './bower_components/jquery/dist/jquery.min.js',
+                    './bower_components/masonry/dist/masonry.pkgd.min.js',
                     './js/main.js',
                     './bower_components/less/dist/less.min.js',
                     './bower_components/moment/min/moment.min.js',
@@ -55,7 +65,7 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: ['less/*.less'], // which files to watch
-                tasks: ['less'],
+                tasks: ['less:development'],
                 options: {
                     nospawn: true
                 }

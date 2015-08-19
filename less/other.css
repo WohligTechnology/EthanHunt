@@ -129,8 +129,8 @@ body a:hover {
   top: 40%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .section .rocket .menuimage img {
@@ -184,8 +184,8 @@ body a:hover {
 .section .menuTop .menuimage:hover {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 .section .social {
@@ -238,8 +238,8 @@ body a:hover {
 .section .comets1 img {
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
   -webkit-animation: rotate -5deg linear 0s infinite normal;
   -moz-animation: rotate -5deg linear 0s infinite normal;
@@ -256,15 +256,15 @@ body a:hover {
   animation: translatecomets2 60s linear 7s infinite normal;
   -webkit-transform: translateX(-1000px);
   -moz-transform: translateX(-1000px);
-  -ms-transform: translateX(-1000px);
   -o-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
   transform: translateX(-1000px);
 }
 .section .comets2 img {
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
   -webkit-animation: rotate -5deg linear 0s infinite normal;
   -moz-animation: rotate -5deg linear 0s infinite normal;
@@ -281,15 +281,15 @@ body a:hover {
   animation: translatecomets3 50s linear 20s infinite normal;
   -webkit-transform: translateX(-1000px);
   -moz-transform: translateX(-1000px);
-  -ms-transform: translateX(-1000px);
   -o-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
   transform: translateX(-1000px);
 }
 .section .comets3 img {
   -webkit-transform: rotate(245deg);
   -moz-transform: rotate(245deg);
-  -ms-transform: rotate(245deg);
   -o-transform: rotate(245deg);
+  -ms-transform: rotate(245deg);
   transform: rotate(245deg);
   -webkit-animation: rotate 245deg linear 0s infinite normal;
   -moz-animation: rotate 245deg linear 0s infinite normal;
@@ -341,8 +341,8 @@ section.enquiry .enquiry .alienrocks .aliens {
   bottom: 0px;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 750px;
   z-index: 1;
@@ -428,8 +428,8 @@ section.enquiry .enquiry .alienrocks .rock {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 600px;
 }
@@ -473,8 +473,16 @@ section.enquiry .enquiry .alien3 img {
   margin: 40px;
 }
 .back-nav img {
-  width: 40px;
+  width: 50px;
   cursor: pointer;
+}
+.disableBackgroundblue {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #16b4ff;
+  opacity: .5;
 }
 .rockets {
   position: absolute;
@@ -482,8 +490,8 @@ section.enquiry .enquiry .alien3 img {
   top: 20%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .rockets .menuimage img {
@@ -493,11 +501,11 @@ section.enquiry .enquiry .alien3 img {
 .googlemap {
   position: absolute;
   top: 50%;
-  right: 17%;
+  left: 20%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .reachss .astro {
@@ -569,6 +577,7 @@ section.enquiry .enquiry .alien3 img {
 }
 .teamrock .teamaliens .alien22 {
   top: 150px;
+  width: 80px;
 }
 .teamrock .teamaliens .alien34 {
   width: 20px;
@@ -637,7 +646,7 @@ section.enquiry .enquiry .alien3 img {
 .qoute h4 {
   font-size: 18px;
   text-align: right;
-  font-family: 'Merge';
+  font-family: 'wohlig';
 }
 .qoute p {
   text-align: right;
@@ -655,60 +664,136 @@ section.enquiry .enquiry .alien3 img {
 .clients {
   position: absolute;
   text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
 }
 .clients1 {
   position: absolute;
   text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
   top: 22%;
   left: 12%;
 }
 .clients2 {
   position: absolute;
   text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
   top: 45%;
-  left: 28%;
+  left: 23%;
 }
 .clients3 {
   position: absolute;
   text-align: center;
-  top: 27%;
+  text-transform: capitalize;
+  font-family: 'merge';
+  top: 34%;
   left: 36%;
 }
 .clients4 {
   position: absolute;
   text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
   bottom: 10%;
   left: 18%;
 }
 .clients5 {
   position: absolute;
   text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
   top: 70%;
   left: 4%;
 }
 .clients6 {
   position: absolute;
   text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
   top: 11%;
   left: 1%;
 }
 .clients7 {
   position: absolute;
   text-align: center;
-  top: 20%;
-  right: 8%;
+  text-transform: capitalize;
+  font-family: 'merge';
+  top: 35%;
+  right: 20%;
 }
 .clients8 {
   position: absolute;
   text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
   top: 16%;
   left: 49%;
 }
 .clients9 {
   position: absolute;
   text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
   bottom: 15%;
   right: 35%;
+}
+.clients10 {
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
+  top: 4%;
+  left: 27%;
+}
+.clients11 {
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
+  bottom: 25%;
+  right: 14%;
+}
+.clients12 {
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
+  bottom: 25%;
+  right: 50%;
+}
+.clients13 {
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
+  bottom: 5%;
+  right: 27%;
+}
+.clients14 {
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
+  bottom: 70%;
+  right: 4%;
+}
+.clients14 {
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
+  bottom: 44%;
+  right: 44%;
+}
+.clients15 {
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'merge';
+  top: 12%;
+  right: 4%;
 }
 h1,
 h2,
@@ -717,6 +802,171 @@ h4,
 h5,
 h6 {
   font-weight: 300;
+}
+.port {
+  position: absolute;
+  font-family: 'wohlig';
+  color: #fff;
+  left: 125px;
+  top: 17px;
+}
+.portimg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.portimag {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 150px;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+  z-index: 9;
+}
+.portimag .img-holdr {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 300px;
+  overflow-y: scroll;
+}
+.portimag .filter-section {
+  width: 300px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.portimag .filter-section ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.portimag .filter-section ul li {
+  position: relative;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+.portimag .filter-section ul img {
+  width: 121px;
+}
+.portimag .filter-section ul img.ring {
+  width: 235px;
+  position: absolute;
+  left: 37px;
+  top: 45px;
+}
+.portimag input {
+  position: absolute;
+}
+.portdetail {
+  position: absolute;
+}
+.grid {
+  padding: 5px 10px;
+}
+.grid div {
+  display: inline-block;
+  overflow: hidden;
+  padding: 5px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+.grid div img {
+  width: 100%;
+  height: auto;
+}
+/**** Transitions ****/
+.masonry,
+.masonry div {
+  position: absolute;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.masonry-enter,
+.masonry-leave {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: -webkit-transform,-moz-transform,-o-transform,transform, opacity;
+}
+.masonry-enter,
+.masonry-leave.masonry-leave-active {
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -o-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+}
+.masonry-leave,
+.masonry-enter.masonry-enter-active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.animate-fil.ng-enter,
+.animate-fil.ng-leave,
+.animate-fil.ng-move {
+  position: absolute;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.animate-fil.ng-leave,
+.animate-fil.ng-move.ng-move-active,
+.animate-fil.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}
+.animate-fil.ng-leave.ng-leave-active,
+.animate-fil.ng-move,
+.animate-fil.ng-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -o-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+}
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #B6B2B2;
+  border-left: 1px solid #B6B2B2;
+  border-right: 1px solid #B6B2B2;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  -webkit-border-radius: 26px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 26px;
+  -moz-background-clip: padding;
+  border-radius: 26px;
+  background-clip: padding-box;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #8A8A8A;
+  height: 8px;
+  -webkit-border-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 20px;
+  -moz-background-clip: padding;
+  border-radius: 20px;
+  background-clip: padding-box;
 }
 .footer {
   position: absolute;
@@ -739,8 +989,8 @@ h6 {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: 9;
 }
@@ -799,8 +1049,8 @@ lesshat-selector {
 .rotate10 {
   -webkit-transform: rotate(10s);
   -moz-transform: rotate(10s);
-  -ms-transform: rotate(10s);
   -o-transform: rotate(10s);
+  -ms-transform: rotate(10s);
   transform: rotate(10s);
   -webkit-animation: rotate 10s linear 0s infinite normal;
   -moz-animation: rotate 10s linear 0s infinite normal;
@@ -816,8 +1066,8 @@ lesshat-selector {
 .rotate30 {
   -webkit-transform: rotate(30s);
   -moz-transform: rotate(30s);
-  -ms-transform: rotate(30s);
   -o-transform: rotate(30s);
+  -ms-transform: rotate(30s);
   transform: rotate(30s);
   -webkit-animation: rotate 30s linear 0s infinite normal;
   -moz-animation: rotate 30s linear 0s infinite normal;
@@ -827,8 +1077,8 @@ lesshat-selector {
 .rotate60 {
   -webkit-transform: rotate(60s);
   -moz-transform: rotate(60s);
-  -ms-transform: rotate(60s);
   -o-transform: rotate(60s);
+  -ms-transform: rotate(60s);
   transform: rotate(60s);
   -webkit-animation: rotate 60s linear 0s infinite normal;
   -moz-animation: rotate 60s linear 0s infinite normal;
@@ -838,8 +1088,8 @@ lesshat-selector {
 .rotate120 {
   -webkit-transform: rotate(120s);
   -moz-transform: rotate(120s);
-  -ms-transform: rotate(120s);
   -o-transform: rotate(120s);
+  -ms-transform: rotate(120s);
   transform: rotate(120s);
   -webkit-animation: rotate 120s linear 0s infinite normal;
   -moz-animation: rotate 120s linear 0s infinite normal;
@@ -849,8 +1099,8 @@ lesshat-selector {
 .rotate180 {
   -webkit-transform: rotate(180s);
   -moz-transform: rotate(180s);
-  -ms-transform: rotate(180s);
   -o-transform: rotate(180s);
+  -ms-transform: rotate(180s);
   transform: rotate(180s);
   -webkit-animation: rotate 180s linear 0s infinite normal;
   -moz-animation: rotate 180s linear 0s infinite normal;
@@ -971,10 +1221,13 @@ lesshat-selector {
   position: absolute;
   top: 30%;
   width: 30%;
-  left: 20%;
+  right: 17%;
   font-family: "Merge";
   text-align: justify;
   font-size: 14px;
   line-height: 175%;
   color: #EEEAEA;
+}
+.grid-item {
+  width: 220px;
 }

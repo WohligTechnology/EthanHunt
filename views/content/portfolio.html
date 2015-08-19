@@ -9,24 +9,20 @@
 <div class="portimag">
     <div class="img-holdr scrollbar">
 
-        <div class="grid" masonry="true">
-            <div ui-view ng-repeat="item in items | filter: { type: nameFilter } " class="animate-fil">
-                <img ng-src="{{item.picture}}">
-            </div>
-        </div>
+        <masonry></masonry>
 
     </div>
     <div class="filter-section" ng-init="nameFilter = ''">
         <ul>
-            <li ng-click="nameFilter = ''">
+            <li ng-click="changefilter('');">
                 <img src="img/portfolio/all.png">
                 <img src="img/portfolio/ring.png" class="ring animatedRing" ng-show="nameFilter=='';">
             </li>
-            <li ng-click="nameFilter = 'Website'">
+            <li ng-click="changefilter('website')">
                 <img src="img/portfolio/website.png">
-                <img src="img/portfolio/ring.png" class="ring animatedRing" ng-show="nameFilter=='Website';">
+                <img src="img/portfolio/ring.png" class="ring animatedRing" ng-show="nameFilter=='website';">
             </li>
-            <li ng-click="nameFilter = 'mobile'">
+            <li ng-click="changefilter('mobile');">
                 <img src="img/portfolio/mobile.png">
                 <img  src="img/portfolio/ring.png" class="ring animatedRing" ng-show="nameFilter=='mobile';">
                 

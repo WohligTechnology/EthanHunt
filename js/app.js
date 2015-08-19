@@ -94,59 +94,33 @@ wohligapp.directive('labelHover', function($document) {
             });
         }
     }
-})
+});
 
-.directive("masonry", function() {
-    var NGREPEAT_SOURCE_RE = '<!-- ngRepeat: ((.*) in ((.*?)( track by (.*))?)) -->';
+var bcd = 0;
+
+wohligapp.directive('masonry', function($document) {
     return {
-        compile: function(element, attrs) {
-            // auto add animation to brick element
-            var animation = attrs.ngAnimate || "'masonry'";
-            var $brick = element.children();
-            $brick.attr("ng-animate", animation);
-
-            // generate item selector (exclude leaving items)
-            var type = $brick.prop('tagName');
-            var itemSelector = type + ":not([class$='-leave-active'])";
-
-            return function(scope, element, attrs) {
-                var options = angular.extend({
-                    itemSelector: itemSelector
-                }, scope.$eval(attrs.masonry));
-
-                // try to infer model from ngRepeat
-                if (!options.model) {
-                    var ngRepeatMatch = element.html().match(NGREPEAT_SOURCE_RE);
-                    if (ngRepeatMatch) {
-                        options.model = ngRepeatMatch[4];
-                    }
-                }
-
-                // initial animation
-                element.addClass('masonry');
-
-                // Wait inside directives to render
-                setTimeout(function() {
-                    element.masonry(options);
-
-                    element.on("$destroy", function() {
-                        element.masonry('destroy')
-                    });
-
-                    if (options.model) {
-                        scope.$apply(function() {
-                            scope.$watchCollection(options.model, function(_new, _old) {
-                                if (_new == _old) return;
-
-                                // Wait inside directives to render
-                                setTimeout(function() {
-                                    element.masonry("reload");
-                                });
-                            });
-                        });
-                    }
+        restrict: 'EA',
+        replace: false,
+        //        scope: {},
+        templateUrl: "views/directive/portfolio.html",
+        link: function($scope, element, attr) {
+            var $element = $(element);
+            
+            setTimeout(function() {
+                $element.children(".grid").children(".grid-item").children("img").load(function() {
+                    console.log($(this).html());
                 });
-            };
+                $scope.portfolio=$('.grid').masonry({
+                    itemSelector: '.grid-item',
+                    columnWidth: 10,
+                    transitionDuration: '0.8s'
+                });
+                
+
+            }, 100);
+
+
         }
-    };
+    }
 });
