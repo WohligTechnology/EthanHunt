@@ -33,6 +33,7 @@ module.exports = function(grunt) {
                 src: [
                     './bower_components/jquery/dist/jquery.min.js',
                     './bower_components/masonry/dist/masonry.pkgd.min.js',
+                    './bower_components/fancyBox/source/jquery.fancybox.pack.js',
                     './js/main.js',
                     './bower_components/less/dist/less.min.js',
                     './bower_components/moment/min/moment.min.js',
