@@ -3,20 +3,17 @@
 
 <head ng-controller="HeaderCtrl">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="{{template.metadesc}}">
+    <meta name="keywords" content="{{template.meta}}">
+    <meta name="author" content="Wohlig Technology">
     <title ng-bind="'Wohlig Technology - '+template.title">Wohlig Technology</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="apple-itouch-icon" href="img/favicon.png">
 
-
     <link rel="stylesheet" type="text/css" href="w/w.css" />
-<!--    <link rel="stylesheet" type="text/css" href="bower_components/fancyBox/source/jquery.fancybox.css" />-->
     <script src="w/w.js"></script>
-    <!--<script src="w/w.min.js"></script>-->
 
 
     <style type="text/css" class="sectioncss">
@@ -30,11 +27,8 @@
 </head>
 
 <body>
-
     <div ui-view style="overflow:hidden;position:relative;">
     </div>
-
-
 </body>
 
 </html>

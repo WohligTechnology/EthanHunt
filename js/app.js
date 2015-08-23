@@ -96,7 +96,7 @@ wohligapp.directive('labelHover', function ($document) {
     }
 });
 
-var bcd = 0;
+var bcd = 0; 
 
 wohligapp.directive('masonry', function ($document) {
     return {

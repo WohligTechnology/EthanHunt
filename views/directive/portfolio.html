@@ -1,7 +1,14 @@
-<div class="grid">
+<div class="grid cs-style-3">
     <div class="grid-item" ng-repeat="item in items | filter: { type: nameFilter }" title="{{image.picture}}">
         <a class="fancybox-thumb" rel="fancybox-thumb" href="{{item.picture}}">
-            <img ng-src="{{item.picture}}">
+           
+                <img ng-src="{{item.picture}}">
+                <figcaption>
+                    <h3>{{item.name}}</h3>
+
+                </figcaption>
+          
+
         </a>
     </div>
 
