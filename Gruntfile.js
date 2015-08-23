@@ -57,28 +57,28 @@ module.exports = function(grunt) {
                 ],
                 dest: './w/w.js',
 
-            },
-            css: {
-                options: {
-                    separator: '\n',
-                },
-                dist: {
-                    src: [
-                        './bower_components/fancyBox/source/jquery.fancybox.css',
-                        './w/w.css'
-                    ],
-                    dest: './w/w.concat.css',
-                }
             }
-
         },
         uglify: {
             options: {
-                mangle: false // Use if you want the names of your functions and variables unchanged
+                mangle: false, // Use if you want the names of your functions and variables unchanged
+                report: "gzip"
             },
             frontend: {
                 files: {
                     './w/w.min.js': ['./w/w.js']
+                }
+            }
+        },
+        cssmin: {
+            options: {
+                shorthandCompacting: true,
+                roundingPrecision: -1,
+                report: "gzip",
+            },
+            target: {
+                files: {
+                    './w/w.min.css': ['./w/w.css']
                 }
             }
         },
@@ -103,5 +103,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.registerTask('default', ['watch']);
 };

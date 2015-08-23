@@ -26,6 +26,7 @@
     "less": "~2.5.1",
     "lesshat": "~3.0.2",
     "animate.css": "~3.3.0",
-    "masonry": "~3.3.1"
+    "masonry": "~3.3.1",
+    "fancyBox": "https://github.com/fancyapps/fancyBox.git#~2.1.5"
   }
 }
