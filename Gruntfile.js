@@ -82,6 +82,28 @@ module.exports = function(grunt) {
                 }
             }
         },
+        compress: {
+            css: {
+                options: {
+                    mode: 'gzip'
+                },
+                expand: true,
+                cwd: './w',
+                src: ['w.min.css'],
+                dest: './p',
+                ext: '.gz.css'
+            },
+            js: {
+                options: {
+                    mode: 'gzip'
+                },
+                expand: true,
+                cwd: './w',
+                src: ['w.min.js'],
+                dest: './p',
+                ext: '.gz.js'
+            }
+        },
         watch: {
             styles: {
                 files: ['less/*.less'], // which files to watch
@@ -104,5 +126,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.registerTask('default', ['watch']);
 };
