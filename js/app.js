@@ -5,7 +5,7 @@ var wohligapp = angular.module('wohligapp', [
     'templateservicemod',
     'navigationservice'
 ]);
-wohligapp.config(function ($stateProvider, $urlRouterProvider) {
+wohligapp.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
     //Turn the spinner on or off
     $stateProvider
         .state('wohlig', {
@@ -50,6 +50,9 @@ wohligapp.config(function ($stateProvider, $urlRouterProvider) {
         })
 
     $urlRouterProvider.otherwise("/wohlig/home");
+    $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('!');
+    
 });
 
 wohligapp.directive('labelHover', function ($document) {

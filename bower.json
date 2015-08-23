@@ -27,6 +27,7 @@
     "lesshat": "~3.0.2",
     "animate.css": "~3.3.0",
     "masonry": "~3.3.1",
-    "fancyBox": "https://github.com/fancyapps/fancyBox.git#~2.1.5"
+    "fancyBox": "https://github.com/fancyapps/fancyBox.git#~2.1.5",
+    "jquery-cacheimage": "https://github.com/alexrabarts/jquery-cacheimage.git#~1.0.0"
   }
 }

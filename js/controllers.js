@@ -12,7 +12,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
         $scope.template.menuheader = "";
         $scope.template.backurl = "img/social/back.png";
     })
-    .controller('EnquiryCtrl', function($scope, TemplateService, NavigationService, $modal) {
+    .controller('EnquiryCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
         $scope.template.title = "Enquiry";
