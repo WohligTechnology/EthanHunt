@@ -8,9 +8,9 @@ templateservicemod.service('TemplateService', function() {
     this.year = d.getFullYear();
 
     this.init = function() {
-        this.header = "views/header.html";
-        this.content = "views/content/home.html";
-        this.footer = "views/footer.html";
+        this.header = "./views/header.html";
+        this.content = "./views/content/home.html";
+        this.footer = "./views/footer.html";
         this.hideContent = false;
         this.contentClass = "blurHome";
     };
@@ -18,7 +18,7 @@ templateservicemod.service('TemplateService', function() {
     this.changecontent = function(page) {
         this.init();
         var data = this;
-        data.content = "views/content/" + page + ".html";
+        data.content = "./views/content/" + page + ".html";
         return data;
     };
 
