@@ -4,6 +4,10 @@ $(document).ready(function() {
         getSection();
     });
 });
+$(window).load(function() {
+    $(".loading").fadeOut(800);
+    $(".realcontent").fadeIn(800)
+});
 function getSection() {
     var height = $(window).height()
     $("head .sectioncss").html(".section {min-height: " + height + "px;}");
