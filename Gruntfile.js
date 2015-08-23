@@ -1,5 +1,5 @@
 //Gruntfile
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     //Initializing the configuration object
     grunt.initConfig({
@@ -26,38 +26,37 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            javascript: {
-                options: {
-                    separator: ';\n',
-                },
-                dist: {
-                    src: [
-                        './bower_components/jquery/dist/jquery.min.js',
-                        './bower_components/masonry/dist/masonry.pkgd.min.js',
-                        './bower_components/fancyBox/source/jquery.fancybox.pack.js',
-                        './js/main.js',
-                        './bower_components/less/dist/less.min.js',
-                        './bower_components/moment/min/moment.min.js',
-                        './bower_components/bootstrap/dist/js/bootstrap.min.js',
-                        './bower_components/bootstrap/angular-bootstrap/ui-bootstrap-tpls.min.js',
-                        './bower_components/angular/angular.min.js',
-                        './bower_components/angular-animate/angular-animate.min.js',
-                        './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-                        './lib/js/angular-flexslider.js',
-                        './lib/js/angular.rangeSlider.js',
-                        './bower_components/angular-bootstrap/ui-bootstrap.min.js',
-                        './bower_components/ui-router/release/angular-ui-router.min.js',
-                        './bower_components/angular-loading-bar/build/loading-bar.min.js',
-                        './bower_components/valdr/valdr.min.js',
-                        './bower_components/valdr/valdr-message.min.js',
-                        './bower_components/lodash/lodash.min.js',
-                        './js/app.js',
-                        './js/controllers.js',
-                        './js/templateservice.js',
-                        './js/navigation.js'
-                    ],
-                    dest: './w/w.js',
-                }
+            options: {
+                separator: ';\n',
+            },
+            dist: {
+                src: [
+                    './bower_components/jquery/dist/jquery.min.js',
+                    './bower_components/masonry/dist/masonry.pkgd.min.js',
+                    './bower_components/fancyBox/source/jquery.fancybox.pack.js',
+                    './js/main.js',
+                    './bower_components/less/dist/less.min.js',
+                    './bower_components/moment/min/moment.min.js',
+                    './bower_components/bootstrap/dist/js/bootstrap.min.js',
+                    './bower_components/bootstrap/angular-bootstrap/ui-bootstrap-tpls.min.js',
+                    './bower_components/angular/angular.min.js',
+                    './bower_components/angular-animate/angular-animate.min.js',
+                    './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+                    './lib/js/angular-flexslider.js',
+                    './lib/js/angular.rangeSlider.js',
+                    './bower_components/angular-bootstrap/ui-bootstrap.min.js',
+                    './bower_components/ui-router/release/angular-ui-router.min.js',
+                    './bower_components/angular-loading-bar/build/loading-bar.min.js',
+                    './bower_components/valdr/valdr.min.js',
+                    './bower_components/valdr/valdr-message.min.js',
+                    './bower_components/lodash/lodash.min.js',
+                    './js/app.js',
+                    './js/controllers.js',
+                    './js/templateservice.js',
+                    './js/navigation.js'
+                ],
+                dest: './w/w.js',
+
             },
             css: {
                 options: {
@@ -93,7 +92,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['js/*.js'], // which files to watch
-                tasks: ['concat:javascript'],
+                tasks: ['concat'],
                 options: {
                     nospawn: true
                 }

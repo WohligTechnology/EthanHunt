@@ -16,31 +16,17 @@
                                                 Thank you for interest in Wohlig Technology. Please provide the following information. You should response within 48 hours.
                                             </p>
                                         </div>
-                                        <div class="form">
-                                            <form action="" class="valid">
-                                                <input type="text" placeholder="Name">
-                                                <input type="email" placeholder="Email">
-                                                <input type="tel" placeholder="Mobile">
-                                                <textarea placeholder="Query"></textarea>
-                                                <script type="text/ng-template" id="myModalContent.html">
-                                                    <div class="modal-header">
-                                                        <h3 class="modal-title">I'm a modal!</h3>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <ul>
-                                                            <li ng-repeat="item in items">
-                                                                <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
-                                                            </li>
-                                                        </ul>
-                                                        Selected: <b>{{ selected.item }}</b>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-                                                        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-                                                    </div>
-                                                </script>
-                                                <input type="submit" value="Submit" ng-click="open('sm')" class="button">
+                                        <div class="form" ng-hide="form.submit">
+                                            <form class="validation" action="javascript:0">
+                                                <input type="text" ng-model="form.name" required placeholder="Name">
+                                                <input type="email" ng-model="form.email" placeholder="Email">
+                                                <input type="tel" ng-model="form.tel" placeholder="Mobile">
+                                                <textarea placeholder="Query" ng-model="form.query" required></textarea>
+                                                <input type="submit" value="Submit" ng-click="formsubmit(form)" class="button">
                                             </form>
+                                        </div>
+                                        <div ng-show="form.submit" class="text-feedback ">
+                                           <p class="text-color feedback2">Your enquiry has been successfully sent.</p>
                                         </div>
                                     </div>
                                 </div>

@@ -34,6 +34,9 @@ var navigationservice = angular.module('navigationservice', [])
             }
             return menuname;
         },
+        submitform: function(data) {
+            console.log(data);
+        }
 
     }
 });

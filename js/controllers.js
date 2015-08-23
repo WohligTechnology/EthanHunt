@@ -1,10 +1,10 @@
 angular.module('wohligController', ['templateservicemod', 'navigationservice', 'valdr', 'ui.bootstrap', ])
 
-.controller('WohligCtrl', function ($scope, TemplateService, NavigationService) {
+.controller('WohligCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
     })
-    .controller('HomeCtrl', function ($scope, TemplateService, NavigationService) {
+    .controller('HomeCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.title = "Universe of Creativity";
         $scope.template.init();
@@ -12,16 +12,26 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         $scope.template.menuheader = "";
         $scope.template.backurl = "img/social/back.png";
     })
-    .controller('EnquiryCtrl', function ($scope, TemplateService, NavigationService, $modal) {
+    .controller('EnquiryCtrl', function($scope, TemplateService, NavigationService, $modal) {
         $scope.template = TemplateService;
         $scope.template.init();
         $scope.template.title = "Enquiry";
         $scope.template.menuheader = "Enquiry";
         $scope.template.backurl = "img/social/back.png";
         $scope.animationsEnabled = true;
-    })
+        $scope.form = {
+            submit: false
+        };
+        $scope.formsubmit = function(data) {
+            var isvalid = $('.validation').get(0).checkValidity();
+            if (isvalid) {
+                $scope.form.submit = true;
+                NavigationService.submitform(data);
+            }
+        };
 
-.controller('ReachusCtrl', function ($scope, TemplateService, NavigationService) {
+    })
+    .controller('ReachusCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
         $scope.template.title = "Reach us";
@@ -30,21 +40,21 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
         $scope.template.menuheader = "Reach Us";
         $scope.template.backurl = "img/social/back.png";
     })
-    .controller('AboutCtrl', function ($scope, TemplateService, NavigationService) {
+    .controller('AboutCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
         $scope.template.title = "About";
         $scope.template.contentClass = true;
         $scope.template.backurl = "img/social/back2.png";
     })
-    .controller('ClientsCtrl', function ($scope, TemplateService, NavigationService) {
+    .controller('ClientsCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
         $scope.template.title = "Clients";
         $scope.template.menuheader = "Clients";
         $scope.template.backurl = "img/social/back3.png";
     })
-    .controller('PortfolioCtrl', function ($scope, TemplateService, NavigationService) {
+    .controller('PortfolioCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
         $scope.nameFilter = "";
@@ -153,9 +163,9 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
             "name": "Designers group"
         }];
 
-        $scope.changefilter = function (filter) {
+        $scope.changefilter = function(filter) {
             $scope.nameFilter = filter;
-            setTimeout(function () {
+            setTimeout(function() {
                 $scope.portfolio.masonry("reloadItems");
                 $scope.portfolio.masonry("layout");
             }, 10);
@@ -163,13 +173,13 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
 
         };
     })
-    .controller('TeamCtrl', function ($scope, TemplateService, NavigationService) {
+    .controller('TeamCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
         $scope.template.title = "Portfolio";
         $scope.template.backurl = "img/social/back.png";
     })
-    .controller('HeaderCtrl', function ($scope, TemplateService) {
+    .controller('HeaderCtrl', function($scope, TemplateService) {
         $scope.template = TemplateService;
         $scope.template.init();
     });
