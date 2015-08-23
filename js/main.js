@@ -6,7 +6,6 @@ $(document).ready(function() {
 });
 $(window).load(function() {
     $(".loading").fadeOut(800);
-    $(".realcontent").fadeIn(800)
 });
 function getSection() {
     var height = $(window).height()
