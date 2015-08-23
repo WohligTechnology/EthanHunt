@@ -4,3 +4,6 @@ w/
 *.db
 less/other.css
 less/style.css
+
+*.zip
+*.tar
