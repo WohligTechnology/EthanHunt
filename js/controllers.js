@@ -78,7 +78,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
             "id": 5,
             "picture": "img/portfolio/6.jpg",
             "type": "mobile",
-            "name": "91 street"
+            "name": "Stake App"
         }, {
             "id": 6,
             "picture": "img/portfolio/7.jpg",
@@ -128,7 +128,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice', '
             "id": 15,
             "picture": "img/portfolio/16.jpg",
             "type": "Mobile",
-            "name": "Stake App"
+            "name": "91 street"
         }, {
             "id": 16,
             "picture": "img/portfolio/17.jpg",
