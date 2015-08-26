@@ -1,0 +1,25 @@
+<IfModule mod_mime.c>
+    AddCharset utf-8 .css
+    AddCharset utf-8 .js
+    AddEncoding gzip .gz
+</IfModule>
+<FilesMatch "(\.js|\.js\.gz)$">
+    ForceType text/javascript
+</FilesMatch>
+<FilesMatch "(\.css|\.css\.gz)$">
+    ForceType text/css
+</FilesMatch>
+<FilesMatch "\.(gif|jpeg|jpg|png|ico|css|js|swf)$">
+     Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On  
+  # If an existing asset or directory is requested go to it as it is
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+  RewriteRule ^ - [L]
+
+  # If the requested resource doesn't exist, use index.html
+  RewriteRule ^ /Ethanhunt/index.html
+</IfModule>

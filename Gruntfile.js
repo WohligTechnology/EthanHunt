@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                     compress: true
                 },
                 files: {
-                    './w/w.css': './less/other.less'
+                    './w/w.min.css': './less/other.less'
                 }
             }
         },
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
             },
             frontend: {
                 files: {
-                    './w/w.min.js': ['./w/w.js']
+                    './w/w.min.js': ['./w/w.js', './w/template/*.js']
                 }
             }
         },
@@ -83,6 +83,28 @@ module.exports = function(grunt) {
             }
         },
         compress: {
+            zip: {
+                options: {
+                    archive: 'production.zip'
+                },
+                files: [{
+                        src: ['./index.html'],
+                        dest: '/',
+                        filter: 'isFile'
+                    }, // includes files in path
+                    {
+                        src: ['./img/**'],
+                        dest: '/'
+                    }, // includes files in path and its subdirs
+                    {
+                        src: ['./fonts/**'],
+                        dest: '/'
+                    }, {
+                        src: ['./p/**'],
+                        dest: '/'
+                    }
+                ]
+            },
             css: {
                 options: {
                     mode: 'gzip'
@@ -99,14 +121,25 @@ module.exports = function(grunt) {
                 },
                 expand: true,
                 cwd: './w',
-                src: ['w.min.js'],
+                src: ['w.min.js', ],
                 dest: './p',
                 ext: '.gz.js'
             }
         },
+        imagemin: { // Task
+
+            dynamic: { // Another target
+                files: [{
+                    expand: true, // Enable dynamic expansion
+                    cwd: './img/', // Src matches are relative to this path
+                    src: ['**/*.{png,jpg}'], // Actual patterns to match
+                    dest: './img2/' // Destination path prefix
+                }]
+            }
+        },
         ngtemplates: {
             templateviews: {
-                option: {
+                options: {
                     htmlmin: {
                         collapseBooleanAttributes: true,
                         collapseWhitespace: true,
@@ -116,13 +149,16 @@ module.exports = function(grunt) {
                         removeRedundantAttributes: true,
                         removeScriptTypeAttributes: true,
                         removeStyleLinkTypeAttributes: true
+                    },
+                    bootstrap: function(module, script) {
+                        return "wohligapp.run(['$templateCache', function($templateCache) {" + script + "}]);";
                     }
                 },
                 src: './views/**.html',
                 dest: './w/template/views.js',
             },
             templatecontent: {
-                option: {
+                options: {
                     htmlmin: {
                         collapseBooleanAttributes: true,
                         collapseWhitespace: true,
@@ -132,13 +168,16 @@ module.exports = function(grunt) {
                         removeRedundantAttributes: true,
                         removeScriptTypeAttributes: true,
                         removeStyleLinkTypeAttributes: true
+                    },
+                    bootstrap: function(module, script) {
+                        return "wohligapp.run(['$templateCache', function($templateCache) {" + script + "}]);";
                     }
                 },
                 src: './views/content/**.html',
                 dest: './w/template/content.js',
             },
             templatedirective: {
-                option: {
+                options: {
                     htmlmin: {
                         collapseBooleanAttributes: true,
                         collapseWhitespace: true,
@@ -148,6 +187,9 @@ module.exports = function(grunt) {
                         removeRedundantAttributes: true,
                         removeScriptTypeAttributes: true,
                         removeStyleLinkTypeAttributes: true
+                    },
+                    bootstrap: function(module, script) {
+                        return "wohligapp.run(['$templateCache', function($templateCache) {" + script + "}]);";
                     }
                 },
                 src: './views/directive/**.html',
@@ -178,5 +220,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-angular-templates');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask('default', ['watch']);
+    grunt.registerTask('production', ['less:production','ngtemplates','concat','uglify','compress:css','compress:js','compress:zip']);
 };

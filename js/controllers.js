@@ -169,8 +169,12 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 $scope.portfolio.masonry("reloadItems");
                 $scope.portfolio.masonry("layout");
             }, 10);
-
-
+        };
+        $scope.showfancybox = function(img) {
+            $.fancybox.open(img, {
+                padding: 0,
+                closeBtn: false
+            });
         };
     })
     .controller('TeamCtrl', function($scope, TemplateService, NavigationService) {
