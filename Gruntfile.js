@@ -135,7 +135,8 @@ module.exports = function(grunt) {
                     src: ['**/*.{png,jpg}'], // Actual patterns to match
                     dest: './img2/' // Destination path prefix
                 }]
-            }
+            },
+            
         },
         ngtemplates: {
             templateviews: {
