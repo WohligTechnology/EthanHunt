@@ -30,7 +30,6 @@ RewriteEngine On
   RewriteRule ^ /index.gz.html
 </IfModule>
 
-DirectoryIndex index.gz.html index.html index.htm index.php
 
 RewriteCond %{HTTP_HOST} ^wohlig.com$
 RewriteRule ^(.*)$ "http\:\/\/www\.wohlig\.com\/$1" [R=301,L]

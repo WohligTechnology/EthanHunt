@@ -11,6 +11,9 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
         $scope.template.contentClass = false;
         $scope.template.menuheader = "";
         $scope.template.backurl = "img/social/back.png";
+        ga('send', 'pageview', {
+            'title': 'Home Page'
+        });
     })
     .controller('EnquiryCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
@@ -28,8 +31,11 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 $scope.form.submit = true;
                 NavigationService.submitform(data);
             }
+            ga('send', 'event', 'Enquiry', 'Submit');
         };
-
+        ga('send', 'pageview', {
+            'title': 'Enquiry Page'
+        });
     })
     .controller('ReachusCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
@@ -39,6 +45,9 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
         $scope.template.hideContent = true;
         $scope.template.menuheader = "Reach Us";
         $scope.template.backurl = "img/social/back.png";
+        ga('send', 'pageview', {
+            'title': 'Reach Us Page'
+        });
     })
     .controller('AboutCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
@@ -46,6 +55,9 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
         $scope.template.title = "About";
         $scope.template.contentClass = true;
         $scope.template.backurl = "img/social/back2.png";
+        ga('send', 'pageview', {
+            'title': 'About Page'
+        });
     })
     .controller('ClientsCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
@@ -53,6 +65,9 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
         $scope.template.title = "Clients";
         $scope.template.menuheader = "Clients";
         $scope.template.backurl = "img/social/back3.png";
+        ga('send', 'pageview', {
+            'title': 'Clients Page'
+        });
     })
     .controller('PortfolioCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
@@ -170,18 +185,25 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 $scope.portfolio.masonry("layout");
             }, 10);
         };
-        $scope.showfancybox = function(img) {
+        $scope.showfancybox = function(img,name) {
             $.fancybox.open(img, {
                 padding: 0,
                 closeBtn: false
             });
+            ga('send', 'event', 'Portfolio Page', name);
         };
+        ga('send', 'pageview', {
+            'title': 'Portfolio Page'
+        });
     })
     .controller('TeamCtrl', function($scope, TemplateService, NavigationService) {
         $scope.template = TemplateService;
         $scope.template.init();
-        $scope.template.title = "Portfolio";
+        $scope.template.title = "Team";
         $scope.template.backurl = "img/social/back.png";
+        ga('send', 'pageview', {
+            'title': 'Team Page'
+        });
     })
     .controller('HeaderCtrl', function($scope, TemplateService) {
         $scope.template = TemplateService;

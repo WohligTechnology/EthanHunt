@@ -28,6 +28,7 @@
     "animate.css": "~3.3.0",
     "masonry": "~3.3.1",
     "fancyBox": "https://github.com/fancyapps/fancyBox.git#~2.1.5",
-    "jquery-cacheimage": "https://github.com/alexrabarts/jquery-cacheimage.git#~1.0.0"
+    "jquery-cacheimage": "https://github.com/alexrabarts/jquery-cacheimage.git#~1.0.0",
+    "analytics": "http://www.google-analytics.com/analytics.js"
   }
 }
