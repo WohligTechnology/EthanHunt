@@ -88,8 +88,8 @@ module.exports = function(grunt) {
                     archive: 'production.zip'
                 },
                 files: [{
-                        src: ['./index.html'],
-                        dest: '/',
+                        src: ['./indexproduction.html'],
+                        dest: '/index.html',
                         filter: 'isFile'
                     }, // includes files in path
                     {
