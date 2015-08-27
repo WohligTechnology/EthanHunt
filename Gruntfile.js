@@ -19,7 +19,6 @@ module.exports = function (grunt) {
                 options: {
                     sourceMap: false,
                     compress: true,
-
                 },
                 files: {
                     './w/w.min.css': './less/other.less'
@@ -33,7 +32,7 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    './w/w.min.css': ['./w/w.min.css']
+                    './w/w.min2.css': ['./w/w.min.css']
                 }
             }
         },
@@ -71,22 +70,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        cssmin: {
-            options: {
-                shorthandCompacting: true,
-                roundingPrecision: -1
-            },
-            target: {
-                files: {
-                    './w/w.min.css': ['./w/w.css']
-                }
-            },
-            //            target2: {
-            //                files: {
-            //                    './w/loading.min.css': ['./w/loading.css']
-            //                }
-            //            }
-        },
+        
         compress: {
             zip: {
                 options: {
@@ -107,7 +91,7 @@ module.exports = function (grunt) {
                 },
                 expand: true,
                 cwd: './w',
-                src: ['w.min.css'],
+                src: ['w.min2.css'],
                 dest: './production/p',
                 ext: '.gz.css'
             },
@@ -267,5 +251,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-angular-templates');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('production', ['copy', 'htmlmin', 'less:production', 'cssmin', 'ngtemplates', 'concat', 'uglify', 'compress:css', 'compress:js','compress:indexhtml', 'compress:zip']);
+    grunt.registerTask('production', ['copy', 'htmlmin', 'less:production','cssmin', 'ngtemplates', 'concat', 'uglify' ,'compress:css', 'compress:js','compress:indexhtml', 'compress:zip']);
 };
