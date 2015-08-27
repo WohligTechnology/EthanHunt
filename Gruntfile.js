@@ -93,6 +93,11 @@ module.exports = function (grunt) {
                 files: {
                     './w/w.min.css': ['./w/w.css']
                 }
+            },
+            target2: {
+                files: {
+                    './w/loading.min.css': ['./w/loading.css']
+                }
             }
         },
         compress: {
