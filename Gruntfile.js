@@ -1,5 +1,5 @@
 //Gruntfile
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     //Initializing the configuration object
     grunt.initConfig({
@@ -87,23 +87,14 @@ module.exports = function(grunt) {
                 options: {
                     archive: 'production.zip'
                 },
-                files: [{
-                        src: ['./indexproduction.html'],
-                        dest: '/index.html',
-                        filter: 'isFile'
-                    }, // includes files in path
+                files: [
                     {
-                        src: ['./img/**'],
-                        dest: '/'
-                    }, // includes files in path and its subdirs
-                    {
-                        src: ['./fonts/**'],
-                        dest: '/'
-                    }, {
-                        src: ['./p/**'],
-                        dest: '/'
+                        expand: true,
+                        cwd: 'production/',
+                        src: ['**'],
+                        dest: './'
                     }
-                ]
+                    ]
             },
             css: {
                 options: {
@@ -112,7 +103,7 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: './w',
                 src: ['w.min.css'],
-                dest: './p',
+                dest: './production/p',
                 ext: '.gz.css'
             },
             js: {
@@ -122,7 +113,7 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: './w',
                 src: ['w.min.js', ],
-                dest: './p',
+                dest: './production/p',
                 ext: '.gz.js'
             }
         },
@@ -136,7 +127,7 @@ module.exports = function(grunt) {
                     dest: './img2/' // Destination path prefix
                 }]
             },
-            
+
         },
         ngtemplates: {
             templateviews: {
@@ -151,7 +142,7 @@ module.exports = function(grunt) {
                         removeScriptTypeAttributes: true,
                         removeStyleLinkTypeAttributes: true
                     },
-                    bootstrap: function(module, script) {
+                    bootstrap: function (module, script) {
                         return "wohligapp.run(['$templateCache', function($templateCache) {" + script + "}]);";
                     }
                 },
@@ -170,7 +161,7 @@ module.exports = function(grunt) {
                         removeScriptTypeAttributes: true,
                         removeStyleLinkTypeAttributes: true
                     },
-                    bootstrap: function(module, script) {
+                    bootstrap: function (module, script) {
                         return "wohligapp.run(['$templateCache', function($templateCache) {" + script + "}]);";
                     }
                 },
@@ -189,13 +180,39 @@ module.exports = function(grunt) {
                         removeScriptTypeAttributes: true,
                         removeStyleLinkTypeAttributes: true
                     },
-                    bootstrap: function(module, script) {
+                    bootstrap: function (module, script) {
                         return "wohligapp.run(['$templateCache', function($templateCache) {" + script + "}]);";
                     }
                 },
                 src: './views/directive/**.html',
                 dest: './w/template/directive.js',
             }
+        },
+        copy: {
+            main: {
+                files: [
+      // includes files within path
+                    {
+                        expand: true,
+                        src: ['indexproduction.html'],
+                        dest: 'production/',
+                        filter: 'isFile'
+                    },
+
+      // includes files within path and its sub-directories
+                    {
+                        expand: true,
+                        src: ['img/**'],
+                        dest: 'production/'
+                    },
+                    {
+                        expand: true,
+                        src: ['fonts/**'],
+                        dest: 'production/'
+                    },
+
+    ],
+            },
         },
         watch: {
             styles: {
@@ -215,6 +232,7 @@ module.exports = function(grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -223,5 +241,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-angular-templates');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('production', ['less:production','ngtemplates','concat','uglify','compress:css','compress:js','compress:zip']);
+    grunt.registerTask('production', ['copy', 'less:production', 'ngtemplates', 'concat', 'uglify', 'compress:css', 'compress:js', 'compress:zip']);
 };

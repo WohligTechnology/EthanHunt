@@ -1,6 +1,6 @@
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
     var navigation = [{
         name: "Home",
         classis: "active",
@@ -35,7 +35,7 @@ var navigationservice = angular.module('navigationservice', [])
             return menuname;
         },
         submitform: function(data) {
-            console.log(data);
+            $http.post("./mandrill/mailsend.php",data);
         }
 
     }
