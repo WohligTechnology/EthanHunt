@@ -94,11 +94,11 @@ module.exports = function (grunt) {
                     './w/w.min.css': ['./w/w.css']
                 }
             },
-            target2: {
-                files: {
-                    './w/loading.min.css': ['./w/loading.css']
-                }
-            }
+            //            target2: {
+            //                files: {
+            //                    './w/loading.min.css': ['./w/loading.css']
+            //                }
+            //            }
         },
         compress: {
             zip: {
@@ -133,6 +133,16 @@ module.exports = function (grunt) {
                 src: ['w.min.js', ],
                 dest: './production/p',
                 ext: '.gz.js'
+            },
+            indexhtml: {
+                options: {
+                    mode: 'gzip'
+                },
+                expand: true,
+                cwd: './w',
+                src: ['index.html', ],
+                dest: './production/',
+                ext: '.gz.html'
             }
         },
         imagemin: { // Task
@@ -141,7 +151,7 @@ module.exports = function (grunt) {
 
                 options: { // Target options
                     optimizationLevel: 7,
-                    progressive : true
+                    progressive: true
                 },
                 files: [{
                     expand: true, // Enable dynamic expansion
@@ -237,7 +247,7 @@ module.exports = function (grunt) {
                     collapseWhitespace: true
                 },
                 files: { // Dictionary of files
-                    './production/index.html': './indexproduction.html',
+                    './w/index.html': './indexproduction.html',
                 }
             },
         },
@@ -270,5 +280,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-angular-templates');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('production', ['copy', 'htmlmin', 'less:production', 'cssmin', 'ngtemplates', 'concat', 'uglify', 'compress:css', 'compress:js', 'compress:zip']);
+    grunt.registerTask('production', ['copy', 'htmlmin', 'less:production', 'cssmin', 'ngtemplates', 'concat', 'uglify', 'compress:css', 'compress:js','compress:indexhtml', 'compress:zip']);
 };
