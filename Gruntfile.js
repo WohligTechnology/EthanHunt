@@ -18,10 +18,22 @@ module.exports = function (grunt) {
             production: {
                 options: {
                     sourceMap: false,
-                    compress: true
+                    compress: true,
+
                 },
                 files: {
                     './w/w.min.css': './less/other.less'
+                }
+            }
+        },
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    './w/w.min.css': ['./w/w.min.css']
                 }
             }
         },
@@ -62,7 +74,9 @@ module.exports = function (grunt) {
         uglify: {
             options: {
                 mangle: false, // Use if you want the names of your functions and variables unchanged
-                report: "gzip"
+                compress: {
+                    drop_console: true
+                }
             },
             frontend: {
                 files: {
@@ -73,8 +87,7 @@ module.exports = function (grunt) {
         cssmin: {
             options: {
                 shorthandCompacting: true,
-                roundingPrecision: -1,
-                report: "gzip",
+                roundingPrecision: -1
             },
             target: {
                 files: {
@@ -120,6 +133,11 @@ module.exports = function (grunt) {
         imagemin: { // Task
 
             dynamic: { // Another target
+
+                options: { // Target options
+                    optimizationLevel: 7,
+                    progressive : true
+                },
                 files: [{
                     expand: true, // Enable dynamic expansion
                     cwd: './img/', // Src matches are relative to this path
@@ -191,13 +209,6 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-      // includes files within path
-                    {
-                        expand: true,
-                        src: ['indexproduction.html'],
-                        dest: 'production/',
-                        filter: 'isFile'
-                    },
 
       // includes files within path and its sub-directories
                     {
@@ -212,6 +223,17 @@ module.exports = function (grunt) {
                     },
 
     ],
+            },
+        },
+        htmlmin: { // Task
+            dist: { // Target
+                options: { // Target options
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: { // Dictionary of files
+                    './production/index.html': './indexproduction.html',
+                }
             },
         },
         watch: {
@@ -232,7 +254,9 @@ module.exports = function (grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -241,5 +265,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-angular-templates');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('production', ['copy', 'less:production', 'ngtemplates', 'concat', 'uglify', 'compress:css', 'compress:js', 'compress:zip']);
+    grunt.registerTask('production', ['copy', 'htmlmin', 'less:production', 'cssmin', 'ngtemplates', 'concat', 'uglify', 'compress:css', 'compress:js', 'compress:zip']);
 };
