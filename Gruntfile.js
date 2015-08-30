@@ -131,19 +131,6 @@ module.exports = function (grunt) {
                     dest: './img2/' // Destination path prefix
                 }]
             },
-            static: { // Another target
-
-                options: { // Target options
-                    optimizationLevel: 7,
-                    progressive: true
-                },
-                files: [{
-                    expand: true, // Enable dynamic expansion
-                    cwd: './test/', // Src matches are relative to this path
-                    src: ['**/*.{png,jpg}'], // Actual patterns to match
-                    dest: './img2/' // Destination path prefix
-                }]
-            },
 
         },
         ngtemplates: {
