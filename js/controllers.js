@@ -182,12 +182,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 "picture": "img/portfolio/12.jpg",
                 "type": "mobile",
                 "name": "Best deal Finance"
-        }, {
-                "id": 20,
-                "picture": "img/portfolio/sfa.jpg",
-                "type": "website",
-                "name": "Sfanow (Sports For All)"
-        },
+        }, 
             {
                 "id": 21,
                 "picture": "img/portfolio/powerforone.jpg",
