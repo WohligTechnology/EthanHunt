@@ -48,10 +48,10 @@ wohligapp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
       url: "/team",
       templateUrl: "./views/content/team.html",
       controller: 'TeamCtrl'
-    })
+    });
 
   $urlRouterProvider.otherwise("/wohlig/home");
-  if (isproduction = false) {
+  if (isproduction === false) {
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
   }
@@ -99,7 +99,7 @@ wohligapp.directive('labelHover', function($document) {
         });
       });
     }
-  }
+  };
 });
 
 wohligapp.directive('masonry', function($document) {
@@ -122,5 +122,5 @@ wohligapp.directive('masonry', function($document) {
         });
       }, 100);
     }
-  }
+  };
 });
