@@ -51,7 +51,7 @@ wohligapp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
     });
 
   $urlRouterProvider.otherwise("/wohlig/home");
-  if (isproduction === false) {
+  if (isproduction) {
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
   }

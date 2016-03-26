@@ -1,5 +1,5 @@
 <div class="grid cs-style-3">
-    <div class="grid-item" ng-repeat="item in items | filter: { type: nameFilter }" title="{{image.picture}}">
+    <div class="grid-item" ng-class="item.type" ng-repeat="item in items | filter: { type: nameFilter }" title="{{image.picture}}">
         <a class="fancybox-thumb" rel="fancybox-thumb" ng-click="showfancybox(item.picture,item.name);" alt="{{item.name}}" title="{{item.name}}">
                 <img ng-src="{{item.picture}}">
                 <figcaption>
