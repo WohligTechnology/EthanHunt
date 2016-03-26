@@ -272,7 +272,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
         }, {
                 "id": 38,
                 "picture": "img/portfolio/16.jpg",
-                "type": "Mobile",
+                "type": "mobile",
                 "name": "91 street"
         }, {
                 "id": 39,
