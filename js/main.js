@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+  if(window.location.protocol == "http:" || window.location.host == "www.wohlig.com")
+  {
+    window.location.href="https://wohlig.com/";
+  }
+
     getSection();
     $(window).resize(function() {
         getSection();
@@ -9,7 +15,7 @@ $(window).load(function() {
     $(".realcontent").fadeIn(800);
 });
 function getSection() {
-    var height = $(window).height()
+    var height = $(window).height();
     $("head .sectioncss").html(".section {min-height: " + height + "px;}");
 }
 

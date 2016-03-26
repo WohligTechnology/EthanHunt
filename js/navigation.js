@@ -38,5 +38,5 @@ var navigationservice = angular.module('navigationservice', [])
             $http.post("./mandrill/mailsend.php",data);
         }
 
-    }
+    };
 });
