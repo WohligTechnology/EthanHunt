@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
-  if(window.location.protocol == "http:" || window.location.host == "www.wohlig.com")
-  {
-    window.location.href="https://wohlig.com/";
-  }
+  
 
     getSection();
     $(window).resize(function() {
