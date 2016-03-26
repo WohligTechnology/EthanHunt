@@ -96,65 +96,87 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
               "id": 3,
               "picture": "img/portfolio/sfa.jpg",
               "type": "website",
-              "name": "SFA(Sports For All)"
+              "name": "SFA(Sports For All)",
+              "link":"http://www.sfanow.in"
+
       },
           {
               "id": 4,
               "picture": "img/portfolio/td.jpg",
               "type": "website",
-              "name": "Ting Digital"
+              "name": "Ting Digital",
+              "link":"http://www.tingdigital.in"
       },
           {
               "id": 5,
               "picture": "img/portfolio/jpp.jpg",
               "type": "website",
-              "name": "Jaipur Pink Panthers"
+              "name": "Jaipur Pink Panthers",
+              "link":"http://www.jaipurpinkpanthers.com"
       }, {
               "id": 6,
               "picture": "img/portfolio/simi.jpg",
               "type": "website",
-              "name": "Simi Events"
+              "name": "Simi Events",
+              "link":"http://www.simievents.com"
+
       },
           {
               "id": 7,
               "picture": "img/portfolio/access.jpg",
               "type": "website",
-              "name": "Access World"
+              "name": "Access World",
+              "link":"http://accessworld.in"
+
       }, {
               "id": 8,
               "picture": "img/portfolio/aura.jpg",
               "type": "website",
-              "name": "Auraart"
+              "name": "Auraart",
+              "link":"http://www.auraart.in/"
+
       }, {
               "id": 9,
               "picture": "img/portfolio/ngu.jpg",
               "type": "website",
-              "name": "WillNeverGrowUp"
+              "name": "WillNeverGrowUp",
+              "link":"http://www.willnevergrowup.com"
+
       }, {
               "id": 10,
               "picture": "img/portfolio/HQ.jpg",
               "type": "website",
-              "name": "Happiness Quotient"
+              "name": "Happiness Quotient",
+              "link":"http://happynessquotient.com"
+
       }, {
               "id": 11,
               "picture": "img/portfolio/adya.jpg",
               "type": "website",
-              "name": "Adya"
+              "name": "Adya",
+              "link":"http://adyadairy.com"
+
       }, {
               "id": 12,
               "picture": "img/portfolio/euro.jpg",
               "type": "website",
-              "name": "Europratik"
+              "name": "Europratik",
+              "link":"http://www.europratik.com"
+
       }, {
               "id": 13,
               "picture": "img/portfolio/fynx.jpg",
               "type": "website",
-              "name": "My Fynx"
+              "name": "My Fynx",
+              "link":"http://myfynx.in"
+
       }, {
               "id": 14,
               "picture": "img/portfolio/selfcare.jpg",
               "type": "website",
-              "name": "SelfCare"
+              "name": "SelfCare",
+              "link":"http://www.selfcareindia.com"
+
       },
             {
                 "id": 15,
@@ -187,18 +209,22 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 "id": 21,
                 "picture": "img/portfolio/powerforone.jpg",
                 "type": "website",
-                "name": "Power For One"
+                "name": "Power For One",
+                "link":"http://www.powerforone.org"
+
         }, {
                 "id": 22,
                 "picture": "img/portfolio/7.jpg",
                 "type": "website",
-                "name": "200 notout"
-        },
-            {
+                "name": "200 notout",
+                "link":"http://www.200notout.in"
+        }, {
                 "id": 23,
                 "picture": "img/portfolio/bpft.jpg",
                 "type": "website",
-                "name": "Blenders Pride"
+                "name": "Blenders Pride",
+                "link":"http://www.bpft.in"
+
         }, {
                 "id": 24,
                 "picture": "img/portfolio/bherpo1.jpg",
@@ -218,7 +244,9 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 "id": 27,
                 "picture": "img/portfolio/5.jpg",
                 "type": "website",
-                "name": "Anima creative"
+                "name": "Anima creative",
+                "link":"http://www.animacreatives.com"
+
         }, {
                 "id": 28,
                 "picture": "img/portfolio/6.jpg",
@@ -238,37 +266,50 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 "id": 31,
                 "picture": "img/portfolio/8.jpg",
                 "type": "website",
-                "name": "Reviu"
+                "name": "Reviu",
+                "link":""
+
         },  {
                 "id": 32,
                 "picture": "img/portfolio/10.jpg",
                 "type": "website",
-                "name": "Lodha group"
+                "name": "Lodha group",
+                "link":"http://www.palava.in"
+
         }, {
                 "id": 33,
                 "picture": "img/portfolio/11.jpg",
                 "type": "website",
-                "name": "Reniscience"
+                "name": "Reniscience",
+                "link":""
+
         }, {
                 "id": 34,
                 "picture": "img/portfolio/facade.jpg",
                 "type": "website",
-                "name": "Facade Testing"
+                "name": "Facade Testing",
+                "link":"http://www.facadetesting.com"
+
         }, {
                 "id": 35,
                 "picture": "img/portfolio/13.jpg",
                 "type": "website",
-                "name": "Ziba collection"
+                "name": "Ziba collection",
+                "link":"http://zibacollections.co.uk"
+
         }, {
                 "id": 36,
                 "picture": "img/portfolio/14.jpg",
                 "type": "website",
-                "name": "XDC india"
+                "name": "XDC india",
+                "link":""
         }, {
                 "id": 37,
                 "picture": "img/portfolio/15.jpg",
                 "type": "website",
-                "name": "world 7 mediacraft"
+                "name": "world 7 mediacraft",
+                "link":"http://www.world7mediacraft.com"
+
         }, {
                 "id": 38,
                 "picture": "img/portfolio/16.jpg",
@@ -278,12 +319,16 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 "id": 39,
                 "picture": "img/portfolio/17.jpg",
                 "type": "website",
-                "name": "LBW Consult"
+                "name": "LBW Consult",
+                "link":"http://www.consultlbw.com"
+
         }, {
                 "id": 40,
                 "picture": "img/portfolio/18.jpg",
                 "type": "website",
-                "name": "Furnicheer"
+                "name": "Furnicheer",
+                "link":"http://furnicheer.com"
+
         }, {
                 "id": 41,
                 "picture": "img/portfolio/19.jpg",
@@ -293,17 +338,23 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 "id": 42,
                 "picture": "img/portfolio/orangestone.jpg",
                 "type": "website",
-                "name": "Orangestone"
+                "name": "Orangestone",
+                "link":"http://www.orangestone.co.uk"
+
         },{
                 "id": 43,
                 "picture": "img/portfolio/20.jpg",
                 "type": "website",
-                "name": "Designers group"
+                "name": "Designers group",
+                "link":"http://www.designers-group.com"
+
         }, {
                 "id": 44,
                 "picture": "img/portfolio/1.jpg",
                 "type": "website",
-                "name": "Lyla loves"
+                "name": "Lyla loves",
+                "link":""
+
         }, {
                 "id": 45,
                 "picture": "img/portfolio/9.jpg",
@@ -318,7 +369,8 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 "id": 47,
                 "picture": "img/portfolio/3.jpg",
                 "type": "website",
-                "name": "Magic mirror"
+                "name": "Magic mirror",
+                "link":"http://magicmirror.in"
         }
         ];
 
