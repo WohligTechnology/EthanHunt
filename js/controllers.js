@@ -79,17 +79,17 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
         $scope.items = [
           {
               "id": 0,
-              "picture": "img/portfolio/JPP1.png",
+              "picture": "img/portfolio/JPP1.jpg",
               "type": "mobile",
               "name": "Jaipur Pink Panthers"
       }, {
               "id": 1,
-              "picture": "img/portfolio/tarun.png",
+              "picture": "img/portfolio/tarun.jpg",
               "type": "mobile",
               "name": "Tarun Mitra Mandal"
       }, {
               "id": 2,
-              "picture": "img/portfolio/noteshare.png",
+              "picture": "img/portfolio/noteshare.jpg",
               "type": "mobile",
               "name": "NoteShare"
       }, {
@@ -182,7 +182,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 "picture": "img/portfolio/12.jpg",
                 "type": "mobile",
                 "name": "Best deal Finance"
-        }, 
+        },
             {
                 "id": 21,
                 "picture": "img/portfolio/powerforone.jpg",
@@ -201,7 +201,7 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
                 "name": "Blenders Pride"
         }, {
                 "id": 24,
-                "picture": "img/portfolio/bherpo1.png",
+                "picture": "img/portfolio/bherpo1.jpg",
                 "type": "mobile",
                 "name": "Bherpo"
         }, {
