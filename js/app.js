@@ -48,6 +48,11 @@ wohligapp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
       url: "/team",
       templateUrl: "./views/content/team.html",
       controller: 'TeamCtrl'
+    })
+      .state('wohlig.job', {
+      url: "/job-description",
+      templateUrl: "./views/content/job-description.html",
+      controller: 'JobCtrl'
     });
 
   $urlRouterProvider.otherwise("/wohlig/home");
