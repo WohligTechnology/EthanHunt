@@ -72,10 +72,10 @@ angular.module('wohligController', ['templateservicemod', 'navigationservice'])
         .controller('JobCtrl', function ($scope, TemplateService, NavigationService) {
                 $scope.template = TemplateService;
                 $scope.template.init();
-                $scope.template.title = "Job Descripton";
-                $scope.template.menuheader = "Job Description";
+                $scope.template.title = "Careers";
+                $scope.template.menuheader = "Careers";
                 ga('send', 'pageview', {
-                        'title': 'Job Description'
+                        'title': 'Careers'
                 });
         })
         .controller('PortfolioCtrl', function ($scope, TemplateService, NavigationService) {
