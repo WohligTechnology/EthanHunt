@@ -50,7 +50,7 @@ wohligapp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
       controller: 'TeamCtrl'
     })
       .state('wohlig.job', {
-      url: "/job-description",
+      url: "/careers",
       templateUrl: "./views/content/job-description.html",
       controller: 'JobCtrl'
     });
